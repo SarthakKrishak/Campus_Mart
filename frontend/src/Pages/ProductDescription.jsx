@@ -19,20 +19,20 @@ const ProductDescription = () => {
                         {/* Left side bottom */}
                         <div className=' w-96 p-3'>
                             <h1 className='text-lg font-medium'>Seller Information</h1>
-                            <div className='flex justify-between'>
-                                <div className='flex items-center gap-1'>
+                            <div className='flex justify-between pt-2 pb-1'>
+                                <div className='flex items-center gap-3'>
                                     <IoMdPerson size={25} />
                                     <h1>Aryan Singh</h1>
                                 </div>
 
                                 <div className='flex flex-col text-right'>
-                                    <h1>9145856958</h1>
+                                    <h1>E block VIT</h1>
                                     <h1>Vellore</h1>
                                 </div>
                             </div>
                             <hr className='bg-black border-1 m-1' />
-                            <div className='flex justify-between'>
-                                <div className='flex items-center gap-1'>
+                            <div className='flex justify-between pt-2 pb-1FFS'>
+                                <div className='flex items-center gap-3'>
                                     <CiCalendarDate size={25} />
                                     <h1>Date Listed</h1>
                                 </div>
@@ -45,28 +45,28 @@ const ProductDescription = () => {
                         </div>
                     </div>
                     {/* Left Right side */}
-                    <div className='w-2/3 max-h-[90vh] p-10 flex flex-col justify-between'>
+                    <div className='w-2/3 max-h-[90vh] p-10 pl-12 flex flex-col justify-between'>
                         {/* Right top side */}
                         <div className='flex flex-col w-96'>
-                            <div className='bg-blue-600 text-white rounded-sm w-40 py-2 flex justify-center items-center'>Electronics</div>
+                            <div className=' text-white bg-[#005df5] rounded w-40 py-2 flex justify-center items-center'>Electronics</div>
                             <h1 className='text-2xl font-semibold mt-4'>Portonics Wireless Mouse</h1>
                             <h1 className='text-5xl font-extrabold'>₹449</h1>
                             <h1 className='text-lg font-semibold mt-4'>Details</h1>
                             <p>A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, typically using Bluetooth or a USB receiver...... more</p>
                             <div className='flex gap-4 w-full mt-8'>
                                 <div className='flex flex-col justify-center items-center border border-slate-300 rounded-lg py-6 px-10'>
-                                    <div className='bg-blue-600 text-white rounded-sm w-44 py-2 flex justify-center items-center'>Electronics</div>
+                                    <div className='bg-[#005df5] rounded text-white w-44 py-2 flex justify-center items-center'>Electronics</div>
                                     <h1>Condition</h1>
                                 </div>
                                 <div className='flex flex-col justify-center items-center border border-slate-300 rounded-lg py-6 px-10'>
-                                    <div className='bg-blue-600 text-white rounded-sm w-44 py-2 flex justify-center items-center'>Electronics</div>
+                                    <div className='bg-[#005df5] rounded text-white w-44 py-2 flex justify-center items-center'>Electronics</div>
                                     <h1>Condition</h1>
                                 </div>
                             </div>
                         </div>
                         {/* Right bottom side */}
                         <div className='flex w-96'>
-                            <button className='bg-blue-600 text-white rounded-sm w-40 py-2 flex justify-center items-center'>Chat</button>
+                            <button className='bg-[#005df5] rounded text-white w-40 py-2 flex justify-center items-center'>Chat</button>
                         </div>
                     </div>
 

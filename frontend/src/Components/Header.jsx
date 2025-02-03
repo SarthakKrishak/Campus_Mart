@@ -24,9 +24,9 @@ const Header = () => {
                 <RiShoppingCartFill />
                 <Link to="/"> <h1>Campus Mart</h1></Link>
             </div>
-            <div className="flex items-center bg-white rounded-lg border border-slate-400 text-black pr-2 mr-36">
+            <div className="flex items-center bg-white rounded-lg border border-slate-300 text-black pr-2 mr-36 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200">
                 <input
-                    className="rounded-lg px-4 py-[1vh] outline-none w-[25vw]"
+                    className="rounded-lg px-4 py-[1vh] outline-none w-[25vw] placeholder:text-black"
                     placeholder="Search Product"
                     type="text"
                     name="search"
@@ -35,7 +35,7 @@ const Header = () => {
                     onChange={handleSearchBar}
                     aria-label="Search products"
                 />
-                <CiSearch size={22} />
+                <CiSearch size={22}/>
             </div>
             <div className="flex items-center gap-14 font-semibold text-lg pr-6">
                 <div className="flex justify-center items-center text-2xl gap-8">

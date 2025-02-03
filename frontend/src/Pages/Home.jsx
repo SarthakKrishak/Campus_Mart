@@ -4,13 +4,14 @@ import ProductCard from "../Components/ProductCard";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Home = () => {
     return (
-        <div className="w-full bg-white">
+        <div className="w-full bg-white relative">
             <div>
                 <Header />
-                <div className="w-[92vw] h-[47vh] bg-gradient-to-b from-[#364EF2] to-[#534FF2] rounded-lg ml-14 mt-3 flex mb-5 relative shadow-lg shadow-gray-400">
+                <div className="w-[92vw] h-[47vh] bg-gradient-to-l from-[#364ef2] to-[#534ff2] rounded-lg ml-14 mt-3 flex mb-5 relative shadow-lg shadow-gray-400">
                     <img width={170} src=".\src\assets\circle.png" alt="image" className="absolute bottom-0 left-72" />
                     <div className="flex gap-1 absolute bottom-5 right-1/2">
                         <div className="rounded-full bg-white w-2 h-2"></div>
@@ -18,16 +19,16 @@ const Home = () => {
                         <div className="rounded-full bg-white w-2 h-2"></div>
                     </div>
                     <div className="flex flex-col h-full w-1/2 text-white gap-6 pl-24 pt-14 justify-centerst">
-                        <h1 className="text-4xl font-bold">
+                        <h1 className="text-4xl font-bold"> 
                             Unlock Deals, Share Essentials, <br />
                             Simply Campus Living!
                         </h1>
                         <h1 className="text-2xl text-gray-200">
                             Your trusted platform to simplify student life.
                             <br />
-                            Buy, sell, and connect with ease!
+                            Buy, sell and connect with ease!
                         </h1>
-                        <Link to={"/upload"} className="bg-white w-44 text-[#364EF2] mt-1 font-bold rounded-md py-2 px-2 text-lg justify-center flex">
+                        <Link to={"/upload"} className="bg-white w-44 text-[#364EF2] mt-1 font-bold rounded-md py-2 px-2 text-xl justify-center flex">
                             Sell Now
                         </Link>
                     </div>
@@ -46,23 +47,27 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="w-full min-h-screen bg-white flex flex-col items-center pl-5 pr-5 pt-2">
+            <div className="w-full min-h-screen bg-white flex flex-col items-center pl-5 pr-5">
                 
                 {/* blue bar part code */}
-                <div className="bg-blue-600 w-[92vw] h-[24vh] rounded-lg text-white flex  items-center justify-between gap-5 relative overflow-hidden shadow-md shadow-gray-300 border border-slate-200">
-                    <img height={300}
-                        width={300} src=".\src\assets\Group_114.png" alt="image" className="absolute right-0 bottom-1/2" />
+                <div className="bg-blue-600 w-[92vw] h-[18vh] rounded-xl text-white flex  items-center justify-between relative overflow-hidden shadow-md shadow-gray-400 border border-slate-200 
+                hover:shadow-lg transition ease-in-out duration-200">
+                    <img height={400}
+                        width={400} src=".\src\assets\Group_114.png" alt="image" className="absolute right-[-7vw] bottom-11 z-0" />
                     <div className="w-full h-full bg-white shadow-md shadow-slate-300 text-black rounded-lg flex">
-                        <div className="flex flex-col pl-6 pt-2 gap-4 w-2/3">
+                        <div className="flex flex-col pl-24 w-2/3 justify-center">
                             <h1 className="font-semibold text-2xl">Product of the Day</h1>
                             <h1 className="text-[#364EF2] font-bold text-3xl">ADVERTISE YOUR PRODUCT HERE</h1>
-                            <h3 className="text-lg text-slate-800">Boost your chances of selling faster!</h3>
+                            <h3 className="text-lg text-slate-600 font-medium">Boost your chances of selling faster!</h3>
                         </div>
-                        <div className="flex justify-end items-end w-1/3 p-4 gap-3">
-                            <h1 className="text-xl font-semibold">Only at <br /><span className="text-4xl">₹49</span></h1>
-                            <button className="rounded-full bg-[#394FF1] w-10 h-10">
-                                
-                            </button>
+                        <div className="flex items-end w-1/3 p-4 gap-3 justify-end pr-20">
+                            <div className="text-right">
+                                <h1 className="text-xl">Only at</h1>
+                                <span className="text-5xl font-bold">₹49</span>
+                            </div>
+                            <Link to={"/price"} className="rounded-full bg-[#394FF1] w-11 h-11 text-white text-3xl flex justify-center items-center z-20">
+                                <IoIosArrowForward />
+                            </Link> 
                         </div>
                     </div>
                 </div>
@@ -85,7 +90,7 @@ const Home = () => {
                 {/* Products section */}
                 <div className="w-[92vw] mt-6 flex flex-col gap-4">
                     <h1 className="text-3xl font-semibold pt-4">Popular Products</h1>
-                    <div className="gap-5 flex flex-wrap shrink-0 mt-2 pl-4">
+                    <div className="gap-6 flex flex-wrap shrink-0 mt-2">
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />

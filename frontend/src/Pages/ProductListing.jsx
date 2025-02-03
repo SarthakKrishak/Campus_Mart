@@ -58,7 +58,7 @@ const ProductListing = () => {
             <div className="flex">
                 {/* Left section */}
                 <div className="flex flex-col gap-5 w-1/3 h-full">
-                    <div className="flex items-center pl-9 pt-5 gap-3 font-medium">
+                    <div className="flex items-center pl-14 pt-5 gap-3 font-medium">
                         <img
                             width={30}
                             height={30}
@@ -67,7 +67,7 @@ const ProductListing = () => {
                         />
                         <h1 className="text-2xl">Sell an Item</h1>
                     </div>
-                    <div className="h-[75vh] bg-blue-500 flex flex-col justify-center items-center ml-20 mr-10 rounded-3xl text-white gap-4">
+                    <div className="h-[75vh] bg-gradient-to-tr from-[#534ff2] to-[#394ff1] flex flex-col justify-center items-center ml-14 mr-16 rounded-3xl text-white gap-4">
                         <h1 className="text-lg">Product Images</h1>
                         <button
                             className="bg-white text-black px-10 py-2 rounded-lg text-lg"
@@ -86,7 +86,7 @@ const ProductListing = () => {
 
                 {/* Right section */}
                 <div className="w-2/3 flex justify-between">
-                    <div className="pt-14">
+                    <div className="pt-16">
                         <form onSubmit={handleSubmit} className="flex flex-col">
                             <label htmlFor="productName" className="font-semibold">
                                 Product Name<span className="text-red-500">*</span>
@@ -202,14 +202,14 @@ const ProductListing = () => {
                         </form>
                     </div>
 
-                    <div className="flex flex-col gap-4 ml-5">
-                        <div className="h-[45vh] w-96 bg-slate-300 mr-16 mt-5 rounded-md">
+                    <div className="flex flex-col gap-4 ml-5 pl-16 justify-center">
+                        <div className="h-[38vh] w-[24.5vw] bg-slate-300 flex mt-16 rounded-md">
                             Google Ads
                         </div>
                         <div>
                             <div>
-                                <h1 className="text-2xl font-bold">Price</h1>
-                                <div className="flex text-6xl pt-4 pl-9 items-center gap-2">
+                                <h1 className="text-3xl font-bold">Price</h1>
+                                <div className="flex text-5xl pt-4 items-center gap-2">
                                     <span className="text-slate-400 font-bold">₹</span>
                                     <input
                                         required
@@ -217,7 +217,7 @@ const ProductListing = () => {
                                         name="productPrice"
                                         id="productPrice"
                                         min="1"
-                                        className="text-black font-extrabold border border-slate-300 flex outline-none rounded-md w-full sm:w-2/3 px-3 py-2 focus:ring-2 focus:ring-[#364EF2] focus:border-[#364EF2] transition duration-200 ease-in-out"
+                                        className="text-black font-extrabold border border-slate-300 flex outline-none rounded-md sm:w-2/3 px-2 py-2 focus:ring-2 focus:ring-[#364EF2] focus:border-[#364EF2] transition duration-200 ease-in-out"
                                         placeholder="Enter price"
                                         value={productPrice}
                                         onChange={(e) => setProductPrice(e.target.value.replace(/[^0-9.]/g, ''))}
@@ -242,7 +242,7 @@ const ProductListing = () => {
                             <button
                                 type="submit"
                                 disabled={!termsAccepted}
-                                className="bg-black text-white rounded-md px-16 py-2 w-2/3"
+                                className="bg-black text-white rounded-md py-2 w-[24.5vw]"
                             >
                                 Upload
                             </button>
