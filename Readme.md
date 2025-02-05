@@ -34,7 +34,7 @@ Campus Mart is a full-stack marketplace platform designed for college students t
 ### Steps to run locally
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/SarthakKrishak/Campus_Mart.git](https://github.com/SarthakKrishak/Campus_Mart.git)
+   git clone https://github.com/SarthakKrishak/Campus_Mart.git
    cd campus-mart
    cd frontend
    ```
