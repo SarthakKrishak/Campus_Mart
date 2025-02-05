@@ -2,6 +2,13 @@ import React from "react";
 import Header from "../Components/Header";
 
 const PricingModel = () => {
+
+  const purchase2 = (e) => {
+    e.preventDefault();
+    alert("Coming Soon")
+  }
+
+
   return (
     <div className="flex flex-col relative w-full h-screen overflow-hidden">
       <Header />
@@ -10,19 +17,20 @@ const PricingModel = () => {
         src="./src/assets/Group_114.png"
         alt="image"
       />
-      <div className="flex flex-col text-center gap-2 mt-9 w-full h-1/4">
-        <h1 className="font-bold text-3xl">
+      <div className="flex flex-col text-center gap-2 mt-9 w-full">
+        <h1 className="font-bold text-[1.6vw]">
           Find the Perfect Plan for Your Needs!
         </h1>
-        <h4 className="text-[#6F6F6F] text-xl">
+        <h4 className="text-[#6F6F6F] text-[1.2vw]">
           Select from flexible plans designed for students, sellers, and buyers.
           Whether you're just getting started <br /> or need advanced features,
           we've got you covered!
         </h4>
       </div>
       <div className="w-full h-3/4 flex gap-12 items-center justify-center">
+        
         {/* Card 1 */}
-        <div className="bg-[#f2f4ff] w-72 h-96 rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3">
+        <div className="bg-[#f2f4ff] w-80 h-96 rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3">
           <div className="bg-gradient-to-r from-[#534ff2] to-[#364ef2] w-28 py-1 text-white font-semibold rounded-md px-2 items-center justify-center flex">
             Current
           </div>
@@ -48,12 +56,12 @@ const PricingModel = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-gradient-to-bl from-[#464ff2] to-[#282d8c] w-72 h-[60vh] rounded-xl shadow-lg shadow-slate-400 p-4 bg-[#F2F4FF] flex flex-col gap-3">
+        <div className="bg-gradient-to-bl from-[#464ff2] to-[#282d8c] w-80 h-[60vh] rounded-xl shadow-lg shadow-slate-400 p-4 bg-[#F2F4FF] flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <div className="bg-gradient-to-r from-white to-white w-28 py-1 text-black font-bold rounded-md px-2 flex items-center justify-center">
               Pro
             </div>
-            <h1 className="text-sm font-semibold text-green-400">Popular</h1>
+            <h1 className="text-sm font-semibold text-[#ffe500] font-['Roboto Flex']">Popular</h1>
           </div>
           <h5 className="text-[#cfcfcf] text-sm">
             For active sellers and buyers looking to expand.Ideal for users who want additional perks and tools to grow their sales.
@@ -65,18 +73,19 @@ const PricingModel = () => {
             <li className="list-disc">In-app messaging and notifications</li>
             <li className="list-disc">Access to detailed analytics</li>
           </ul>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 pt-5">
             <div className="flex flex-col gap-1">
-              <h1 className="font-bold text-4xl text-white"><span className="text-[#828f9b]  text-3xl font-['Roboto'] pr-1">₹</span>49</h1>
+              <h1 className="font-bold text-4xl text-white"><span className="text-white  text-3xl font-['Roboto'] pr-1">₹</span>49</h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white">
+            <button onClick={purchase2} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white">
               Continue
             </button>
           </div>
         </div>
+
         {/* Card 3 */}
-        <div className="bg-[#f2f4ff] w-72 h-96 rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3">
+        <div className="bg-[#f2f4ff] w-80 h-96 rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3">
           <div className="bg-gradient-to-r from-[#534ff2] to-[#364ef2] w-28 py-1 text-white font-semibold rounded-md px-2 flex items-center justify-center ">
             Pro Plus
           </div>
@@ -95,7 +104,7 @@ const PricingModel = () => {
               <h1 className="font-bold text-4xl"><span className="text-[#828f9b]  text-3xl font-['Roboto'] pr-1">₹</span>99</h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-[#534ff2] to-[#364ef2] text-white">
+            <button onClick={purchase2} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-[#534ff2] to-[#364ef2] text-white">
               Continue
             </button>
           </div>

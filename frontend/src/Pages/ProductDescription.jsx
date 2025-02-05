@@ -13,8 +13,8 @@ const ProductDescription = () => {
                 {/* left side */}
                 <div className='flex w-3/4 pl-14'>
                     <div className='h-full w-1/3 p-10 flex flex-col items-center gap-5'>
-                        <div className='rounded-lg w-96 h-96 bg-zinc-500 flex justify-center items-center'>
-                            Product image
+                        <div className='rounded-lg w-96 h-96 object-cover'>
+                            <img src="./src/assets/image10.png" alt="image" />
                         </div>
                         {/* Left side bottom */}
                         <div className=' w-96 p-3'>
@@ -49,7 +49,7 @@ const ProductDescription = () => {
                         {/* Right top side */}
                         <div className='flex flex-col w-96'>
                             <div className=' text-white bg-[#005df5] rounded w-40 py-2 flex justify-center items-center'>Electronics</div>
-                            <h1 className='text-2xl font-semibold mt-4'>Portonics Wireless Mouse</h1>
+                            <h1 className='text-2xl font-semibold mt-4'>Classmate Notebook</h1>
                             <h1 className='text-5xl font-extrabold'>₹449</h1>
                             <h1 className='text-lg font-semibold mt-4'>Details</h1>
                             <p>A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, typically using Bluetooth or a USB receiver...... more</p>
@@ -73,13 +73,13 @@ const ProductDescription = () => {
                 </div>
 
                 {/* related Product section */}
-                <div className='w-1/4 h-full flex flex-col p-10'>
+                {/* <div className='w-1/4 h-full flex flex-col p-10'>
                     <h1 className='text-lg'>Related Products</h1>
                     <div className='scale-95'>
                         <ProductCard />
                         <ProductCard />
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </div>

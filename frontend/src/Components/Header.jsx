@@ -9,7 +9,7 @@ const Header = () => {
 
     const [search, setSearch] = useState("");
     const [darkMode, setDarkMode] = useState(false);
-    const [notification, setNotification] = useState(2);
+    const [notification, setNotification] = useState(1);
 
     const toggleDarkMode = () => setDarkMode(!darkMode);
 
@@ -20,13 +20,13 @@ const Header = () => {
 
     return (
         <nav className="flex bg-white text-black items-center justify-between pl-14 pr-10 pt-6 pb-2">
-            <div className="flex items-center font-bold text-2xl gap-2">
+            <div className="flex items-center font-bold text-2xl gap-[0.4vw]">
                 <RiShoppingCartFill />
                 <Link to="/"> <h1>Campus Mart</h1></Link>
             </div>
-            <div className="flex items-center bg-white rounded-lg border border-slate-300 text-black pr-2 mr-36 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200">
+            <div className="flex items-center bg-white rounded-lg border border-slate-300 pr-2 mr-36 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200">
                 <input
-                    className="rounded-lg px-4 py-[1vh] outline-none w-[25vw] placeholder:text-black"
+                    className="rounded-lg px-4 py-[1vh] outline-none w-[25vw] placeholder:text-slate-600"
                     placeholder="Search Product"
                     type="text"
                     name="search"
@@ -37,15 +37,15 @@ const Header = () => {
                 />
                 <CiSearch size={22}/>
             </div>
-            <div className="flex items-center gap-14 font-semibold text-lg pr-6">
-                <div className="flex justify-center items-center text-2xl gap-8">
+            <div className="flex items-center gap-12 font-semibold text-[1.1vw] pr-6">
+                <div className="flex justify-center items-center text-[1.5vw] gap-8">
                     <button onClick={toggleDarkMode} aria-label="Toggle dark mode">
                         <MdDarkMode className={darkMode ? 'text-yellow-400' : 'text-black'} />
                     </button>
                     <button className='relative' aria-label="Notifications">
                         <RiNotificationFill/>
                         {notification > 0 && (
-                            <span className="absolute top-0 right-0 h-4 w-4 bg-red-500 text-white text-xs flex items-center justify-center rounded-full">
+                            <span className="absolute top-0 right-0 h-3 w-3 bg-red-500 text-white text-xs flex items-center justify-center rounded-full">
                                 {notification}
                             </span>
                         )}
