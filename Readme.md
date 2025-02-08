@@ -34,27 +34,17 @@ Campus Mart is a full-stack marketplace platform designed for college students t
 ### Steps to run locally
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/campus-mart.git
+   git clone https://github.com/SarthakKrishak/Campus_Mart.git
    cd campus-mart
+   cd frontend
    ```
-2. Install dependencies:
+2. Install dependencies for frontend:
    ```sh
    npm install
    ```
-3. Set up environment variables (`.env` file):
+3. Start the frontend server:
    ```sh
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   ```
-4. Start the backend server:
-   ```sh
-   npm run server
-   ```
-5. Navigate to the frontend directory, install dependencies, and start the frontend:
-   ```sh
-   cd client
-   npm install
-   npm start
+   npm run dev
    ```
 
 ## License
