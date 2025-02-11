@@ -95,9 +95,7 @@ const ProductListing = () => {
                 {/* Right section */}
                 <div className="w-2/3 flex mt-12">
                     <form onSubmit={handleSubmit} className="flex">
-
-
-                           
+                
                         <div className="flex flex-col h-full w-1/2 pr-12">
                             {/* Product name */}
                             <label htmlFor="productName" className="font-semibold">
@@ -193,18 +191,95 @@ const ProductListing = () => {
                                 value={productDesc}
                                 onChange={(e) => setProductDesc(e.target.value)}
                             ></textarea>
-
-
-
-                            
-
-                            
                         </div>
 
-                        <div className="flex flex-col gap-4 ml-5 pl-16 justify-center h-full w-1/2">
-                            <div className="h-[38vh] w-[24.5vw] bg-slate-300 flex mt-16 rounded-md">
-                                Google Ads
+                        <div className="flex flex-col h-full w-1/2 pr-12">
+                            {/* Pickup Address */}
+                            <label htmlFor="productDesc" className="font-semibold mt-3">
+                               Pickup Address<span className="text-red-500">*</span>
+                            </label>
+                            <input
+                                required
+                                id="productAddress"
+                                type="text"
+                                placeholder="Enter the pickup Address"
+                                className="outline-none border border-slate-300 rounded-md px-2 py-2 mt-2"
+                                value={productAddress}
+                                onChange={(e) => setProductAddress(e.target.value)}
+                            />
+
+
+                            {/* Condition and  date of purchase */}
+                            <div className="flex mt-5 gap-3">
+                                <div className="border border-black/10 flex flex-col justify-center items-center p-5 gap-2 rounded w-56">
+                                    <h1 className="font-semi">
+                                        Is the price negotiable<span className="text-red-500">*</span>
+                                    </h1>
+                                    <select
+                                        name=""
+                                        id="opts"
+                                        className="bg-slate-200 px-12 py-2"
+                                        value={productCondition}
+                                        onChange={(e) => setProductCondition(e.target.value)}
+                                    >
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+
+                                </div>
+
+                                <div className="border border-black/10 flex flex-col justify-center items-center p-5 gap-2 rounded w-60">
+                                    <h1 className="font-semi">
+                                       Usage Duration<span className="text-red-500">*</span>
+                                    </h1>
+                                    <select
+                                        name=""
+                                        id="opts"
+                                        className="bg-slate-200 px-12 py-2"
+                                        value={productCondition}
+                                        onChange={(e) => setProductCondition(e.target.value)}
+                                    >
+                                        <option value="less than 3 months"> {'<'} 3 months</option>
+                                        <option value="6 months">6 months</option>
+                                        <option value="9 months">9 months</option>
+                                        <option value="12 months">12 months</option>
+                                        <option value="more than 12 months">{'>'} 12 months</option>
+                                    </select>
+                                </div>
                             </div>
+
+
+                            {/* original price */}
+                            <label htmlFor="productDesc" className="font-semibold mt-3">
+                              Original Price<span className="text-red-500">*</span>
+                            </label>
+                            <input
+                                required
+                                id="productAddress"
+                                type="text"
+                                placeholder="Enter Brand or model name"
+                                className="outline-none border border-slate-300 rounded-md px-2 py-2 mt-2"
+                                value={productAddress}
+                                onChange={(e) => setProductAddress(e.target.value)}
+                            />
+
+                            {/* payment method */}
+                            <label htmlFor="payment" className="font-semibold mt-3">
+                                Preferred Payment (Cash/UPI) <span className="text-red-500">*</span>
+                            </label>
+                            <div className="flex gap-4 mt-2">
+                                <div className="flex items-center gap-2">
+                                    <input type="radio" name="payment" id="cash" value="cash" className="cursor-pointer" />
+                                    <label htmlFor="cash" className="font-semibold cursor-pointer">Cash</label>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <input type="radio" name="payment" id="upi" value="upi" className="cursor-pointer" />
+                                    <label htmlFor="upi" className="font-semibold cursor-pointer">UPI</label>
+                                </div>
+                            </div>
+
+
                             <div>
                                 <div>
                                     <h1 className="text-3xl font-bold">Price</h1>
@@ -253,6 +328,7 @@ const ProductListing = () => {
                         </div>
 
                     </form>
+
                 </div>
             </div>
         </div>
