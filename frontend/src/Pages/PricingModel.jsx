@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "../Components/Header";
+import toast, { Toaster } from 'react-hot-toast';
 
 const PricingModel = () => {
 
-  const purchase2 = (e) => {
-    e.preventDefault();
-    alert("Coming Soon")
-  }
+  const handlePurchase = () => {
+    toast('Coming Soon !')
+  };
+
 
 
   return (
@@ -78,9 +79,10 @@ const PricingModel = () => {
               <h1 className="font-bold text-4xl text-white"><span className="text-white  text-3xl font-['Roboto'] pr-1">₹</span>49</h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button onClick={purchase2} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white">
+            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white">
               Continue
             </button>
+            <Toaster/>
           </div>
         </div>
 
@@ -104,9 +106,10 @@ const PricingModel = () => {
               <h1 className="font-bold text-4xl"><span className="text-[#828f9b]  text-3xl font-['Roboto'] pr-1">₹</span>99</h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button onClick={purchase2} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-[#534ff2] to-[#364ef2] text-white">
+            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-[#534ff2] to-[#364ef2] text-white">
               Continue
             </button>
+            <Toaster/>
           </div>
         </div>
       </div>
