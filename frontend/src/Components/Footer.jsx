@@ -25,13 +25,13 @@ const Footer = () => {
                     </h1>
                 </div>
                 {/* top right section */}
-                <div className="text-white h-full flex flex-col gap-5">
-                    <h1 className="text-2xl">Feedback ? We're Listening!</h1>
+                <div className="text-white h-full flex flex-col gap-2 mt-9">
+                    <h1 className="text-[1.4vw]">Feedback ? We're Listening!</h1>
                     <div className="relative">
-                        <a href="mailto:sarthakkrishak1234@gmail.com" className=" rounded-3xl absolute z-10 py-3 bg-white text-black text-xl font-semibold px-[7.1vw]">
+                        <a href="mailto:sarthakkrishak1234@gmail.com" className=" rounded-3xl absolute z-10 py-3 bg-white text-black text-xl font-semibold px-[6.1vw]">
                             Send Us
                         </a>
-                        <div className="border border-slate-200 bg-transparent rounded-3xl py-6 absolute px-36 top-2"></div>
+                        <div className="border border-slate-200 bg-transparent rounded-3xl py-6 absolute px-32 top-2"></div>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Home = () => {
     return (
@@ -261,8 +262,8 @@ const Home = () => {
                 {/* Products section */}
                 <div className="w-full mt-8 flex flex-col gap-4">
                     <h1 className="w-[90vw] text-[1.7vw] font-semibold">Popular Products</h1>
-                    <div className="w-full gap-4 flex flex-wrap shrink-0 mt-2">
-                        <ProductCard />
+                    <div className="w-full flex flex-wrap shrink-0 mt-2 gap-4">
+                        <ProductCard/>
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />
@@ -280,7 +281,10 @@ const Home = () => {
                 </div>
             </div>
             {/* More section */}
-            <button className="w-full p-5">More</button>
+            <div className="w-full text-[1.1vw] flex justify-center items-center p-10 font-semibold">
+                <button>More</button>
+                <IoIosArrowDown className="size-4"/>
+            </div>
             <Footer/>
         </div>
     );

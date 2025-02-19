@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import Header from '../Components/Header'
-import { X } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { EllipsisVertical } from 'lucide-react';
 import { IndianRupee } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
+import { MessageSquareMore } from 'lucide-react';
 
 const ProductDescription = () => {
     const [report, setReport] = useState(false);
-    const [removeImg3, setRemoveImg3] = useState(false)
-    const [removeImg2, setRemoveImg2] = useState(false)
-    const [removeImg1, setRemoveImg1] = useState(false)
     const [isLiked, setIsLiked] = useState(false);
     const [wishlish, setWishlish] = useState(false);
 
@@ -28,18 +25,6 @@ const ProductDescription = () => {
         }, 800);
     };
 
-    const removeImage3 = () => {
-        setRemoveImg3(!removeImg3)
-        toast.success('Image removed');
-    }
-    const removeImage2 = () => {
-        setRemoveImg2(!removeImg2)
-        toast.success('Image removed');
-    }
-    const removeImage1 = () => {
-        setRemoveImg1(!removeImg1)
-        toast.success('Image removed');
-    }
 
     const handleLike = () => {
         setIsLiked(!isLiked);
@@ -60,26 +45,22 @@ const ProductDescription = () => {
                 <div className='h-full w-[32vw] mb-10 mt-4 flex flex-col items-center gap-4 '>
                     {/* left top */}
                     <div className='rounded-2xl shadow-lg shadow-slate-200 border pb-1 '>
-                        <img className='size-96 pl-5 pr-5 rounded-xl object-contain' src="./src/assets/pro_desc.png" alt="image" />
-                        <div className='flex pl-5 pb-3 justify-between'>
+                        <img className='w-[26vw] h-96 pl-5 pr-5 pt-3 rounded-xl object-contain' src="./src/assets/pro_desc.png" alt="image" />
+                        <div className='flex pl-5 pb-3 pt-1 justify-between'>
                             <div className='flex gap-3'>
-                                <div className={`relative ${removeImg1 ? 'hidden' : 'block'}`}>
-                                    <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
-                                    <button onClick={removeImage1} className='absolute bg-slate-300 rounded-full p-1 top-0 right-1 translate-x-1/2 translate-y-[-50%]'> <X className='size-3' /></button>
-                                </div>
-                                <div className={`relative ${removeImg2 ? 'hidden' : 'block'}`}>
-                                    <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
-                                    <button onClick={removeImage2} className='absolute bg-slate-300 rounded-full p-1 top-0 right-1 translate-x-1/2 translate-y-[-50%]'> <X className='size-3' /></button>
-                                </div>
-                                <div className={`relative ${removeImg3 ? 'hidden' : 'block'}`}>
-                                    <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
-                                    <button onClick={removeImage3} className='absolute bg-slate-300 rounded-full p-1 top-0 right-1 translate-x-1/2 translate-y-[-50%]'> <X className='size-3' /></button>
-                                </div>
+
+                                <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
+
+
+
+                                <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
+
+                                <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
                             </div>
                             <div className='flex justify-end items-end pr-6 relative pt-5'>
                                 <button onClick={handleLike} className='absolute'><Heart className='text-[#848484] hover:text-blue-500' /></button>
 
-                                <button onClick={handleLike} className={`absolute ${isLiked ? 'block' : 'hidden'}`}><Heart className='text-[red]' /></button>                                
+                                <button onClick={handleLike} className={`absolute ${isLiked ? 'block' : 'hidden'}`}><Heart className='text-[red]' /></button>
                             </div>
                         </div>
                     </div>
@@ -107,14 +88,18 @@ const ProductDescription = () => {
                 </div>
 
                 {/* Right side */}
-                <div className='pt-4 flex flex-col justify-between w-[60vw] ml-[-1.4vw]'>
+                <div className='pt-4 flex flex-col justify-between w-[66vw] ml-[-1.4vw]'>
                     {/* Right top side */}
                     <div className='flex flex-col rounded-2xl shadow-lg shadow-slate-200 border pl-8 pr-6 pb-6 pt-5 w-full'>
                         <div className='flex justify-between items-center pr-4'>
                             <div className=' text-[#364ef2]/80 bg-[#F4F4F4] rounded-md w-36 py-2 flex justify-center items-center'>Electronics</div>
                             <div className='flex flex-col items-center gap-2 relative'>
                                 <button onClick={handleReport}><EllipsisVertical /></button>
-                                <button className={`bg-red-500 text-white font-medium py-1 px-3 rounded-md ${report ? 'block' : 'hidden'} absolute top-8`} onClick={reportIssue}>Report</button>
+                                <div className={`bg-slate-400 text-white font-medium py-3 px-10 rounded-md ${report ? 'block' : 'hidden'} absolute top-0 right-8 flex flex-col gap-4 text-sm`}>
+                                    <button className='w-full' onClick={reportIssue}>Report Product</button>
+                                    <button className='w-full' onClick={reportIssue}>Report a user</button>
+                                    <button className='w-full' onClick={reportIssue}>Raise a issue</button>
+                               </div>
                             </div>
                         </div>
                         <div className='flex flex-col'>
@@ -131,10 +116,10 @@ const ProductDescription = () => {
                             </div>
 
                             <h1 className='font-medium mt-4'>Product Details</h1>
-                            <p className='text-[#848484]'>A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, typically using Bluetooth or a USB receiver.
+                            <p className='text-[#848484] mr-20'>A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, typically using Bluetooth or a USB receiver.
                                 A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, <button className='text-black'>more</button></p>
                         </div>
-                        <div className='flex gap-48 mt-10'>
+                        <div className='flex gap-16 mt-10'>
                             <div className='flex flex-col gap-3'>
                                 <h1 className='font-medium text-[#828F9B]'>Condition</h1>
                                 <div className='flex flex-col gap-3'>
@@ -144,6 +129,13 @@ const ProductDescription = () => {
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h1 className='font-medium text-[#828F9B]'>Usage Duration</h1>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-56 py-3 flex px-10 items-center font-semibold'>6 Months</div>
+                                    <div className='bg-[#09C712] rounded-md text-white w-56 py-3 flex px-10 items-center  font-semibold'>Price Negotiable</div>
+                                </div>
+                            </div>
+                            <div className='flex flex-col gap-3'>
+                                <h1 className='font-medium text-[#828F9B]'>Other Details</h1>
                                 <div className='flex flex-col gap-3'>
                                     <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-56 py-3 flex px-10 items-center font-semibold'>6 Months</div>
                                     <div className='bg-[#09C712] rounded-md text-white w-56 py-3 flex px-10 items-center  font-semibold'>Price Negotiable</div>
@@ -164,8 +156,9 @@ const ProductDescription = () => {
                     </div>
                     {/* Right bottom side */}
                     <div className='flex w-full justify-between items-center mt-6 mb-6'>
+                        
                         <button onClick={handleWishlish} className='border-2 border-[#dddddd] rounded-md text-black px-20 py-4 flex justify-center items-center font-semibold'>Add to Wishlist</button>
-                        <Link to={"/chat"} className='bg-gradient-to-r from-[#4d4ef2] to-[#364ef2] rounded-md text-white px-20 py-4 flex justify-center items-center shadow-[0px_4px_12px_0px_rgba(0,0,0,0.17)] font-semibold'>Chat with seller</Link>
+                        <Link to={"/chat"} className='bg-gradient-to-r from-[#4d4ef2] to-[#364ef2] rounded-md text-white px-20 py-4 flex justify-center items-center shadow-[0px_4px_12px_0px_rgba(0,0,0,0.17)] font-semibold gap-1'><MessageSquareMore className='pt-1 size-7'/>Chat with seller</Link>
                     </div>
                 </div>
 

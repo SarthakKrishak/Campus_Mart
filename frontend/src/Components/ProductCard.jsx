@@ -3,9 +3,14 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const ProductCard = () => {
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
-    <Link to={"/product"} className="w-[17vw] h-[52vh] rounded-lg overflow-hidden shadow-gray-300 shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] border border-[#d6d6d6] mr-[0.1vw] mb-2 hover:shadow-sm animation duration-150">
-      <div className="p-2 w-full h-60 object-contain relative">
+    <Link onClick={handleClick} to={"/product"} className="w-[21.3vw] h-[56vh] rounded-xl overflow-hidden shadow-gray-300 shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] border border-[#d6d6d6] hover:shadow-sm animation duration-150">
+      <div className="p-2 w-full h-64 object-contain relative">
         <button
           className="absolute flex items-center justify-center w-10 h-10  right-3 top-3"
           aria-label="Add to wishlist">
@@ -22,8 +27,8 @@ const ProductCard = () => {
         />
       </div>
 
-      <h1 className="pb-2 pl-2 text-xl font-medium text-[#313131] font-['Poppins'] ">Classmate Notebook</h1>
-      <div className="flex gap-2 pl-2">
+      <h1 className="pb-2 pl-3 text-[1.3vw] font-medium text-[#313131]">Classmate Notebook</h1>
+      <div className="flex gap-2 pl-3">
         <div className="bg-slate-200 border border-black/10 px-2 py-1 rounded text-sm font-medium">
           Light
         </div>
@@ -31,7 +36,7 @@ const ProductCard = () => {
           Electronics
         </div>
       </div>
-      <div className="pl-2 mt-3 flex justify-between items-center">
+      <div className="pl-4   pr-3 mt-5 flex justify-between items-center">
         <h2 className="text-black font-['Figtree'] text-2xl font-medium">₹ 499</h2>
         <Link to={"/product"}
           className="text-black rounded-full w-9 h-9 flex justify-center items-center text-2xl hover:bg-slate-200 transition-colors duration-200"
