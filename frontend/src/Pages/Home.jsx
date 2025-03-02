@@ -260,7 +260,7 @@ const Home = () => {
 
                 
                 {/* Products section */}
-                <div className="w-full mt-8 flex flex-col gap-4">
+                <div className="w-full mt-12 flex flex-col gap-4">
                     <h1 className="w-[90vw] text-[1.7vw] font-semibold">Popular Products</h1>
                     <div className="w-full flex flex-wrap shrink-0 mt-2 gap-4">
                         <ProductCard/>

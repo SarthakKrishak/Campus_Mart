@@ -38,7 +38,7 @@ const ProductDescription = () => {
 
     return (
         <div className='w-full h-screen'>
-            <Header />
+            <Header color={"#394ff1"} textColor={"white"} />
             <div className='flex w-full'>
                 <Toaster />
                 {/* left side */}
@@ -65,7 +65,7 @@ const ProductDescription = () => {
                         </div>
                     </div>
                     {/* Left side bottom */}
-                    <div className=' w-96 p-5 rounded-2xl shadow-lg shadow-slate-200 border'>
+                    <div className=' w-[26vw] p-5 rounded-2xl shadow-lg shadow-slate-200 border'>
                         <h1 className='text-base text-[#494949] font-medium'>Seller Information</h1>
                         <div className='flex pt-2 pb-1 items-center gap-2'>
                             <img className='size-8 rounded-md object-cover ' src="./src/assets/user_img.png" alt="image" />
@@ -92,7 +92,7 @@ const ProductDescription = () => {
                     {/* Right top side */}
                     <div className='flex flex-col rounded-2xl shadow-lg shadow-slate-200 border pl-8 pr-6 pb-6 pt-5 w-full'>
                         <div className='flex justify-between items-center pr-4'>
-                            <div className=' text-[#364ef2]/80 bg-[#F4F4F4] rounded-md w-36 py-2 flex justify-center items-center'>Electronics</div>
+                            <div className=' text-[#364ef2]/80 bg-[#F4F4F4] rounded-md w-36 py-2 flex justify-center items-center font-semibold'>Electronics</div>
                             <div className='flex flex-col items-center gap-2 relative'>
                                 <button onClick={handleReport}><EllipsisVertical /></button>
                                 <div className={`bg-slate-400 text-white font-medium py-3 px-10 rounded-md ${report ? 'block' : 'hidden'} absolute top-0 right-8 flex flex-col gap-4 text-sm`}>
@@ -119,26 +119,19 @@ const ProductDescription = () => {
                             <p className='text-[#848484] mr-20'>A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, typically using Bluetooth or a USB receiver.
                                 A wireless mouse is a convenient input device that connects to a computer without the need for physical cables, <button className='text-black'>more</button></p>
                         </div>
-                        <div className='flex gap-16 mt-10'>
+                        <div className='flex gap-36 mt-10'>
                             <div className='flex flex-col gap-3'>
                                 <h1 className='font-medium text-[#828F9B]'>Condition</h1>
                                 <div className='flex flex-col gap-3'>
-                                    <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-56 py-3 flex px-10 items-center font-semibold'>Like New</div>
-                                    <div className='bg-[#09C712] rounded-md text-white w-56 py-3 flex px-10 items-center  font-semibold'>Price Negotiable</div>
+                                    <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-64 py-3 flex px-10 items-center font-semibold'>Like New</div>
+                                    <div className='bg-[#09C712] rounded-md text-white w-64 py-3 flex px-10 items-center  font-semibold'>Price Negotiable : Yes</div>
                                 </div>
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h1 className='font-medium text-[#828F9B]'>Usage Duration</h1>
                                 <div className='flex flex-col gap-3'>
-                                    <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-56 py-3 flex px-10 items-center font-semibold'>6 Months</div>
-                                    <div className='bg-[#09C712] rounded-md text-white w-56 py-3 flex px-10 items-center  font-semibold'>Price Negotiable</div>
-                                </div>
-                            </div>
-                            <div className='flex flex-col gap-3'>
-                                <h1 className='font-medium text-[#828F9B]'>Other Details</h1>
-                                <div className='flex flex-col gap-3'>
-                                    <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-56 py-3 flex px-10 items-center font-semibold'>6 Months</div>
-                                    <div className='bg-[#09C712] rounded-md text-white w-56 py-3 flex px-10 items-center  font-semibold'>Price Negotiable</div>
+                                    <div className='bg-gradient-to-r from-[#394ff1] to-[#534ff2] rounded-md text-white w-64 py-3 flex px-10 items-center font-semibold'>6 Months</div>
+                                    <div className='bg-[#09C712] rounded-md text-white w-64 py-3 flex px-10 items-center  font-semibold'>Color</div>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +139,7 @@ const ProductDescription = () => {
                             <h1 className='font-semibold'>Payment & Pickup</h1>
                             <div className='flex items-center gap-4 mt-2'>
                                 <h1 className='text-[#848484]'>Payment Mode (Cash/UPI):</h1>
-                                <div className='border border-[#ececec] px-5 py-2 rounded'>UPI</div>
+                                <div className='bg-white border border-[#ececec] px-5 py-2 rounded'>UPI</div>
                             </div>
                             <h1 className='text-[#848484] mt-2'>Pickup Location</h1>
                             <p className='w-80 font-medium leading-7'>

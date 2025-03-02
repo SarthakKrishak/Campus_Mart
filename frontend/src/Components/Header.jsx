@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { RiNotificationFill } from "react-icons/ri";
 import { MdDarkMode } from "react-icons/md";
 
-const Header = () => {
+const Header = ({ color,textColor }) => {
 
     const [search, setSearch] = useState("");
     const [darkMode, setDarkMode] = useState(false);
@@ -19,7 +19,7 @@ const Header = () => {
 
 
     return (
-        <nav className="flex bg-white text-black items-center justify-between pl-14 pr-10 pt-6 pb-2">
+        <nav style={{ backgroundColor: color, color: textColor }} className={ `flex text-black items-center justify-between pl-14 pr-10 pt-5 pb-4`}>
             <div className="flex items-center font-bold text-2xl gap-[0.4vw]">
                 <RiShoppingCartFill />
                 <Link to="/"> <h1>Campus Mart</h1></Link>
