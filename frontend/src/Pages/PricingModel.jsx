@@ -12,9 +12,9 @@ const PricingModel = () => {
 
   return (
     <div className="flex flex-col relative w-full h-screen overflow-hidden">
-      <Header />
+      <Header color={"#394ff1"} textColor={"white"}/>
       <img
-        className="absolute w-[28vw] h-[50vh] bottom-[-29vh] left-[-11vw]"
+        className="absolute w-[28vw] h-[50vh] bottom-[-29vh] left-[-11vw] hidden lg:block"
         src="./src/assets/Group_114.png"
         alt="image"
       />

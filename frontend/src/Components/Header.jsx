@@ -4,6 +4,8 @@ import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import { RiNotificationFill } from "react-icons/ri";
 import { MdDarkMode } from "react-icons/md";
+import { IoIosMenu } from "react-icons/io";
+import { IoChevronBackOutline } from "react-icons/io5";
 
 const Header = ({ color,textColor }) => {
 
@@ -19,14 +21,26 @@ const Header = ({ color,textColor }) => {
 
 
     return (
-        <nav style={{ backgroundColor: color, color: textColor }} className={ `flex text-black items-center justify-between pl-14 pr-10 pt-5 pb-4`}>
-            <div className="flex items-center font-bold text-2xl gap-[0.4vw]">
+        <nav style={{ backgroundColor: color, color: textColor }} className={`flex text-black items-center justify-between h-[9.3vh] pt-1 sm:pl-10 md:pr-10`}>
+            <div className='flex justify-around w-full items-center sm:hidden'>
+                <Link to="/"><IoChevronBackOutline size={22} /></Link>
+                <div className="flex items-center font-bold text-lg gap-[0.4vw] ">
+                    <RiShoppingCartFill />
+                    <Link to="/"> <h1>Campus Mart</h1></Link>
+                </div>
+                <IoIosMenu size={25}/>
+            </div>
+
+            <div className="hidden items-center font-bold text-lg gap-[0.4vw] sm:flex lg:text-xl xl:text-[1.4vw]">
                 <RiShoppingCartFill />
                 <Link to="/"> <h1>Campus Mart</h1></Link>
             </div>
-            <div className="flex items-center bg-white rounded-lg border border-slate-300 pr-2 mr-36 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200">
+
+            
+            
+            <div className="items-center bg-white rounded-md border border-slate-300 pr-2 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200 hidden sm:flex">
                 <input
-                    className="rounded-lg px-4 py-[1vh] outline-none w-[25vw] placeholder:text-slate-600"
+                    className="rounded-md px-3 outline-none w-[25vw] placeholder:text-slate-600 text-black sm:py-[0.4vh] lg:py-[0.7vh] xl:py-[0.6vh] text-base"
                     placeholder="Search Product"
                     type="text"
                     name="search"
@@ -35,26 +49,31 @@ const Header = ({ color,textColor }) => {
                     onChange={handleSearchBar}
                     aria-label="Search products"
                 />
-                <CiSearch size={22}/>
+                <CiSearch size={22} className='sm:text-black size-4 lg:size-5'/>
             </div>
-            <div className="flex items-center gap-12 font-semibold text-[1.1vw] pr-6">
-                <div className="flex justify-center items-center text-[1.5vw] gap-8">
+
+            <div className="hidden items-center text-[1.9vw] sm:flex gap-8 lg:gap-11 font-medium xl:gap-14">
+                <div className="flex justify-center items-center text-[1.5vw] sm:gap-5 lg:gap-8 xl:gap-10">
                     <button onClick={toggleDarkMode} aria-label="Toggle dark mode">
-                        <MdDarkMode className={darkMode ? 'text-yellow-400' : 'text-black'} />
+                        <MdDarkMode className={darkMode ? 'text-yellow-400  sm:size-4 lg:size-5' : 'text-black sm:size-4 lg:size-5'} />
                     </button>
                     <button className='relative' aria-label="Notifications">
-                        <RiNotificationFill/>
+                        <RiNotificationFill className='sm:size-4 lg:size-5'/>
                         {notification > 0 && (
-                            <span className="absolute top-0 right-0 h-3 w-3 bg-red-500 text-white text-xs flex items-center justify-center rounded-full">
+                            <span className="absolute bg-red-500 text-white flex items-center justify-center rounded-full sm:size-2 text-xs p-[0.8vw] top-[-0.6vh] lg:top-[-0.7vh] right-[-0.3vw] xl:p-[0.5vw]">
                                 {notification}
                             </span>
                         )}
                     </button>
                 </div>
-                <Link to="/" className="hover:text-blue-500 transition duration-200">Orders</Link>
-                <Link to="/" className="hover:text-blue-500 transition duration-200">Chats</Link>
-                <Link to="/" className="hover:text-blue-500 transition duration-200">Menu</Link>
+                <Link to="/" className="hover:text-blue-500 transition duration-200 lg:text-[1.7vw] xl:text-[1.2vw]">Orders</Link>
+                <Link to="/" className="hover:text-blue-500 transition duration-200 lg:text-[1.7vw] xl:text-[1.2vw]">Chats</Link>
+                <Link to="/" className="hover:text-blue-500 transition duration-200 lg:text-[1.7vw] xl:text-[1.2vw]">Menu</Link>
+
             </div>
+
+                
+ 
         </nav>
 
     )
