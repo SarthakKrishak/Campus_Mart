@@ -3,6 +3,8 @@ dotenv.config();
 const express = require('express')
 const app = express()
 const cors = require("cors");
+
+// Calling the database
 const databaseConnection = require('./db/db')
 databaseConnection();
 const cookieParser = require('cookie-parser')
@@ -21,6 +23,9 @@ app.get("/", (req, res) => {
 
 app.use("/product", productRoute);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server started at ${process.env.PORT}`);
+
+const PORT = process.env.PORT || 5000; 
+
+app.listen(PORT, () => {
+    console.log(`🔥 Server started at ${PORT}`);
 })
