@@ -23,7 +23,6 @@ const ProductCard = () => {
           className="rounded-lg w-full h-full object-cover"
           src="./src/assets/image10.png"
           alt="Product"
-          onError={(e) => (e.target.src = "./src/assets/placeholder.png")}
         />
       </div>
 
