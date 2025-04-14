@@ -68,7 +68,7 @@ const ProductListing = () => {
                     <div className="flex flex-col gap-3 lg:h-full w-full lg:w-1/3">
                         <div className="flex items-center pl-5 lg:pl-14 lg:pt-5 pt-4 gap-2 lg:gap-3 font-medium">
                             <img
-                                src=".\src\assets\Group_58.png"
+                                src="/assets/Group_58.png"
                                 alt="image"
                                 className="size-6"
                             />

@@ -21,7 +21,7 @@ const ProductCard = () => {
         </button>
         <img
           className="rounded-lg w-full h-full object-cover"
-          src="./src/assets/image10.png"
+          src="/assets/image10.png"
           alt="Product"
         />
       </div>

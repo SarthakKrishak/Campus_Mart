@@ -16,7 +16,7 @@ const PricingModel = () => {
       <Header color={"#394ff1"} textColor={"white"} />
       <img
         className="absolute w-[28vw] h-[50vh] bottom-[-35vh] left-[-11vw] hidden xl:block"
-        src="./src/assets/Group_114.png"
+        src="/assets/Group_114.png"
         alt="image"
       />
       <div className="flex flex-col text-center gap-2 mt-9 w-full pr-4 pl-4 sm:text-[1vw]">

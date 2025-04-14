@@ -45,12 +45,12 @@ const ProductDescription = () => {
                 <div className='w-full mt-3 flex flex-col items-center xl:items-start gap-4 xl:w-1/3 xl:ml-5'>
                     {/* left top */}
                     <div className='rounded-2xl shadow-lg shadow-slate-200 border pb-1 object-contain w-[93vw] xl:flex flex-col justify-center md:items-center xl:items-start lg:w-[37vw] xl:w-[28vw]'>
-                        <img className='w-96 pl-5 pr-5 pt-3 rounded-xl xl:w-[30vw]' src="./src/assets/pro_desc.png" alt="image" />
+                        <img className='w-96 pl-5 pr-5 pt-3 rounded-xl xl:w-[30vw]' src="/assets/pro_desc.png" alt="image" />
                         <div className='flex pl-5 pb-3 pt-1 justify-between xl:w-full'>
                             <div className='flex gap-3 mt-2'>
-                                <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
-                                <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
-                                <img className='size-16 rounded-md object-cover ' src="./src/assets/pro_desc.png" alt="image" />
+                                <img className='size-16 rounded-md object-cover ' src="/assets/pro_desc.png" alt="image" />
+                                <img className='size-16 rounded-md object-cover ' src="/assets/pro_desc.png" alt="image" />
+                                <img className='size-16 rounded-md object-cover ' src="/assets/pro_desc.png" alt="image" />
                             </div>
                             <div className='flex justify-end items-end pr-6 relative pt-5'>
                                 <button onClick={handleLike} className='absolute'><Heart className='text-[#848484] hover:text-blue-500' /></button>
@@ -63,7 +63,7 @@ const ProductDescription = () => {
                     <div className='hidden lg:block ml-1 w-[37vw] p-5 rounded-2xl shadow-lg shadow-slate-200 border xl:w-[28vw]'>
                         <h1 className='text-base text-[#494949] font-medium'>Seller Information</h1>
                         <div className='flex pt-2 pb-1 items-center gap-2'>
-                            <img className='size-8 rounded-md object-cover ' src="./src/assets/user_img.png" alt="image" />
+                            <img className='size-8 rounded-md object-cover ' src="/assets/user_img.png" alt="image" />
                             <h1 className='font-semibold '>Aryan Singh</h1>
                         </div>
 
@@ -151,7 +151,7 @@ const ProductDescription = () => {
                     <div className='lg:hidden w-full p-5 rounded-2xl shadow-lg shadow-slate-200 border mb-4'>
                         <h1 className='text-base text-[#494949] font-medium md:text-lg'>Seller Information</h1>
                         <div className='flex pt-2 pb-1 items-center gap-2'>
-                            <img className='size-7 md:size-8 rounded-md object-cover ' src="./src/assets/user_img.png" alt="image" />
+                            <img className='size-7 md:size-8 rounded-md object-cover ' src="/assets/user_img.png" alt="image" />
                             <h1 className='font-semibold '>Aryan Singh</h1>
                         </div>
 

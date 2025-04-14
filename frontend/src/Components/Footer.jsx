@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div className="w-full h-[72vh] bg-gradient-to-l from-[#4d4ef2] to-[#005df5] pl-[4.5vw] pr-[4.5vw] relative overflow-hidden">
-            <img width={250} height={250} className="absolute bottom-[-2vh] left-44" src="./src/assets/circle45.png" alt="image" />
+            <img width={250} height={250} className="absolute bottom-[-2vh] left-44" src="/assets/circle45.png" alt="image" />
             
-            <img width={250} height={250} className="absolute right-[-3vh] top-[-2vh] " src="./src/assets/footer_circle.png" alt="image" />
+            <img width={250} height={250} className="absolute right-[-3vh] top-[-2vh] " src="/assets/footer_circle.png" alt="image" />
             {/* top section */}
             <div className="flex justify-between h-[15vh] pt-9 w-full">
                 {/* top left section */}
@@ -41,7 +41,7 @@ const Footer = () => {
                 <button className=" rounded-3xl absolute z-10 py-2 bg-white text-black text-lg font-semibold px-7">
                     Share with friends
                 </button>
-               <img src="./src/assets/Line_11.png" alt="image"/>
+               <img src="/assets/Line_11.png" alt="image"/>
             </div>
 
             {/* mobile top right section */}

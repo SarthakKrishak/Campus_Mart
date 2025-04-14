@@ -84,7 +84,7 @@ const Home = () => {
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                                        src="./src/assets/Group_115.png"
+                                        src="/assets/Group_115.png"
                                         alt="Background Shape"
                                         className="absolute lg:w-[400px] h-56 z-0"
                                     />
@@ -92,7 +92,7 @@ const Home = () => {
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-                                        src="./src/assets/image_12.png"
+                                        src="/assets/image_12.png"
                                         alt="Main Visual"
                                         className="absolute lg:w-[400px] size-36 z-10 mt-10"
                                     />
@@ -166,7 +166,7 @@ const Home = () => {
                     <img
                         height={350}
                         width={350}
-                        src="./src/assets/Group_114.png"
+                        src="/assets/Group_114.png"
                         alt="background"
                         className="absolute lg:right-[-6vw] bottom-10 z-0 right-[-40vw]"
                     />
@@ -264,15 +264,15 @@ const Home = () => {
                 {/* Category section */}
                 <div className="flex w-[90vw] flex-col gap-4 lg:mt-10 mt-8">
                     <div className="flex items-center lg:text-[1.7vw] text-sm gap-[0.4vw]">
-                        <img src=".\src\assets\fluent-mdl2_tiles.png" className="size-6 lg:size-8" alt="image" />
+                        <img src="/assets/fluent-mdl2_tiles.png" className="size-6 lg:size-8" alt="image" />
                         <h1 className="font-semibold">Categories</h1>
                    </div>
                     <div className="flex w-full lg:gap-6 gap-2 items-center justify-evenly overflow-auto">
-                        <Category title="Electronics" imageSrc={"./src/assets/icons8-electronics-961.png"}/>
-                        <Category title="Books" imageSrc={"./src/assets/icons8-books-961.png"} />
-                        <Category title="Essentials" imageSrc={"./src/assets/Group_116.png"} />
-                        <Category title="Cycles" imageSrc={"./src/assets/icons8-bicycle-961.png"} />
-                        <Category title="Matress" imageSrc={"./src/assets/icons8-bed-961.png"} />
+                        <Category title="Electronics" imageSrc={"/assets/icons8-electronics-961.png"}/>
+                        <Category title="Books" imageSrc={"/assets/icons8-books-961.png"} />
+                        <Category title="Essentials" imageSrc={"/assets/Group_116.png"} />
+                        <Category title="Cycles" imageSrc={"/assets/icons8-bicycle-961.png"} />
+                        <Category title="Matress" imageSrc={"/assets/icons8-bed-961.png"} />
                     </div>
                 </div>
 
