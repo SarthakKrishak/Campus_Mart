@@ -9,8 +9,6 @@ const PricingModel = () => {
     toast('Coming Soon !')
   };
 
-
-
   return (
     <div className="flex flex-col relative w-full min-h-screen overflow-hidden">
       <Header color={"#394ff1"} textColor={"white"} />
@@ -29,7 +27,7 @@ const PricingModel = () => {
           we've got you covered!
         </h4>
       </div>
-      <div className="w-full h-3/4 flex flex-col gap-7 items-center justify-center mt-14 mb-10 sm:flex xl:flex-row pr-32 pl-32 mt-8">
+      <div className="w-full h-3/4 flex flex-col gap-7 items-center justify-center mb-10 sm:flex xl:flex-row pr-32 pl-32 mt-8">
 
         {/* Card 1 */}
         <div className="bg-[#f2f4ff] w-[80vw] rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3 pt-6 pb-5 sm:w-[61vw] md:w-[55vw] xl:w-[30vw]">
