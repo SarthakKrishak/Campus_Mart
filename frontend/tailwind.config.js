@@ -6,7 +6,14 @@ export default {
   ],
   theme: {
     extend: {
-      textColor: ["selection"]
+      textColor: ["selection"],
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        figtree: ['Figtree', 'sans-serif'],
+        robotoFlex: ['"Roboto Flex"', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        firaSans: ['"Fira Sans"', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { IoIosArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import bannerRight from "/bannerRight.png"
 
 const Home = () => {
 
@@ -25,10 +26,10 @@ const Home = () => {
         <div className="w-full bg-white relative selection:bg-purple-400 selection:text-black">
             <Header />
             {/* search bar */}
-            <div className="flex items-center bg-white rounded-md border border-slate-300 pr-2 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2">
+            <div className="flex items-center bg-white rounded-md border border-slate-300 pr-2 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2 font-poppins">
                 <input
-                    className="rounded-xl px-5 outline-none w-full placeholder:text-[#AAB9C5] text-black py-2 text-base"
-                    placeholder="Search Product"
+                    className="rounded-xl px-5 outline-none w-full placeholder:text-[#AAB9C5] text-black py-2 text-sm"
+                    placeholder="Search for Product"
                     type="text"
                     name="search"
                     id="search"
@@ -37,13 +38,13 @@ const Home = () => {
                 <CiSearch size={22} className='text-[#64707D] size-5 mr-3' />
             </div>
 
-            <div>     
+            <div>
                 {/* Blue banner animated code */}
                 <motion.div
-                    initial={{ opacity: 0,x:20 }}
-                    animate={{ opacity: 1,x:0 }}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="lg:h-[47vh] h-44 bg-gradient-to-l from-[#364ef2] to-[#534ff2] rounded-lg ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-lg shadow-gray-400"
+                    className="lg:h-[50vh] h-44 bg-gradient-to-l from-blue-600 to-indigo-600 rounded-md  md:rounded-xl ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-[0px_8.196179389953613px_8.196179389953613px_0px_rgba(0,0,0,0.12)]"
                 >
                     <Swiper
                         modules={[Pagination, A11y]}
@@ -53,6 +54,9 @@ const Home = () => {
                         className="w-full h-full"
                     >
                         <SwiperSlide>
+
+                            <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 md:left-72" />
+
                             <div className="flex h-full w-full items-center justify-between lg:px-20 px-5 relative">
                                 {/* Left Content */}
                                 <motion.div
@@ -61,18 +65,18 @@ const Home = () => {
                                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                                     className="text-white lg:w-1/2"
                                 >
-                                    <h1 className="lg:text-[2.1vw] text-sm font-bold leading-tight">
-                                        Unlock Deals, Share Essentials, <br />
-                                        Simply Campus Living!
+                                    <h1 className="lg:text-[2.2vw] text-sm font-bold leading-tight font-figtree">
+                                        Unlock Deals. Share <br />
+                                       Essentials. Simplify Life.
                                     </h1>
-                                    <p className="lg:text-[1.4vw] text-[2.3vw] text-gray-200 mt-2">
-                                        Your trusted platform to simplify student life.
-                                        <br />
-                                        Buy, sell, and connect with ease!
+                                    <p className="lg:text-[1.4vw] text-[3vw] text-gray-200 font-medium mt-2 font-figtree">
+                                        Your trusted student hub
+                                        <br/>
+                                        buy, sell & connect easily.
                                     </p>
                                     <Link
                                         to="/upload"
-                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-4 lg:text-xl text-sm inline-flex lg:mt-4 mt-2 shadow-md transition-transform transform lg:hover:scale-105 py-[0.6vh] px-2"
+                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl text-xs inline-flex lg:mt-6 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-5 font-robotoFlex"
                                     >
                                         Sell Now
                                     </Link>
@@ -86,35 +90,115 @@ const Home = () => {
                                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                                         src="/assets/Group_115.png"
                                         alt="Background Shape"
-                                        className="absolute lg:w-[400px] h-56 z-0"
+                                        className="absolute lg:size-[25vw] size-[30vw] h-56 z-0"
                                     />
                                     <motion.img
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-                                        src="/assets/image_12.png"
+                                        src={bannerRight}
                                         alt="Main Visual"
-                                        className="absolute lg:w-[400px] size-36 z-10 mt-10"
+                                        className="absolute lg:size-[26vw] lg:mt-20 size-[39vw] z-10 mt-10"
+                                    />
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        {/* Slide 2 */}
+                        <SwiperSlide>
+                            <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 left-72" />
+                            <div className="flex h-full w-full items-center justify-between lg:px-20 px-5 relative">
+                                {/* Left Content */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                                    className="text-white lg:w-1/2"
+                                >
+                                    <h1 className="lg:text-[2.2vw] text-sm font-bold leading-tight font-figtree">
+                                        Find What You Need, <br />
+                                        Sell What You Don't!
+                                    </h1>
+                                    <p className="lg:text-[1.4vw] text-[3vw] text-gray-200 font-medium mt-2 font-figtree">
+                                        Your go-to place for deals
+                                        <br />
+                                        all in one click.
+                                    </p>
+                                    <Link
+                                        to="/upload"
+                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl text-xs inline-flex lg:mt-6 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-3 font-robotoFlex"
+                                    >
+                                        Explore Now
+                                    </Link>
+                                </motion.div>
+
+                                {/* Right Image Section */}
+                                <div className="relative w-1/2 flex justify-center items-center">
+                                    <motion.img
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                                        src="/assets/Group_115.png"
+                                        alt="Background Shape"
+                                        className="absolute lg:size-[25vw] size-[30vw] h-56 z-0"
+                                    />
+                                    <motion.img
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                                        src={bannerRight}
+                                        alt="Main Visual"
+                                        className="absolute lg:size-[26vw] lg:mt-20 size-[39vw] z-10 mt-10"
                                     />
                                 </div>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide>
-                            <div className="flex h-full items-center justify-center text-white text-3xl font-bold">
-                                Slide 2
-                            </div>
-                        </SwiperSlide>
+                            <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 left-72" />
+                            <div className="flex h-full w-full items-center justify-between lg:px-20 px-5 relative">
+                                {/* Left Content */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                                    className="text-white lg:w-1/2"
+                                >
+                                    <h1 className="lg:text-[2.2vw] text-sm font-bold leading-tight font-figtree">
+                                        Buy Smart, Share Freely <br />
+                                        Simplified Campus Life!
+                                    </h1>
+                                    <p className="lg:text-[1.4vw] text-[3vw] text-gray-200 font-medium mt-2 font-figtree">
+                                        Where Students Connect
+                                        <br />
+                                        Trade & Save Together
+                                    </p>
+                                    <Link
+                                        to="/upload"
+                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl text-xs inline-flex lg:mt-6 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-3 font-robotoFlex"
+                                    >
+                                        Trade Now
+                                    </Link>
+                                </motion.div>
 
-                        <SwiperSlide>
-                            <div className="flex h-full items-center justify-center text-white text-3xl font-bold">
-                                Slide 3
-                            </div>
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <div className="flex h-full items-center justify-center text-white text-3xl font-bold">
-                                Slide 4
+                                {/* Right Image Section */}
+                                <div className="relative w-1/2 flex justify-center items-center">
+                                    <motion.img
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                                        src="/assets/Group_115.png"
+                                        alt="Background Shape"
+                                        className="absolute lg:size-[25vw] size-[30vw] h-56 z-0"
+                                    />
+                                    <motion.img
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                                        src={bannerRight}
+                                        alt="Main Visual"
+                                        className="absolute lg:size-[26vw] lg:mt-20 size-[39vw] z-10 mt-10"
+                                    />
+                                </div>
                             </div>
                         </SwiperSlide>
                     </Swiper>
@@ -156,35 +240,35 @@ const Home = () => {
                     </div>
                 </div> */}
 
+                {/* White banner*/}
                 <motion.div
-                    initial={{ opacity: 0, x:10 }}
+                    initial={{ opacity: 0, x: 10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="lg:h-[16vh] h-[14vh] ml-[4.5vw] mr-[4.5vw] lg:rounded-xl rounded-lg text-white flex items-center justify-between relative overflow-hidden shadow-lg shadow-gray-300"
+                    className="lg:h-[19vh] max-h-[20vh] pt-2 pb-2 md:pb-0 md:pt-0 sm:h-[15vh] ml-[4.5vw] mr-[4.5vw] md:rounded-xl rounded-md text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_36.9295768737793px_0px_rgba(0,0,0,0.16)]"
                 >
                     {/* Background Image */}
                     <img
-                        height={350}
-                        width={350}
                         src="/assets/Group_114.png"
                         alt="background"
-                        className="absolute lg:right-[-6vw] bottom-10 z-0 right-[-40vw]"
+                        className="absolute bottom-12 right-[-22vw] lg:right-[-5vw] z-0 w-[60vw] max-w-[400px] h-auto"
                     />
+
 
                     {/* White Banner Container */}
                     <motion.div
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="w-full h-full bg-white shadow-md shadow-slate-300 text-black rounded-lg flex"
+                        className="w-full h-full text-black rounded-lg flex"
                     >
                         {/* Left Text Section */}
-                        <div className="flex flex-col lg:pl-16 pl-6 w-2/3 justify-center">
+                        <div className="flex flex-col lg:pl-20 pl-6 w-2/3 justify-center">
                             <motion.h1
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.2, duration: 0.6 }}
-                                className="font-semibold lg:text-xl text-xs"
+                                className="font-semibold lg:text-xl text-xs font-figtree"
                             >
                                 Product of the Day
                             </motion.h1>
@@ -192,7 +276,7 @@ const Home = () => {
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="text-[#364EF2] font-bold lg:text-2xl text-xs"
+                                className="text-blue-600 font-bold lg:text-2xl text-xs font-inter"
                             >
                                 ADVERTISE YOUR PRODUCT HERE
                             </motion.h1>
@@ -200,22 +284,22 @@ const Home = () => {
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.4, duration: 0.6 }}
-                                className="lg:text-base text-xs text-slate-600 font-medium"
+                                className="lg:text-lg text-[2.5vw] text-black font-medium font-inter"
                             >
                                 Boost your chances of selling faster!
                             </motion.h3>
                         </div>
 
                         {/* Right Price Section */}
-                        <div className="flex items-end w-1/3 lg:p-4 lg:pb-0 lg:gap-3 gap-2 justify-end lg:pr-16 pr-2 pb-5">
+                        <div className="flex items-end lg:pb-3 w-1/3 lg:gap-8 gap-2 justify-end lg:pr-20 pr-2 md:pb-5 pt-3">
                             <motion.div
                                 initial={{ opacity: 0, x: 30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.5, duration: 0.6 }}
-                                className="text-right"
+                                className="text-right flex flex-col"
                             >
-                                <h1 className="text-slate-600 lg:text-lg text-sm">Only at</h1>
-                                <span className="lg:text-4xl font-bold text-lg">₹49</span>
+                                <h1 className="text-black/100 lg:text-lg text-xs font-medium font-inter">Only at</h1>
+                                <span className="lg:text-4xl font-bold text-lg font-firaSans">₹49</span>
                             </motion.div>
 
                             {/* Arrow Button */}
@@ -226,7 +310,7 @@ const Home = () => {
                             >
                                 <Link
                                     to={"/price"}
-                                    className="rounded-full bg-[#394FF1] lg:p-[0.4vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 text-sm"
+                                    className="rounded-full bg-indigo-600 lg:p-[0.4vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] md:mb-0 text-sm"
                                 >
                                     <IoIosArrowForward />
                                 </Link>
@@ -234,6 +318,7 @@ const Home = () => {
                         </div>
                     </motion.div>
                 </motion.div>
+
                 {/* white banner code
                 <div className="h-[16vh] ml-[4.5vw] mr-[4.5vw] rounded-xl text-white flex  items-center justify-between relative overflow-hidden shadow-md shadow-gray-300">
                     <img height={350}
@@ -255,55 +340,61 @@ const Home = () => {
                         </div>
                     </div>
                 </div> */}
-                
+
             </div>
 
-          
+
             <div className="w-full min-h-screen bg-white flex flex-col items-center pl-[4.5vw] pr-[4.5vw]">
 
                 {/* Category section */}
                 <div className="flex w-[90vw] flex-col gap-4 lg:mt-10 mt-8">
                     <div className="flex items-center lg:text-[1.7vw] text-sm gap-[0.4vw]">
                         <img src="/assets/fluent-mdl2_tiles.png" className="size-6 lg:size-8" alt="image" />
-                        <h1 className="font-semibold">Categories</h1>
-                   </div>
-                    <div className="flex w-full lg:gap-6 gap-2 items-center justify-evenly overflow-auto">
-                        <Category title="Electronics" imageSrc={"/assets/icons8-electronics-961.png"}/>
-                        <Category title="Books" imageSrc={"/assets/icons8-books-961.png"} />
-                        <Category title="Essentials" imageSrc={"/assets/Group_116.png"} />
-                        <Category title="Cycles" imageSrc={"/assets/icons8-bicycle-961.png"} />
-                        <Category title="Matress" imageSrc={"/assets/icons8-bed-961.png"} />
+                        <h1 className="font-semibold font-poppins tracking-wide">Categories</h1>
+                    </div>
+                    <div className="flex w-full gap-2 lg:gap-6 items-center overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing">
+                        <Category title="Electronics" imageSrc="/assets/icons8-electronics-961.png" />
+                        <Category title="Books" imageSrc="/assets/icons8-books-961.png" />
+                        <Category title="Essentials" imageSrc="/assets/Group_116.png" />
+                        <Category title="Cycles" imageSrc="/assets/icons8-bicycle-961.png" />
+                        <Category title="Matress" imageSrc="/assets/icons8-bed-961.png" />
+                        <Category title="Others" />
+                    </div>
+
+                </div>
+
+
+                {/* Products section */}
+                <div className="w-full lg:mt-12 mt-8 flex flex-col lg:gap-4 gap-3">
+                    <h1 className="w-[90vw] lg:text-[1.7vw] text-sm font-bold font-poppins">Popular Products</h1>
+                    <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 gap-1 ">
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
                     </div>
                 </div>
 
-                
-                {/* Products section */}
-                <div className="w-full lg:mt-12 mt-8 flex flex-col lg:gap-4 gap-3">
-                    <h1 className="w-[90vw] lg:text-[1.7vw] text-sm font-semibold">Popular Products</h1>
-                    <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 gap-1 ">
-                        <ProductCard/>
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard /> 
-                    </div>
-                </div>
             </div>
+
             {/* More section */}
             <div className="w-full lg:text-[1.1vw] tex-sm flex justify-center items-center lg:p-10 p-6 font-semibold">
                 <button>More</button>
-                <IoIosArrowDown className="size-4"/>
+                <IoIosArrowDown className="size-4" />
             </div>
-            <Footer/>
+
+            <Footer />
+
         </div>
     );
 };
