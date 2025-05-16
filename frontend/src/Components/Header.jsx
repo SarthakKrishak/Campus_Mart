@@ -23,7 +23,7 @@ const Header = ({ color,textColor }) => {
 
 
     return (
-        <nav style={{ backgroundColor: color, color: textColor }} className={`flex text-black items-center justify-between pt-6 pb-3 sm:pl-10 md:pr-10 lg:pl-16 lg:pr-16`}>
+        <nav style={{ backgroundColor: color, color: textColor }} className={`flex text-black items-center justify-between pt-6 pb-3 sm:pl-10 md:pr-10 lg:pl-16 lg:pr-16 lg:pb-5`}>
             <div className='flex justify-between pl-5 pr-6 w-full items-center sm:hidden font-poppins'>
                 <Link to="/"><IoChevronBackOutline size={22} /></Link>
                 <div className="flex items-center font-bold text-base gap-[1vw] ">

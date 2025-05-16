@@ -13,6 +13,8 @@ export default {
         robotoFlex: ['"Roboto Flex"', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         firaSans: ['"Fira Sans"', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        tiltWarp: ['"Tilt Warp"', 'cursive'],
       },
     },
   },

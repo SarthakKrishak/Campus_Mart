@@ -44,7 +44,7 @@ const Home = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="lg:h-[50vh] h-44 bg-gradient-to-l from-blue-600 to-indigo-600 rounded-md  md:rounded-xl ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-[0px_8.196179389953613px_8.196179389953613px_0px_rgba(0,0,0,0.12)]"
+                    className="pt-6 pb-5 md:pt-8 md:pb-8 lg:pt-12 lg:pb-12  bg-gradient-to-l from-blue-600 to-indigo-600 rounded-md ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-[0px_8.196179389953613px_8.196179389953613px_0px_rgba(0,0,0,0.12)]"
                 >
                     <Swiper
                         modules={[Pagination, A11y]}
@@ -55,9 +55,9 @@ const Home = () => {
                     >
                         <SwiperSlide>
 
-                            <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 md:left-72" />
+                            <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 lg:left-72 md:left-36 hidden md:block" />
 
-                            <div className="flex h-full w-full items-center justify-between lg:px-20 px-5 relative">
+                            <div className="flex h-full w-full items-center justify-between lg:px-20 md:px-10 px-5 relative">
                                 {/* Left Content */}
                                 <motion.div
                                     initial={{ opacity: 0, x: 20 }}
@@ -65,18 +65,18 @@ const Home = () => {
                                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                                     className="text-white lg:w-1/2"
                                 >
-                                    <h1 className="lg:text-[2.2vw] text-sm font-bold leading-tight font-figtree">
+                                    <h1 className="lg:text-[2.2vw] md:text-[3vw] text-sm font-bold leading-tight font-figtree">
                                         Unlock Deals. Share <br />
                                        Essentials. Simplify Life.
                                     </h1>
-                                    <p className="lg:text-[1.4vw] text-[3vw] text-gray-200 font-medium mt-2 font-figtree">
+                                    <p className="lg:text-[1.4vw] md:text-[2vw] text-[3vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
                                         Your trusted student hub
                                         <br/>
                                         buy, sell & connect easily.
                                     </p>
                                     <Link
                                         to="/upload"
-                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl text-xs inline-flex lg:mt-6 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-5 font-robotoFlex"
+                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl md:text-base text-xs inline-flex lg:mt-6 md:mt-4 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-5 font-robotoFlex"
                                     >
                                         Sell Now
                                     </Link>
@@ -98,7 +98,7 @@ const Home = () => {
                                         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
                                         src={bannerRight}
                                         alt="Main Visual"
-                                        className="absolute lg:size-[26vw] lg:mt-20 size-[39vw] z-10 mt-10"
+                                        className="absolute lg:size-[26vw] md:size-[30vw] lg:mt-20 size-[39vw] z-10 mt-10"
                                     />
                                 </div>
                             </div>
@@ -106,7 +106,7 @@ const Home = () => {
                         {/* Slide 2 */}
                         <SwiperSlide>
                             <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 left-72" />
-                            <div className="flex h-full w-full items-center justify-between lg:px-20 px-5 relative">
+                            <div className="flex h-full w-full items-center justify-between lg:px-20 md:px-10 px-5 relative">
                                 {/* Left Content */}
                                 <motion.div
                                     initial={{ opacity: 0, x: 20 }}
@@ -114,18 +114,18 @@ const Home = () => {
                                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                                     className="text-white lg:w-1/2"
                                 >
-                                    <h1 className="lg:text-[2.2vw] text-sm font-bold leading-tight font-figtree">
+                                    <h1 className="lg:text-[2.2vw] md:text-[3vw] text-sm font-bold leading-tight font-figtree">
                                         Find What You Need, <br />
                                         Sell What You Don't!
                                     </h1>
-                                    <p className="lg:text-[1.4vw] text-[3vw] text-gray-200 font-medium mt-2 font-figtree">
+                                    <p className="lg:text-[1.4vw] md:text-[2vw] text-[3vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
                                         Your go-to place for deals
                                         <br />
                                         all in one click.
                                     </p>
                                     <Link
                                         to="/upload"
-                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl text-xs inline-flex lg:mt-6 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-3 font-robotoFlex"
+                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl md:text-base text-xs inline-flex lg:mt-6 md:mt-4 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-5 font-robotoFlex"
                                     >
                                         Explore Now
                                     </Link>
@@ -147,7 +147,7 @@ const Home = () => {
                                         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
                                         src={bannerRight}
                                         alt="Main Visual"
-                                        className="absolute lg:size-[26vw] lg:mt-20 size-[39vw] z-10 mt-10"
+                                        className="absolute lg:size-[26vw] md:size-[30vw] lg:mt-20 size-[39vw] z-10 mt-10"
                                     />
                                 </div>
                             </div>
@@ -155,7 +155,7 @@ const Home = () => {
 
                         <SwiperSlide>
                             <img width={170} src="\assets\circle.png" alt="image" className="absolute bottom-0 left-72" />
-                            <div className="flex h-full w-full items-center justify-between lg:px-20 px-5 relative">
+                            <div className="flex h-full w-full items-center justify-between lg:px-20 md:px-10 px-5 relative">
                                 {/* Left Content */}
                                 <motion.div
                                     initial={{ opacity: 0, x: 20 }}
@@ -163,18 +163,18 @@ const Home = () => {
                                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                                     className="text-white lg:w-1/2"
                                 >
-                                    <h1 className="lg:text-[2.2vw] text-sm font-bold leading-tight font-figtree">
+                                    <h1 className="lg:text-[2.2vw] md:text-[3vw] text-sm font-bold leading-tight font-figtree">
                                         Buy Smart, Share Freely <br />
                                         Simplified Campus Life!
                                     </h1>
-                                    <p className="lg:text-[1.4vw] text-[3vw] text-gray-200 font-medium mt-2 font-figtree">
+                                    <p className="lg:text-[1.4vw] md:text-[2vw] text-[3vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
                                         Where Students Connect
                                         <br />
                                         Trade & Save Together
                                     </p>
                                     <Link
                                         to="/upload"
-                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl text-xs inline-flex lg:mt-6 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-3 font-robotoFlex"
+                                        className="bg-white text-[#364EF2] font-bold rounded-md lg:py-2 lg:px-9 lg:text-xl md:text-base text-xs inline-flex lg:mt-6 md:mt-4 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-5 font-robotoFlex"
                                     >
                                         Trade Now
                                     </Link>
@@ -196,7 +196,7 @@ const Home = () => {
                                         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
                                         src={bannerRight}
                                         alt="Main Visual"
-                                        className="absolute lg:size-[26vw] lg:mt-20 size-[39vw] z-10 mt-10"
+                                        className="absolute lg:size-[26vw] md:size-[30vw] lg:mt-20 size-[39vw] z-10 mt-10"
                                     />
                                 </div>
                             </div>
@@ -245,13 +245,13 @@ const Home = () => {
                     initial={{ opacity: 0, x: 10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="lg:h-[19vh] max-h-[20vh] pt-2 pb-2 md:pb-0 md:pt-0 sm:h-[15vh] ml-[4.5vw] mr-[4.5vw] md:rounded-xl rounded-md text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_36.9295768737793px_0px_rgba(0,0,0,0.16)]"
+                    className="pt-2 pb-2 md:pb-3 md:pt-3 lg:pb-4 lg:pt-4 pl-[2vw] pr-[2vw] lg:pl-[0.2vw] lg:pr-[0.2vw] ml-[4.5vw] mr-[4.5vw] rounded-md text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_36.9295768737793px_0px_rgba(0,0,0,0.16)]"
                 >
                     {/* Background Image */}
                     <img
                         src="/assets/Group_114.png"
                         alt="background"
-                        className="absolute bottom-12 right-[-22vw] lg:right-[-5vw] z-0 w-[60vw] max-w-[400px] h-auto"
+                        className="absolute bottom-12 right-[-22vw] lg:right-[-5vw] z-0 w-[60vw] max-w-[400px] h-auto md:bottom-10 md:right-[-21vw]"
                     />
 
 
@@ -268,7 +268,7 @@ const Home = () => {
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.2, duration: 0.6 }}
-                                className="font-semibold lg:text-xl text-xs font-figtree"
+                                className="font-semibold lg:text-xl md:text-base text-xs font-figtree"
                             >
                                 Product of the Day
                             </motion.h1>
@@ -276,7 +276,7 @@ const Home = () => {
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="text-blue-600 font-bold lg:text-2xl text-xs font-inter"
+                                className="text-blue-600 font-bold md:text-lg lg:text-2xl text-xs font-inter"
                             >
                                 ADVERTISE YOUR PRODUCT HERE
                             </motion.h1>
@@ -284,22 +284,22 @@ const Home = () => {
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.4, duration: 0.6 }}
-                                className="lg:text-lg text-[2.5vw] text-black font-medium font-inter"
+                                className="lg:text-lg md:text-sm text-[2.5vw] text-black font-medium font-inter"
                             >
                                 Boost your chances of selling faster!
                             </motion.h3>
                         </div>
 
                         {/* Right Price Section */}
-                        <div className="flex items-end lg:pb-3 w-1/3 lg:gap-8 gap-2 justify-end lg:pr-20 pr-2 md:pb-5 pt-3">
+                        <div className="flex items-end w-1/3 lg:gap-8 gap-2 justify-end lg:pr-20 pr-2 pt-3">
                             <motion.div
                                 initial={{ opacity: 0, x: 30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.5, duration: 0.6 }}
                                 className="text-right flex flex-col"
                             >
-                                <h1 className="text-black/100 lg:text-lg text-xs font-medium font-inter">Only at</h1>
-                                <span className="lg:text-4xl font-bold text-lg font-firaSans">₹49</span>
+                                <h1 className="text-black/100 lg:text-lg text-xs font-medium font-inter md:text-sm">Only at</h1>
+                                <span className="lg:text-4xl font-bold text-lg font-firaSans md:text-2xl">₹49</span>
                             </motion.div>
 
                             {/* Arrow Button */}
@@ -310,7 +310,7 @@ const Home = () => {
                             >
                                 <Link
                                     to={"/price"}
-                                    className="rounded-full bg-indigo-600 lg:p-[0.4vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] md:mb-0 text-sm"
+                                    className="rounded-full bg-indigo-600 lg:p-[0.4vw] md:p-[0.8vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] lg:mb-0 md:mb-[0.3vh] text-sm"
                                 >
                                     <IoIosArrowForward />
                                 </Link>
@@ -348,11 +348,11 @@ const Home = () => {
 
                 {/* Category section */}
                 <div className="flex w-[90vw] flex-col gap-4 lg:mt-10 mt-8">
-                    <div className="flex items-center lg:text-[1.7vw] text-sm gap-[0.4vw]">
+                    <div className="flex items-center lg:text-[1.7vw] md:text-[2.1vw] text-sm gap-[0.4vw]">
                         <img src="/assets/fluent-mdl2_tiles.png" className="size-6 lg:size-8" alt="image" />
                         <h1 className="font-semibold font-poppins tracking-wide">Categories</h1>
                     </div>
-                    <div className="flex w-full gap-2 lg:gap-6 items-center overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing">
+                    <div className="flex w-full gap-2 md:gap-4 lg:gap-6 items-center overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing">
                         <Category title="Electronics" imageSrc="/assets/icons8-electronics-961.png" />
                         <Category title="Books" imageSrc="/assets/icons8-books-961.png" />
                         <Category title="Essentials" imageSrc="/assets/Group_116.png" />
@@ -366,7 +366,7 @@ const Home = () => {
 
                 {/* Products section */}
                 <div className="w-full lg:mt-12 mt-8 flex flex-col lg:gap-4 gap-3">
-                    <h1 className="w-[90vw] lg:text-[1.7vw] text-sm font-bold font-poppins">Popular Products</h1>
+                    <h1 className="w-[90vw] lg:text-[1.7vw] md:text-[2.1vw] text-sm font-bold font-poppins">Popular Products</h1>
                     <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 gap-1 ">
                         <ProductCard />
                         <ProductCard />

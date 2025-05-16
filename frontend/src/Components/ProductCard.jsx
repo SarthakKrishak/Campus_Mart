@@ -9,7 +9,7 @@ const ProductCard = () => {
   }
 
   return (
-    <Link onClick={handleClick} to={"/product"} className="lg:w-[21.3vw] w-[44.7vw] lg:h-[56vh] rounded-xl overflow-hidden shadow-gray-300 shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] border border-[#d6d6d6] hover:shadow-sm animation duration-150">
+    <Link onClick={handleClick} to={"/product"} className="lg:w-[21.3vw] w-[44.7vw] lg:h-[56vh] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-150">
       <div className="p-2 w-full lg:h-64 object-contain relative">
         <button
           className="absolute flex items-center justify-center lg:w-10 w-7 lg:h-10 h-7 right-3 top-3"
@@ -26,22 +26,17 @@ const ProductCard = () => {
         />
       </div>
 
-      <h1 className="pb-2 pl-3 lg:text-[1.3vw] text-xs font-medium text-[#313131]">Classmate Notebook</h1>
+      <h1 className="pb-2 pl-3 lg:text-[1.3vw] text-xs font-medium text-[#313131] font-poppins">Classmate Notebook</h1>
       <div className="flex gap-2 pl-3">
-        <div className="bg-slate-200 border border-black/10 px-2 py-1 rounded lg:text-sm text-xs font-medium">
+        <div className="bg-slate-200 border border-black/10 px-2 py-1 rounded lg:text-sm text-xs font-medium font-poppins">
           Light
         </div>
-        <div className="bg-[#394ff1] border border-black/10 text-white px-2 py-1 rounded lg:text-sm text-xs font-medium shadow-md">
+        <div className="bg-[#394ff1] border border-black/10 text-white px-2 py-1 rounded lg:text-sm text-xs font-medium shadow-md font-poppins">
           Electronics
         </div>
       </div>
-      <div className="pl-4 pr-3 lg:mt-5 mt-2 flex justify-between items-center">
-        <h2 className="text-black font-['Figtree'] lg:text-2xl font-medium text-sm">₹ 499</h2>
-        <Link to={"/product"}
-          className="text-black rounded-full w-9 h-9 flex justify-center items-center text-2xl hover:bg-slate-200 transition-colors duration-200"
-          aria-label="View product details">
-          <IoIosArrowForward />
-        </Link>
+      <div className="pl-4 pr-3 lg:mt-5 mt-2 pb-3  flex justify-between items-center">
+        <h2 className="text-black font-figtree lg:text-2xl font-medium text-sm">₹ 499</h2>
       </div>
     </Link>
   );

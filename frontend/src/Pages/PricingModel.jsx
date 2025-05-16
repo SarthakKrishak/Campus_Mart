@@ -18,10 +18,10 @@ const PricingModel = () => {
         alt="image"
       />
       <div className="flex flex-col text-center gap-2 mt-9 w-full pr-4 pl-4 sm:text-[1vw]">
-        <h1 className="text-[#353535] font-bold text-[5vw] sm:text-[3.1vw] md:text-[2.6vw] xl:text-[1.9vw]">
+        <h1 className="text-neutral-700 font-bold text-[5vw] sm:text-[3.1vw] md:text-[2.6vw] xl:text-[1.9vw] font-robotoFlex leading-7">
           Find the Perfect Plan for Your Needs!
         </h1>
-        <h4 className="text-[#7991A4] text-[3.7vw] sm:text-[2.1vw] md:text-[1.8vw] xl:text-[1.2vw]">
+        <h4 className="text-neutral-400 text-[3.7vw] sm:text-[2.1vw] md:text-[1.8vw] xl:text-[1.2vw] font-poppins leading-7">
           Select from flexible plans designed for students, sellers, and buyers.
           Whether you're just getting started <br /> or need advanced features,
           we've got you covered!
@@ -31,14 +31,14 @@ const PricingModel = () => {
 
         {/* Card 1 */}
         <div className="bg-[#f2f4ff] w-[80vw] rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3 pt-6 pb-5 sm:w-[61vw] md:w-[55vw] xl:w-[30vw]">
-          <div className="bg-gradient-to-r from-[#534ff2] to-[#364ef2] w-24 py-1 text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2">
+          <div className="bg-gradient-to-br from-indigo-600 to-blue-600 w-24 py-1 text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 leading-tight font-robotoFlex">
             Current
           </div>
-          <h5 className="text-[#8D8D8D] text-sm sm:text-lg md:text-base">
+          <h5 className="text-neutral-400 text-sm sm:text-lg md:text-base leading-tight font-robotoFlex">
             Perfect for exploring the platform and listing your first few
             items.
           </h5>
-          <ul className="text-[4vw] pl-4 mt-2 leading-7 sm:text-[2.6vw] md:text-lg xl:text-base">
+          <ul className="text-[4vw] pl-4 mt-2 leading-7 sm:text-[2.6vw] md:text-lg xl:text-base font-robotoFlex">
             <li className="list-disc">List up to 5 products for free</li>
             <li className="list-disc">Access basic buyer/seller features</li>
             <li className="list-disc">Track orders and listings</li>
@@ -46,10 +46,10 @@ const PricingModel = () => {
           </ul>
           <div className="flex flex-col gap-3 mt-5 sm:mt-10 md:mt-11 xl:mt-6">
             <div className="flex flex-col gap-1">
-              <h1 className="font-bold text-3xl sm:text-5xl xl:text-4xl">Free</h1>
+              <h1 className="text-3xl sm:text-5xl xl:text-4xl font-tiltWarp">Free</h1>
               <hr className="border-[#D0D0D0]" />
             </div>
-            <div className="border-[#D0D0D0] border rounded-md py-1 flex justify-center items-center sm:py-2 md:py-2 xl:py-1">
+            <div className="border-[#D0D0D0] border rounded-md py-1 flex justify-center items-center sm:py-2 md:py-2 xl:py-1 font-robotoFlex">
               Activated
             </div>
           </div>
@@ -61,12 +61,12 @@ const PricingModel = () => {
             <div className="bg-gradient-to-r from-white to-white w-24 py-1 text-black font-bold rounded-md px-2 flex items-center justify-center text-sm sm:py-[0.7vh] xl:py-2">
               Pro
             </div>
-            <h1 className="text-xs font-semibold text-[#ffe500] sm:text-sm">Popular</h1>
+            <h1 className="text-xs font-semibold text-[#ffe500] sm:text-sm leading-tight font-robotoFlex">Popular</h1>
           </div>
-          <h5 className="text-[#cfcfcf] text-sm sm:text-lg md:text-base">
+          <h5 className="text-[#cfcfcf] text-sm sm:text-lg md:text-base leading-tight font-robotoFlex">
             For active sellers and buyers looking to expand.Ideal for users who want additional perks and tools to grow their sales.
           </h5>
-          <ul className="text-sm leading-7 text-white sm:text-[2.6vw] sm:mt-3 xl:text-base">
+          <ul className="text-sm leading-7 text-white sm:text-[2.6vw] sm:mt-3 xl:text-base font-robotoFlex">
             <div className="flex gap-2 items-center">
               <CircleCheck size={18} className="" />
               <h1>Unlimited product listings</h1>
@@ -90,10 +90,10 @@ const PricingModel = () => {
           </ul>
           <div className="flex flex-col gap-3 mt-5 sm:mt-10 md:mt-12 xl:mt-7">
             <div className="flex flex-col gap-1">
-              <h1 className="font-bold text-4xl text-white sm:text-5xl xl:text-4xl"><span className="text-white  text-3xl font-['Roboto'] pr-1 sm:text-5xl xl:text-4xl">₹</span>49</h1>
+              <h1 className="text-4xl text-white sm:text-5xl xl:text-4xl"><span className="text-white text-3xl pr-1 sm:text-5xl xl:text-4xl font-roboto">₹</span><span className="font-tiltWarp text-5xl">49</span></h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white sm:py-2 md:py-2 xl:py-1">
+            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white sm:py-2 md:py-2 xl:py-1 font-robotoFlex">
               Continue
             </button>
             <Toaster />
@@ -102,13 +102,13 @@ const PricingModel = () => {
 
         {/* Card 3 */}
         <div className="bg-[#f2f4ff] w-[80vw] rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3 pt-6 pb-5 sm:w-[61vw] md:w-[55vw] xl:w-[30vw]">
-          <div className="bg-gradient-to-r from-[#534ff2] to-[#364ef2] w-24 py-1 text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2">
+          <div className="bg-gradient-to-r from-[#534ff2] to-[#364ef2] w-24 py-1 text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 font-robotoFlex leading-tight">
             Pro Plus
           </div>
-          <h5 className="text-[#8D8D8D] text-sm sm:text-lg md:text-base">
+          <h5 className="text-[#8D8D8D] text-sm sm:text-lg md:text-base font-robotoFlex leading-tight">
             Ideal for users who want additional perks and tools to grow their sales.
           </h5>
-          <ul className="text-[4vw] pl-4 mt-2 leading-7 sm:text-[2.6vw] md:text-lg xl:text-base">
+          <ul className="text-[4vw] pl-4 mt-2 leading-7 sm:text-[2.6vw] md:text-lg xl:text-base font-robotoFlex">
             <li className="list-disc">Everything in Growth Plan</li>
             <li className="list-disc">Featured product placement</li>
             <li className="list-disc">Exclusive promotional tools</li>
@@ -116,10 +116,10 @@ const PricingModel = () => {
           </ul>
           <div className="flex flex-col gap-3 mt-5 sm:mt-10 md:mt-12 xl:mt-7">
             <div className="flex flex-col gap-1">
-              <h1 className="font-bold text-4xl text-black sm:text-5xl xl:text-4xl"><span className="text-black text-3xl font-['Roboto'] pr-1 sm:text-5xl xl:text-4xl">₹</span>99</h1>
+              <h1 className="text-4xl text-black sm:text-5xl xl:text-4xl"><span className=" text-3xl font-['Roboto'] pr-1 sm:text-5xl xl:text-4xl text-gray-400">₹</span><span className="font-tiltWarp text-5xl">99</span></h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white sm:py-2 md:py-2 xl:py-1">
+            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-indigo-600 to-blue-600 text-white sm:py-2 md:py-2 xl:py-1 font-robotoFlex">
               Continue
             </button>
             <Toaster />
