@@ -121,7 +121,7 @@ const ProductDescription = () => {
               <div className="flex flex-col items-center gap-2 relative">
                 <button onClick={handleReport}>
                   <EllipsisVertical />
-                </button>
+                </button> 
                 <div
                   className={`bg-slate-400 text-white font-medium py-3 px-10 rounded-md ${
                     report ? "block" : "hidden"
@@ -219,7 +219,7 @@ const ProductDescription = () => {
               onClick={handleWishlish}
                           className="outline outline-2 outline-offset-[-2px] outline-neutral-200 rounded-md text-black w-full py-3 flex justify-center items-center font-semibold text-sm md:text-base font-robotoFlex hover:scale-105 duration-300 ease-in-out cursor-pointer gap-2"
                       >
-                          <FaRegHeart className="lg:size-4"/>
+                          <FaRegHeart className="lg:size-4 hover:text-red-500"/>
               Add to Wishlist
             </div>
             <Link
