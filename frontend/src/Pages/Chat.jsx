@@ -16,6 +16,7 @@ const Chat = () => {
     { id: 5, name: 'Arnav Sharma' },
     { id: 6, name: 'Arnav Sharma' },
     { id: 7, name: 'Arnav Sharma', url:'/userdp.png' },
+    { id: 7, name: 'Arnav Sharma', url:'/userdp.png' },
   ];
 
   const [selectedUser, setSelectedUser] = useState(null);
@@ -29,10 +30,10 @@ const Chat = () => {
   };
   return (
     <div className="w-full h-screen flex flex-col">
-      <Header />
+      <Header color={"#394ff1"} textColor={"white"} />
       <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
         {/* Left panel */}
-        <div className="w-full lg:w-1/4 flex flex-col">
+        <div className="w-full lg:w-1/4 flex flex-col lg:pt-2">
           {/* Search bar */}
           <div className="flex items-center bg-indigo-50 rounded-md border-[1.5px] border-zinc-100 px-2 mx-4 mt-2 font-poppins">
             <CiSearch size={22} className="text-[#64707D] lg:size-7 lg:ml-1" />
@@ -55,7 +56,7 @@ const Chat = () => {
         </div>
 
         {/* Right panel */}
-        <div className="w-full lg:w-3/4 flex flex-col">
+        <div className="w-full lg:w-3/4 flex flex-col relative">
           <div className="w-full h-[10vh] flex items-center px-6 font-semibold text-lg">
             {selectedUser ? <div className='flex items-center pt-2 pb-2 w-full cursor-pointer'>
               {selectedUser.url ? <img src={selectedUser.url} alt="user profile image" className='lg:size-12' /> : <img src={userdp} alt="user profile image" className='lg:size-12' />}
