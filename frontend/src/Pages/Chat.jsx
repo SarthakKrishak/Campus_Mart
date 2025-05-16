@@ -5,6 +5,8 @@ import ChatUser from '../Components/ChatUser';
 import userdp from '/userdp.png'
 import { GoDotFill } from "react-icons/go";
 import { EllipsisVertical } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { IoSend } from "react-icons/io5";
 
 const Chat = () => {
 
@@ -20,7 +22,8 @@ const Chat = () => {
   ];
 
   const [selectedUser, setSelectedUser] = useState(null);
-
+  const [chats, setchats] = useState([])
+  
   const handleUserClick = (user) => {
     setSelectedUser(user);
   };
@@ -28,6 +31,11 @@ const Chat = () => {
   const handleReport = () => {
     setReport(!report);
   };
+  const handleChat = () => {
+    const chat = [...chats, []]
+    setchats([]);
+
+  }
   return (
     <div className="w-full h-screen flex flex-col">
       <Header color={"#394ff1"} textColor={"white"} />
@@ -56,7 +64,11 @@ const Chat = () => {
         </div>
 
         {/* Right panel */}
-        <div className="w-full lg:w-3/4 flex flex-col relative">
+        <div className="relative w-full lg:w-3/4 flex flex-col">
+          <div className='absolute md:bottom-6 flex justify-between items-center outline outline-[0.50px] outline-zinc-300 bg-white rounded-md lg:py-3 md:right-16 md:left-16 lg:px-5'>
+            <input onChange={(e)=>setchats(e.target.value)} value={chats} type="text" placeholder='Type your message...' className='outline-none w-11/12 h-auto'/>
+            <button onClick={handleChat}><IoSend className='md:size-5'/></button>
+          </div>
           <div className="w-full h-[10vh] flex items-center px-6 font-semibold text-lg">
             {selectedUser ? <div className='flex items-center pt-2 pb-2 w-full cursor-pointer'>
               {selectedUser.url ? <img src={selectedUser.url} alt="user profile image" className='lg:size-12' /> : <img src={userdp} alt="user profile image" className='lg:size-12' />}
@@ -73,18 +85,15 @@ const Chat = () => {
                     <EllipsisVertical />
                   </button>
                   <div
-                    className={`bg-slate-400 text-black font-medium py-3 px-10 rounded-md ${report ? "block" : "hidden"
-                      } absolute top-[18vh] right-11 flex flex-col gap-6 text-sm`}
+                    className={`bg-blue-200 text-black font-medium py-3 px-10 rounded-md ${report ? "block" : "hidden"
+                      } absolute top-[9vh] right-11 flex flex-col gap-6 text-sm`}
                   >
-                    <button className="w-full">
-                      Report Product
-                    </button>
-                    <button className="w-full">
-                      Report a user
-                    </button>
-                    <button className="w-full">
+                    <Link to={"/"} className="w-full">
+                      Report user
+                    </Link>
+                    <Link to={"/"} className="w-full">
                       Raise a issue
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -92,7 +101,8 @@ const Chat = () => {
           </div>
           <div className="bg-gradient-to-b from-indigo-50 to-sky-100 w-full h-full flex items-center justify-center text-zinc-500 text-xl">
             {selectedUser ? (
-              <div>Messages with {selectedUser.name} will appear here.</div>
+              <div>Messages with {selectedUser.name} will appear here.
+              </div>
             ) : (
               'Select a chat to start messaging'
             )}
