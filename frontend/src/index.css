@@ -10,15 +10,42 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cursor-grab {
+    cursor: grab;
+}
+
+.cursor-grab.active,
+.cursor-grab:active {
+    cursor: grabbing;
+}
+
+.swiper-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4vw;
+    margin-bottom: 2.4vh;
+}
 .swiper-pagination-bullet {
-    background-color: #fff;
+    background-color: white !important;
     scale: 1.2;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #fff !important;
+    background-color: white !important;
     scale: 1.4;
 }
+
 @media (min-width: 320px) {
     .swiper-pagination-bullet {
         scale: 1;
@@ -40,20 +67,20 @@
 
 @media (min-width: 640px) {
     .swiper-pagination-bullet {
-        scale: 1.2;
+        scale: 1;
     }
 
     .swiper-pagination-bullet-active {
-        scale: 1.4;
+        scale: 1.3;
     }
 }
 
 @media (min-width: 1024px) {
     .swiper-pagination-bullet {
-        scale: 1.4;
+        scale: 1.2;
     }
 
     .swiper-pagination-bullet-active {
-        scale: 1.8;
+        scale: 1.6;
     }
 }

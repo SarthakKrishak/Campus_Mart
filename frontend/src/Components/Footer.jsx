@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import whitebag from '/whitebag.png'
 
 const Footer = () => {
     return (
@@ -15,10 +16,10 @@ const Footer = () => {
             <div className="flex justify-between h-[15vh] pt-9 w-full">
                 {/* top left section */}
                 <div className="flex flex-col text-white h-full gap-3">
-                    <Link to={"/"} className="flex items-center font-semibold text-xl gap-[0.4vw]">
-                        <RiShoppingCartFill />
+                    <a href={"/"} className="flex items-center font-semibold text-xl gap-[0.4vw]">
+                        <img src={whitebag} className='size-4 lg:size-5' />
                         <h1>Campus Mart</h1>
-                    </Link>
+                    </a>
                     <h1 className="text-[4vw] leading-snug">
                         The Ultimate Marketplace for <br />
                         Students to Buy, Sell, and Trade with Ease!

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { RiShoppingCartFill } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import { RiNotificationFill } from "react-icons/ri";
@@ -8,26 +7,38 @@ import { IoIosMenu } from "react-icons/io";
 import { IoChevronBackOutline } from "react-icons/io5";
 import bag from '/bag.png'
 import bluebag from '/bluebag.png'
-
-const Header = ({ color,textColor }) => {
+import { useEffect} from 'react';
+const Header = ({ color, textColor, bagUrl }) => {
 
     const [search, setSearch] = useState("");
     const [darkMode, setDarkMode] = useState(false);
     const [notification, setNotification] = useState(1);
-
+    const placeholderWords = ["Product", "Book", "Cycle", "Laptop", "Mattress", "Bottle"];
+    const [placeholderIndex, setPlaceholderIndex] = useState(0);
+    const [fade, setFade] = useState(true);
     const toggleDarkMode = () => setDarkMode(!darkMode);
 
     const handleSearchBar = (e) => {
         setSearch(e.target.value);
     }
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(false);
+            setTimeout(() => {
+                setPlaceholderIndex((prev) => (prev + 1) % placeholderWords.length);
+                setFade(true);
+            }, 300);
+        }, 2500);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <nav style={{ backgroundColor: color, color: textColor }} className={`flex text-black items-center justify-between pt-6 pb-3 sm:pl-10 md:pr-10 lg:pl-16 lg:pr-16 lg:pb-5`}>
+        <nav style={{ backgroundColor: color, color: textColor }} className={`flex text-black items-center justify-between pt-6 pb-3 sm:pl-10 md:pr-10 lg:pl-[4.6vw] lg:pr-[4.6vw] lg:pb-5 lg:pt-6`}>
             <div className='flex justify-between pl-5 pr-6 w-full items-center sm:hidden font-poppins'>
                 <Link to="/"><IoChevronBackOutline size={22} /></Link>
-                <div className="flex items-center font-bold text-base gap-[1vw] ">
-                    <img src={bluebag} className='size-4 lg:size-5' />
+                <div className="flex items-center font-bold text-base gap-[1vw]">
+                    <img src={bagUrl} className='size-4 lg:size-5' />
                     <a href="/">Campus Mart</a>
                 </div>
                 <IoIosMenu size={25}/>
@@ -40,10 +51,10 @@ const Header = ({ color,textColor }) => {
 
             
             
-            <div className="items-center bg-white rounded-sm shadow-[0px_3px_14px_0px_rgba(0,0,0,0.07)] outline outline-2 outline-offset-[3px] md:outline-offset-[3px] outline-neutral-200 hover:shadow-md transition ease-in-out duration-200 hidden sm:flex">
+            <div className="relative items-center bg-white rounded-md shadow-[0px_3px_14px_0px_rgba(0,0,0,0.07)] outline outline-2 outline-neutral-200 hover:shadow-md transition ease-in-out duration-200 hidden sm:flex cursor-pointer lg:py-[0.5vh] lg:pr-3 lg:mr-[5vw]">
+
                 <input
-                    className="rounded-sm px-3 outline-none w-[25vw] placeholder:text-gray-500 text-black sm:py-[0.4vh] lg:py-[2vh] xl:py-[0.6vh] text-md font-poppins lg:text-base md:text-xs"
-                    placeholder="Search for Product"
+                    className="rounded-md px-3 outline-none w-[25vw] lg:w-[27vw] placeholder-transparent text-black sm:py-[0.4vh] lg:py-[2.4vh] xl:py-[0.6vh] text-md font-poppins lg:text-base md:text-xs lg:px-6 relative z-10 bg-transparent"
                     type="text"
                     name="search"
                     id="search"
@@ -51,7 +62,20 @@ const Header = ({ color,textColor }) => {
                     onChange={handleSearchBar}
                     aria-label="Search products"
                 />
-                <CiSearch size={22} className='sm:text-black size-4 lg:size-5 mr-2'/>
+
+                {/* Animated Placeholder Text */}
+                {search === "" && (
+                    <span className={`absolute left-4 lg:left-6 flex items-center gap-1`}>
+                        <span className='text-gray-500'>
+                            Search for
+                        </span>
+                        <span className={` text-[#364EF2] pointer-events-none transition-opacity duration-500 z-0 ${fade ? "opacity-100" : "opacity-0"}`}>
+                            {placeholderWords[placeholderIndex]}
+                        </span>
+                    </span>
+                )}
+
+                <CiSearch size={22} className='text-black size-4 lg:size-5 mr-2 cursor-pointer' />
             </div>
 
             <div className="hidden items-center text-[1.9vw] sm:flex gap-8 md:gap-7 lg:gap-11 font-medium xl:gap-14">
