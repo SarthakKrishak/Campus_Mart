@@ -12,7 +12,7 @@ const ProductCard = () => {
     <Link
       onClick={handleClick}
       to={"/product"}
-      className="lg:w-[21.3vw] w-[44.7vw] lg:h-[62vh] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
+      className="lg:w-[21.3vw] w-[44.7vw] lg:h-[64vh] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
     >
       <div className="p-3 w-full lg:h-[40vh] object-contain relative">
         <button
@@ -48,14 +48,18 @@ const ProductCard = () => {
         </div>
       </div>
 
-      <div className="pl-3 pr-3 lg:mt-4 mt-2 pb-3 flex flex-col">
+      <div className="pl-3 pr-3 lg:mt-4 lg:pb-6 mt-2 pb-3 flex flex-col">
         <div className="flex items-center lg:gap-2">
           <h2 className="text-zinc-800 font-inter lg:text-2xl font-bold text-sm flex items-center justify-center tracking-tight">
-            <span className="mr-[-0.2vw]"><MdOutlineCurrencyRupee /></span>
+            <span className="mr-[-0.2vw]">
+              <MdOutlineCurrencyRupee />
+            </span>
             <span>799</span>
           </h2>
           <h2 className="text-neutral-400 font-inter lg:text-sm font-medium text-sm flex items-center line-through justify-center tracking-tight">
-            <span className="mr-[-0.2vw]"><MdOutlineCurrencyRupee /></span>
+            <span className="mr-[-0.2vw]">
+              <MdOutlineCurrencyRupee />
+            </span>
             <span>399</span>
           </h2>
         </div>
@@ -63,9 +67,11 @@ const ProductCard = () => {
           <h2 className="text-[#06981E] font-inter lg:text-sm font-medium text-sm flex items-center">
             <h3>Save</h3>
             <div className="flex items-center">
-              <span className="mr-[-0.2vw]"><MdOutlineCurrencyRupee /></span>
+              <span className="mr-[-0.2vw]">
+                <MdOutlineCurrencyRupee />
+              </span>
               <span>400</span>
-        </div>
+            </div>
           </h2>
         </div>
       </div>
