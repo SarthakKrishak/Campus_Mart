@@ -14,12 +14,11 @@ const Header = ({ color, textColor, bagUrl }) => {
   const [darkMode, setDarkMode] = useState(false);
   const [notification, setNotification] = useState(1);
   const placeholderWords = [
-    "Product",
+    "Electronics",
     "Book",
     "Cycle",
-    "Laptop",
+    "Essential",
     "Mattress",
-    "Bottle",
   ];
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [fade, setFade] = useState(true);

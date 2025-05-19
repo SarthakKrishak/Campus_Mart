@@ -11,7 +11,7 @@ const Footer = () => {
       <img
         src="/assets/circle45.png"
         alt="circle"
-        className="absolute bottom-[-2vh] left-44 w-[250px]"
+        className="absolute bottom-[-2vh] left-60 w-[250px]"
       />
       <img
         src="/assets/footer_circle.png"
@@ -31,26 +31,26 @@ const Footer = () => {
               <img src={whitebag} alt="logo" className="w-5 h-5" />
               <h1> Campus Mart</h1>
             </Link>
-            <h1 className="flex items-center gap-2 text-xl font-bold lg:text-lg font-figtree lg:ml-7">
+            <h1 className="flex items-center gap-2 text-xl font-medium lg:text-lg font-poppins">
               {" "}
-              Build by{" "}
+              ~ platform build by{" "}
               <a
                 href="https://imaginumorg.vercel.app/"
                 target="_blank"
-                className="text-black"
+                className="text-white font-poppins font-bold hover:text-black duration-300 ease-in-out"
               >
                 Imaginum
               </a>
             </h1>
           </div>
-          <p className="text-[4vw] md:text-[2vw] lg:text-[1.6vw] leading-snug">
+          <p className="text-[4vw] md:text-[2vw] lg:text-[1.5vw] leading-snug">
             The Ultimate Marketplace for <br />
             Students to Buy, Sell, and Trade with Ease!
           </p>
         </div>
 
         {/* Right */}
-        <div className="hidden md:flex flex-col items-end gap-4 w-full md:w-1/2">
+        <div className="hidden md:flex flex-col items-end gap-4 w-full md:w-1/2 lg:mt-6">
           <h2 className="text-[1.2vw] flex items-center gap-2 font-medium lg:text-[1.5vw] font-poppins">
             Feedback? We're Listening!
             <FaHeart className="text-white" />
@@ -62,14 +62,14 @@ const Footer = () => {
             >
               Send Us
             </a>
-            <div className="border border-slate-200 bg-transparent rounded-3xl py-6 px-20 mt-2"></div>
+            <div className="border border-slate-200 bg-transparent rounded-3xl py-6 px-20 md:mt-3 md:ml-[-0.5vw] md:mr-2"></div>
           </div>
         </div>
       </div>
 
       {/* Middle Section */}
       <div className="flex justify-between items-center my-10 relative">
-        <button className="z-10 py-2 px-7 text-black bg-white rounded-3xl font-semibold hover:scale-105 transition-transform duration-200">
+        <button className="z-10 py-2 px-7 lg:py-3 lg:px-10 text-black bg-white rounded-3xl font-semibold hover:scale-105 transition-transform duration-200">
           Share with friends
         </button>
         <img
@@ -133,8 +133,10 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-white/30 mt-10 pt-4 text-sm pb-4 text-white">
-        <p>© 2025 All rights reserved</p>
+      <div className="border-t border-white/30 mt-10 pt-4 text-sm pb-4 text-white flex items-center justify-between">
+        <p className="hover:underline cursor-default">
+          © 2025 All rights reserved
+        </p>
         <p className="text-[3.5vw] sm:text-base mt-1">
           Designed and developed by{" "}
           <a
