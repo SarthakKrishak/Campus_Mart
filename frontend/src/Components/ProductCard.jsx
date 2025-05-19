@@ -12,7 +12,7 @@ const ProductCard = () => {
     <Link
       onClick={handleClick}
       to={"/product"}
-      className="lg:w-[28vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
+      className="lg:w-[28vw] xl:w-[21vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
     >
       <div className="md:p-3 p-2 w-full h-[21vh] lg:h-[19vh] xl:h-[40vh] object-contain relative">
         <button
