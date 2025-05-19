@@ -20,7 +20,7 @@ const PricingModel = () => {
         <h1 className="text-neutral-700 font-bold text-[5vw] sm:text-[3.1vw] md:text-[2.6vw] xl:text-[1.9vw] font-robotoFlex leading-7">
           Find the Perfect Plan for Your Needs!
         </h1>
-        <h4 className="text-neutral-400 text-[3.7vw] sm:text-[2.1vw] md:text-[1.8vw] xl:text-[1.2vw] font-poppins leading-7">
+        <h4 className="text-neutral-400 text-[3.2vw] sm:text-[2.1vw] md:text-[1.8vw] xl:text-[1.2vw] font-poppins md:leading-7 leading-5">
           Select from flexible plans designed for students, sellers, and buyers.
           Whether you're just getting started <br /> or need advanced features,
           we've got you covered!

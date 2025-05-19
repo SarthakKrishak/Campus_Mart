@@ -12,7 +12,7 @@ const ProductCard = () => {
     <Link
       onClick={handleClick}
       to={"/product"}
-      className="lg:w-[21.3vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
+      className="lg:w-[28vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
     >
       <div className="md:p-3 p-2 w-full h-[21vh] lg:h-[19vh] xl:h-[40vh] object-contain relative">
         <button
@@ -36,7 +36,7 @@ const ProductCard = () => {
         />
       </div>
 
-      <h1 className="pb-2 pl-4 lg:text-[1.6vw] xl:text-[1.3vw] text-sm font-medium text-[#313131] font-inter xl:mt-3">
+      <h1 className="pb-2 pl-4 lg:text-[1.6vw] xl:text-[1.3vw] text-sm font-semibold text-[#313131] font-inter xl:mt-1">
         Classmate Notebook
       </h1>
       <div className="flex md:gap-2 gap-5 pl-4">
@@ -64,7 +64,7 @@ const ProductCard = () => {
           </h2>
         </div>
         <div className="flex items-center pl-1">
-          <h2 className="text-[#06981E] font-inter lg:text-sm font-medium text-xs flex items-center">
+          <h2 className="text-[#06981E] font-inter lg:text-sm font-bold text-xs flex items-center">
             <h3>Save</h3>
             <div className="flex items-center">
               <span className="mr-[-0.2vw]">

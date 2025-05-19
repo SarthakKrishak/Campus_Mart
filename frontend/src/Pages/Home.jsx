@@ -423,7 +423,7 @@ const Home = () => {
           <h1 className="w-[90vw] lg:text-[2vw] xl:text-[1.7vw] md:text-[2.1vw] text-sm font-bold font-poppins">
             Popular Products
           </h1>
-          <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-2 xl:gap-4 gap-1 ">
+          <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 xl:gap-4 gap-3 ">
             <ProductCard />
             <ProductCard />
             <ProductCard />
