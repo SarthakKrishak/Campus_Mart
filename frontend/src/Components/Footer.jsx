@@ -31,13 +31,12 @@ const Footer = () => {
               <img src={whitebag} alt="logo" className="w-5 h-5" />
               <h1> Campus Mart</h1>
             </Link>
-            <h1 className="flex items-center gap-2 md:text-xl text-sm font-medium lg:text-lg font-poppins">
-              {" "}
-              ~ platform build by{" "}
+            <h1 className="flex items-center gap-2 md:text-xl text-sm lg:text-lg font-poppins">
+              <span className="font-extralight">~ platform build by</span>{" "}
               <a
                 href="https://imaginumorg.vercel.app/"
                 target="_blank"
-                className="text-white font-poppins font-bold hover:text-black duration-300 ease-in-out"
+                className="text-white font-poppins font-extrabold hover:text-black duration-300 ease-in-out"
               >
                 Imaginum
               </a>
@@ -69,7 +68,7 @@ const Footer = () => {
 
       {/* Middle Section */}
       <div className="flex justify-between items-center my-10 relative">
-        <button className="z-10 py-2 px-7 lg:py-3 lg:px-10 text-black bg-white rounded-3xl font-semibold hover:scale-105 transition-transform duration-200">
+        <button className="z-10 py-2 px-7 lg:py-3 lg:px-10 text-black bg-white rounded-3xl font-semibold hover:scale-105 transition-transform duration-200 md:text-base text-sm">
           Share with friends
         </button>
         <img
@@ -85,11 +84,11 @@ const Footer = () => {
         <div className="relative w-2/3">
           <a
             href="mailto:sarthakkrishak1234@gmail.com"
-            className="z-10 absolute inset-x-0 top-0 py-3 px-10 text-black bg-white rounded-3xl text-base font-semibold text-center"
+            className="z-10 absolute inset-x-0 top-0 py-3 px-10 text-black bg-white rounded-3xl text-sm font-semibold text-center"
           >
             Send Us
           </a>
-          <div className="border border-slate-200 bg-transparent rounded-3xl py-7 px-20 ml-[-0.5vw] mr-2"></div>
+          <div className="border border-slate-200 bg-transparent rounded-3xl py-6 px-20 ml-[-0.8vw] mr-2"></div>
         </div>
       </div>
 
@@ -108,8 +107,8 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex gap-16">
-          <ul className="space-y-3 text-lg">
+        <div className="flex gap-16 pl-2">
+          <ul className="space-y-3 text-sm md:text-lg">
             {["Orders", "Chats", "Dev team"].map((text, i) => (
               <li
                 key={i}
@@ -119,7 +118,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <ul className="space-y-3 text-lg">
+          <ul className="space-y-3 text-sm md:text-lg">
             {["Sell a product", "Notification", "Contact us"].map((text, i) => (
               <li
                 key={i}
@@ -133,7 +132,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-white/30 mt-10 pt-4 md:text-sm text-lg pb-4 text-white flex flex-col md:flex-row md:items-center justify-between">
+      <div className="border-t border-white/30 mt-10 pt-4 md:text-sm text-sm pb-4 text-white flex flex-col md:flex-row md:items-center justify-between">
         <p className="hover:underline cursor-default">
           © 2025 All rights reserved
         </p>
@@ -155,7 +154,8 @@ const Footer = () => {
           </a>
           .
         </p>
-        <p className="text-[4vw] md:hidden sm:text-base mt-1">
+        {/* Mobile para */}
+        <p className="text-xs md:hidden sm:text-base mt-1">
           Developed by{" "}
           <a
             href="https://www.linkedin.com/in/sarthakkrishak/"

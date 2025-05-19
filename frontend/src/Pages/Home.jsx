@@ -89,7 +89,7 @@ const Home = () => {
     <div className="w-full bg-white relative">
       <Header bagUrl={"/bag.png"} />
       {/* search bar */}
-      <div className="flex items-center bg-white rounded-md  pr-2 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.20)] border border-stone-300 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2 font-poppins">
+      <div className="flex items-center bg-white rounded-md  pr-2 shadow-[0px_3px_14px_0px_rgba(0,0,0,0.07)] outline outline-2 outline-neutral-200 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2 font-poppins">
         <input
           className="rounded-xl px-5 outline-none w-full placeholder:text-[#AAB9C5] text-black py-[1.4vh] text-sm placeholder-transparent relative z-10 bg-transparent"
           type="text"
@@ -155,17 +155,18 @@ const Home = () => {
                   className="text-white w-1/2"
                 >
                   <h1 className="lg:text-[2.5vw] xl:text-[2.2vw] md:text-[2.7vw] text-[2.98vw] font-bold leading-tight font-figtree">
-                    Unlock Deals, Share Essentials, <br />
+                    Unlock Deals, Share Essentials,{" "}
+                    <br className="hidden md:block" />
                     Simplify Campus Living!
                   </h1>
-                  <p className="lg:text-[1.7vw] xl:text-[1.4vw] md:text-[2vw] text-[2.5vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
+                  <p className="lg:text-[1.7vw] xl:text-[1.4vw] md:text-[2vw] text-[2.7vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
                     Your trusted platform to simplify student life
                     <br className="hidden sm:block" /> Buy, sell & connect
                     easily.
                   </p>
                   <Link
                     to="/upload"
-                    className="bg-white text-[#364EF2] font-bold rounded-md md:py-2 xl:py-2 lg:py-[0.5vh] xl:px-11 lg:px-7 xl:text-xl lg:text-lg md:text-base text-xs inline-flex lg:mt-4 xl:mt-6 md:mt-4 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-5 font-robotoFlex duration-500 ease-in-out"
+                    className="bg-white text-[#364EF2] font-bold rounded-md md:py-2 xl:py-2 lg:py-[0.5vh] xl:px-11 lg:px-7 xl:text-xl lg:text-lg md:text-base text-xs inline-flex lg:mt-4 xl:mt-6 md:mt-4 mt-3 shadow-md transition-transform transform lg:hover:scale-105 py-[0.8vh] px-4 font-robotoFlex duration-500 ease-in-out"
                   >
                     Sell Now
                   </Link>
@@ -213,7 +214,7 @@ const Home = () => {
                     Find What You Need, <br />
                     Sell What You Don't!
                   </h1>
-                  <p className="lg:text-[1.7vw] xl:text-[1.4vw] md:text-[2vw] text-[2.5vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
+                  <p className="lg:text-[1.7vw] xl:text-[1.4vw] md:text-[2vw] text-[2.7vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
                     The perfect place to buy, sell, and discover
                     <br className="hidden sm:block" /> amazing deals all in one
                     spot!
@@ -268,7 +269,7 @@ const Home = () => {
                     Buy Smart, Share Freely <br />
                     Simplified Campus Life!
                   </h1>
-                  <p className="lg:text-[1.7vw] xl:text-[1.4vw] md:text-[2vw] text-[2.5vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
+                  <p className="lg:text-[1.7vw] xl:text-[1.4vw] md:text-[2vw] text-[2.7vw] lg:leading-7 md:leading-5  text-gray-200 font-medium mt-2 font-figtree">
                     Where Students Connect
                     <br className="hidden sm:block" /> Trade & Save Together
                   </p>
@@ -339,7 +340,7 @@ const Home = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-blue-600 font-extrabold md:text-lg lg:text-[2.2vw] xl:text-[1.8vw] text-xs font-inter lg:mt-1"
+                className="text-blue-600 font-extrabold md:font-bold md:text-lg lg:text-[2.2vw] xl:text-[1.8vw] text-[3vw] font-inter lg:mt-1"
               >
                 ADVERTISE YOUR PRODUCT HERE
               </motion.h1>
@@ -361,10 +362,10 @@ const Home = () => {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-right flex flex-col"
               >
-                <h1 className="text-slate-400 lg:text-base xl:text-lg text-xs font-medium font-inter md:text-sm">
+                <h1 className="text-slate-400 lg:text-base xl:text-lg text-[2.5vw] font-medium font-inter md:text-sm">
                   Only at
                 </h1>
-                <span className="lg:text-3xl xl:text-4xl font-bold text-lg font-firaSans md:text-2xl mt-[-1vh]">
+                <span className="lg:text-3xl xl:text-4xl font-bold text-lg font-firaSans md:text-2xl mt-[-0.7vh]">
                   ₹49
                 </span>
               </motion.div>
@@ -423,7 +424,7 @@ const Home = () => {
           <h1 className="w-[90vw] lg:text-[2vw] xl:text-[1.7vw] md:text-[2.1vw] text-sm font-bold font-poppins">
             Popular Products
           </h1>
-          <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 xl:gap-4 gap-3 ">
+          <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 xl:gap-4 md:gap-2 gap-1">
             <ProductCard />
             <ProductCard />
             <ProductCard />
@@ -443,7 +444,7 @@ const Home = () => {
       </div>
 
       {/* More section */}
-      <div className="w-full lg:text-[1.1vw] tex-sm flex justify-center items-center lg:p-10 p-6 font-semibold font-poppins">
+      <div className="w-full lg:text-[1.1vw] text-sm flex justify-center items-center lg:p-10 p-6 font-semibold font-poppins">
         <button>More</button>
         <IoIosArrowDown className="size-4" />
       </div>
