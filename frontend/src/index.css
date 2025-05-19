@@ -34,16 +34,16 @@
     justify-content: center;
     align-items: center;
     gap: 0.4vw;
-    margin-bottom: 2.4vh;
+    margin-bottom: 0.4vh;
 }
 .swiper-pagination-bullet {
     background-color: white !important;
-    scale: 1.2;
+    scale: 1;
 }
 
 .swiper-pagination-bullet-active {
     background-color: white !important;
-    scale: 1.4;
+    scale: 1.1;
 }
 
 @media (min-width: 320px) {
@@ -83,4 +83,11 @@
     .swiper-pagination-bullet-active {
         scale: 1.4;
     }
+        .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.4vw;
+            margin-bottom: 2.4vh;
+        }
 }

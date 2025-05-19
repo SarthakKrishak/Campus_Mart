@@ -126,17 +126,16 @@ const Home = () => {
           className="h-auto min-h-[22vh] md:min-h-[24vh] md:h-auto lg:min-h-[22vh] lg:h-auto xl:min-h-[48vh] xl:h-auo bg-gradient-to-l from-blue-600 to-indigo-600 rounded-md md:rounded-xl ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-[0px_8.196179389953613px_8.196179389953613px_0px_rgba(0,0,0,0.12)]"
         >
           <Swiper
-          // modules={[Pagination, A11y, Autoplay]}
-          // spaceBetween={30}
-          // slidesPerView={1}
-          // pagination={{ clickable: true }}
-          // className="w-full h-full"
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          // }}
-          // loop={true}
-          // speed={900}
+          modules={[Pagination, A11y, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          speed={900}
           >
             {/* Slide 1 */}
             <SwiperSlide>
