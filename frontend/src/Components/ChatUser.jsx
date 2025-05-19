@@ -10,11 +10,11 @@ const ChatUser = ({ user, onClick }) => {
           {user.url ? <img src={user.url} alt="user profile image" className='lg:size-12' /> : <img src={userdp} alt="user profile image" className='lg:size-12' />}
           <div className='flex justify-between lg:pl-3 lg:pr-3 w-full'>
               <div className='flex flex-col leading-5 text-black'>
-                  <h1 className='font-robotoFlex font-medium lg:text-sm tracking-wider'>{user.name}</h1>
-                  <h3 className='font-light font-robotoFlex text-gray-500 lg:text-xs '>Hey, tell me your final price.</h3>
+                  <h1 className='font-robotoFlex font-medium lg:text-sm tracking-wider dark:text-[#FFFFFF]'>{user.name}</h1>
+                  <h3 className='font-light font-robotoFlex text-gray-500 lg:text-xs dark:text-[#64707D]'>Hey, tell me your final price.</h3>
               </div>
               <div className='flex flex-col text-black font-robotoFlex font-medium'>
-                  <h1 className='lg:text-xs tracking-wider'>19:44</h1>
+                  <h1 className='lg:text-xs tracking-wider dark:text-[#FFFFFF]'>19:44</h1>
                   <div className='flex items-center justify-center lg:pt-1'>
                       <img src={dot} alt="image" className='lg:size-2' />
                   </div>

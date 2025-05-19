@@ -6,7 +6,7 @@ import whitebag from "/whitebag.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-bl from-indigo-600 to-blue-600 px-[4.5vw] pt-10 lg:pt-[2vw] relative text-white font-poppins overflow-hidden">
+    <footer className="w-full bg-gradient-to-bl from-indigo-600 to-blue-600 dark:bg-none dark:bg-zinc-900 px-[4.5vw] pt-10 lg:pt-[2vw] relative text-white font-poppins overflow-hidden">
       {/* Decorative Circles */}
       <img
         src="/assets/circle45.png"

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { RiNotificationFill } from "react-icons/ri";
-import { IoIosSunny } from "react-icons/io";
+import { IoIosSunny, IoMdMoon } from "react-icons/io";
 import bag from "/bag.png";
 import bluebag from "/bluebag.png";
 import { useEffect } from "react";
@@ -22,7 +22,26 @@ const Header = ({ color, textColor, bagUrl }) => {
   ];
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [fade, setFade] = useState(true);
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    if (newMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
   const handleSearchBar = (e) => {
     setSearch(e.target.value);
@@ -42,22 +61,26 @@ const Header = ({ color, textColor, bagUrl }) => {
   return (
     <nav
       style={{ backgroundColor: color, color: textColor }}
-      className={`flex text-black items-center justify-between pt-6 pb-3 md:pb-4 sm:pl-10 md:pr-10 lg:pl-[4.6vw] lg:pr-[4.6vw] lg:pb-4 lg:pt-6 xl:pb-5`}
+      className={`flex text-black items-center justify-between pt-6 pb-3 md:pb-4 sm:pl-10 md:pr-10 lg:pl-[4.6vw] lg:pr-[4.6vw] lg:pb-4 lg:pt-5 xl:pb-4 xl:pt-5`}
     >
-      <div className="flex justify-between pl-5 pr-6 w-full items-center sm:hidden font-poppins">
+      <div className="flex justify-between pl-5 pr-6 w-full items-center sm:hidden font-poppins dark:text-white">
         <Link to="/">
           <RiMenu2Line size={25} />
         </Link>
-        <div className="flex items-center font-bold text-lg gap-[1vw]">
-          <img src={bagUrl} className="size-4 lg:size-5" />
+        <div className="flex items-center font-bold text-lg gap-[1vw] dark:text-white">
+          {darkMode ? <img src={"/whitebag.png"} className="size-4 lg:size-5" /> : <img src={bagUrl} className="size-4 lg:size-5" />}
 
           <a href="/">Campus Mart</a>
         </div>
         <MdShoppingCart size={25} />
       </div>
 
-      <div className="hidden items-center font-bold text-lg gap-[0.4vw] md:text-base sm:flex lg:text-xl xl:text-[1.4vw] font-poppins md:gap-[0.6vw] lg:gap-[0.5vw]">
-        <img src={bagUrl} className="size-3 lg:size-5" />
+      <div className="hidden items-center font-bold text-lg gap-[0.4vw] md:text-base sm:flex lg:text-xl xl:text-[1.4vw] font-poppins md:gap-[0.6vw] lg:gap-[0.5vw] dark:text-white">
+        {darkMode ? (
+          <img src={"/whitebag.png"} className="size-3 lg:size-5" />
+        ) : (
+          <img src={bagUrl} className="size-3 lg:size-5" />
+        )}
         <a href="/">Campus Mart</a>
       </div>
 
@@ -77,7 +100,7 @@ const Header = ({ color, textColor, bagUrl }) => {
           <span
             className={`absolute left-4 lg:left-6 flex items-center gap-1 md:text-sm xl:text-base lg:text-sm`}
           >
-            <span className="text-gray-500">Search for</span>
+            <span className="text-gray-500 dark:text-[#303030]">Search for</span>
             <span
               className={` text-[#364EF2] pointer-events-none transition-opacity duration-500 z-0 ${
                 fade ? "opacity-100" : "opacity-0"
@@ -96,16 +119,22 @@ const Header = ({ color, textColor, bagUrl }) => {
 
       <div className="hidden items-center text-[1.9vw] sm:flex gap-8 md:gap-7 lg:gap-11 font-medium xl:gap-14">
         <div className="flex justify-center items-center text-[1.5vw] sm:gap-5 lg:gap-8 xl:gap-10">
-          <button onClick={toggleDarkMode} aria-label="Toggle dark mode">
-            <IoIosSunny
-              className={
-                darkMode
-                  ? "text-red-400  sm:size-4 lg:size-6 md:size-5"
-                  : "text-black sm:size-4 lg:size-6 md:size-5"
-              }
-            />
+          <button
+            onClick={toggleDarkMode}
+            aria-label="Toggle dark mode"
+            className="transition duration-500 ease-in-out"
+          >
+            {darkMode ? (
+              <IoIosSunny className="text-white sm:size-4 md:size-5 lg:size-6 transition-all duration-500 ease-in-out rotate-0 scale-100" />
+            ) : (
+              <IoMdMoon className="text-black sm:size-4 md:size-5 lg:size-6 transition-all duration-500 ease-in-out rotate-0 scale-100" />
+            )}
           </button>
-          <button className="relative" aria-label="Notifications">
+
+          <button
+            className="relative dark:text-white"
+            aria-label="Notifications"
+          >
             <RiNotificationFill className="sm:size-4 md:size-4 lg:size-6" />
             {notification > 0 && (
               <span className="absolute bg-red-500 text-white flex items-center justify-center rounded-full sm:size-2 text-xs p-[0.8vw] top-[-0.6vh] lg:top-[-0.7vh] right-[-0.3vw] xl:p-[0.5vw]">
@@ -116,19 +145,19 @@ const Header = ({ color, textColor, bagUrl }) => {
         </div>
         <Link
           to="/"
-          className="hover:text-blue-500 transition duration-200 md:text-[1.7vw] xl:text-[1.2vw] font-poppins font-medium"
+          className="hover:text-blue-500 transition duration-200 md:text-[1.7vw] xl:text-[1.2vw] font-poppins font-medium dark:text-white"
         >
           Orders
         </Link>
         <Link
           to="/"
-          className="hover:text-blue-500 transition duration-200 md:text-[1.7vw] xl:text-[1.2vw] font-poppins"
+          className="hover:text-blue-500 transition duration-200 md:text-[1.7vw] xl:text-[1.2vw] font-poppins dark:text-white"
         >
           Chats
         </Link>
         <Link
           to="/"
-          className="hover:text-blue-500 transition duration-200 md:text-[1.7vw] xl:text-[1.2vw] font-poppins"
+          className="hover:text-blue-500 transition duration-200 md:text-[1.7vw] xl:text-[1.2vw] font-poppins dark:text-white"
         >
           Menu
         </Link>

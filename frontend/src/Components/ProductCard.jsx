@@ -12,7 +12,7 @@ const ProductCard = () => {
     <Link
       onClick={handleClick}
       to={"/product"}
-      className="lg:w-[28vw] xl:w-[21vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
+      className="lg:w-[28vw] xl:w-[21vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105 dark:bg-zinc-900 dark:shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] dark:outline dark:outline-1 dark:outline-offset-[-1.03px] dark:outline-zinc-600"
     >
       <div className="md:p-3 p-2 w-full h-[22vh] md:h-[21vh] lg:h-[19vh] xl:h-[40vh] object-contain relative">
         <button
@@ -36,7 +36,7 @@ const ProductCard = () => {
         />
       </div>
 
-      <h1 className="md:pb-2 pb-1 pl-4 lg:text-[1.6vw] xl:text-[1.3vw] text-xs font-semibold text-[#313131] font-inter xl:mt-1">
+      <h1 className="md:pb-2 xl:pb-3 pb-1 pl-4 lg:text-[1.6vw] xl:text-[1.3vw] text-xs font-semibold text-[#313131] font-inter xl:mt-1 dark:text-white">
         Classmate Notebook
       </h1>
       <div className="flex md:gap-2 gap-5 pl-4">
@@ -50,7 +50,7 @@ const ProductCard = () => {
 
       <div className="pl-3 pr-3 xl:mt-4 lg:mt-3 lg:pb-6 md:mt-4 mt-3 pb-3 flex flex-col">
         <div className="flex items-center lg:gap-2 gap-2">
-          <h2 className="text-zinc-800 font-inter xl:text-2xl lg:text-xl font-bold text-sm md:text-base flex items-center justify-center tracking-tight">
+          <h2 className="text-zinc-800 font-inter xl:text-2xl lg:text-xl font-bold text-sm md:text-base flex items-center justify-center tracking-tight dark:text-white">
             <span className="mr-[-0.2vw]">
               <MdOutlineCurrencyRupee />
             </span>

@@ -28,7 +28,6 @@ const Chat = () => {
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
-    // On mobile, hide the sidebar after selecting a user
     if (window.innerWidth < 768) {
       setShowSidebar(false);
     }
@@ -59,7 +58,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col bg-white">
+    <div className="w-full h-screen flex flex-col bg-white dark:bg-[#131313]">
       <Header color={"#394ff1"} textColor={"white"} bagUrl={"/whitebag.png"} />
 
       <div className="flex-1 flex overflow-hidden relative">
@@ -89,7 +88,7 @@ const Chat = () => {
         <div
           className={`${
             showSidebar ? "flex" : "hidden"
-          } md:flex flex-col w-full md:w-1/3 lg:w-1/4 bg-white border-r border-zinc-200 z-40 absolute md:relative inset-0`}
+          } md:flex flex-col w-full md:w-1/3 lg:w-1/4 bg-white border-r border-zinc-200 z-40 absolute md:relative inset-0 dark:bg-[#131313] dark:border-0`}
         >
           {/* Mobile close button */}
           <button
@@ -114,10 +113,10 @@ const Chat = () => {
           </button>
 
           {/* Search bar */}
-          <div className="flex items-center bg-indigo-50 rounded-md border-[1.5px] border-zinc-100 px-2 mx-4 mt-2 font-poppins">
+          <div className="flex items-center bg-indigo-50 rounded-md border-[1.5px] border-zinc-100 px-2 mx-4 mt-2 font-poppins dark:bg-[#1A1D20] dark:border-[#3C3C3C] dark:text-white xl:mt-5">
             <CiSearch className="text-[#64707D] text-xl md:text-2xl" />
             <input
-              className="rounded-xl px-2 py-2 outline-none w-full placeholder:text-zinc-500 text-black text-sm bg-indigo-50"
+              className="rounded-xl px-2 py-2 outline-none w-full placeholder:text-zinc-500 text-black text-sm bg-indigo-50 dark:bg-[#1A1D20] dark:border-[#3C3C3C] dark:text-white dark:placeholder:text-[#C7C7C7]"
               placeholder="Search chats..."
               type="text"
               name="search"
@@ -147,7 +146,7 @@ const Chat = () => {
         >
           {/* Chat header */}
           {selectedUser ? (
-            <div className="border-b border-zinc-200 p-3 md:p-4">
+            <div className="border-b border-zinc-200 p-3 md:p-4 dark:border-0">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   {/* Mobile back button */}
@@ -183,10 +182,10 @@ const Chat = () => {
                     )}
 
                     <div className="ml-3">
-                      <h2 className="font-medium text-base md:text-lg">
+                      <h2 className="font-medium text-base md:text-lg xl:text-base dark:text-white">
                         {selectedUser.name}
                       </h2>
-                      <div className="flex items-center text-green-500 text-xs md:text-sm">
+                      <div className="flex items-center text-green-500 text-xs md:text-sm dark:text-[#4CAF50]">
                         <GoDotFill className="mr-1" />
                         <span>Active</span>
                       </div>
@@ -197,7 +196,7 @@ const Chat = () => {
                 {/* Options button */}
                 <div className="relative">
                   <button onClick={handleReport} aria-label="More options">
-                    <EllipsisVertical className="h-5 w-5 md:h-6 md:w-6" />
+                    <EllipsisVertical className="h-5 w-5 md:h-6 md:w-6 dark:text-[#AAB9C5]" />
                   </button>
 
                   {/* Dropdown menu */}
@@ -225,7 +224,7 @@ const Chat = () => {
           )}
 
           {/* Messages area */}
-          <div className="flex-1 overflow-y-auto overflow-x-hidden bg-gradient-to-b from-indigo-50 to-sky-100 p-4">
+          <div className="flex-1 overflow-y-auto overflow-x-hidden bg-gradient-to-b from-indigo-50 to-sky-100 p-4 dark:bg-[#1A1D20] dark:bg-none">
             {selectedUser ? (
               messages.length > 0 ? (
                 <div className="space-y-4">
@@ -275,18 +274,21 @@ const Chat = () => {
 
           {/* Message input */}
           {selectedUser && (
-            <form onSubmit={handleSendMessage} className="p-3 md:p-4">
-              <div className="flex items-center outline outline-[0.50px] outline-zinc-300 rounded-md">
+            <form
+              onSubmit={handleSendMessage}
+              className="p-3 md:p-4 dark:bg-[#1A1D20]"
+            >
+              <div className="flex items-center outline outline-[0.50px] outline-zinc-300 rounded-md dark:outline-[#D7D7D7] dark:outline-[0.10px] dark:border-0 dark:bg-[#202122]">
                 <input
                   type="text"
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 px-4 py-2 md:py-3 text-sm md:text-base outline-none"
+                  className="flex-1 px-4 py-2 md:py-3 text-sm md:text-base outline-none dark:bg-[#202122] dark:text-white dark:placeholder:text-[#939393]"
                 />
                 <button
                   type="submit"
-                  className=" text-black hover:text-blue-700 duration-300 ease-in-out rounded-md p-2 md:p-3 mx-1"
+                  className=" text-black hover:text-blue-700 duration-300 ease-in-out rounded-md p-2 md:p-3 mx-1 dark:bg-[#202122] dark:text-[#A1A1A1]"
                   aria-label="Send message"
                 >
                   <IoSend className="h-5 w-5 lg:h-6 lg:w-6" />
