@@ -389,20 +389,15 @@ const Home = () => {
 
       <div className="w-full min-h-screen bg-white flex flex-col items-center pl-[4.5vw] pr-[4.5vw]">
         {/* Category section */}
-        <div className="flex w-[90vw] flex-col gap-4 lg:gap-6 lg:mt-12 mt-8">
-          <div className="flex items-center lg:text-[1.7vw] md:text-[2.1vw] text-sm gap-[0.4vw]">
-            <img
-              src="/assets/fluent-mdl2_tiles.png"
-              className="size-6 lg:size-8"
-              alt="image"
-            />
+        <div className="flex w-[90vw] flex-col gap-4 lg:gap-4 xl:gap-6 lg:mt-12 mt-8">
+          <div className="lg:text-[2vw] xl:text-[1.7vw] md:text-[2.1vw] text-sm gap-[0.4vw]">
             <h1 className="font-semibold font-poppins tracking-wide">
               Categories
             </h1>
           </div>
           <div
             ref={sliderRef}
-            className="flex w-full gap-2 md:gap-4 lg:gap-6 items-center overflow-x-auto no-scrollbar cursor-grab"
+            className="flex w-full gap-2 md:gap-4 lg:gap-6 items-center overflow-x-auto no-scrollbar cursor-grab select-none"
             onMouseDown={onMouseDown}
             onMouseLeave={onMouseLeave}
             onMouseUp={onMouseUp}
@@ -419,16 +414,16 @@ const Home = () => {
               imageSrc="/assets/icons8-bicycle-961.png"
             />
             <Category title="Matress" imageSrc="/assets/icons8-bed-961.png" />
-            <Category title="Others" />
+            <Category title="Others" imageSrc={"/others.png"} />
           </div>
         </div>
 
         {/* Products section */}
-        <div className="w-full lg:mt-12 mt-8 flex flex-col lg:gap-6 gap-3">
-          <h1 className="w-[90vw] lg:text-[1.7vw] md:text-[2.1vw] text-sm font-bold font-poppins">
+        <div className="w-full lg:mt-12 mt-8 flex flex-col lg:gap-4 xl:gap-6 gap-2">
+          <h1 className="w-[90vw] lg:text-[2vw] xl:text-[1.7vw] md:text-[2.1vw] text-sm font-bold font-poppins">
             Popular Products
           </h1>
-          <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-4 gap-1 ">
+          <div className="w-full flex flex-wrap lg:shrink-0 mt-2 lg:gap-2 xl:gap-4 gap-1 ">
             <ProductCard />
             <ProductCard />
             <ProductCard />

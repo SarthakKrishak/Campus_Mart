@@ -12,9 +12,9 @@ const ProductCard = () => {
     <Link
       onClick={handleClick}
       to={"/product"}
-      className="lg:w-[21.3vw] w-[44.7vw] lg:h-[64vh] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
+      className="lg:w-[21.3vw] w-[44.7vw] md:w-[29vw] rounded-xl overflow-hidden shadow-[0px_4.115523815155029px_28.808666229248047px_0px_rgba(0,0,0,0.10)] outline outline-1 outline-offset-[-1.03px] outline-zinc-300 hover:shadow-sm animation duration-300 ease-linear hover:scale-105"
     >
-      <div className="p-3 w-full lg:h-[40vh] object-contain relative">
+      <div className="md:p-3 p-2 w-full h-[21vh] lg:h-[19vh] xl:h-[40vh] object-contain relative">
         <button
           className="absolute flex items-center justify-center lg:w-10 w-7 lg:h-10 h-7 right-5 top-5"
           aria-label="Add to wishlist"
@@ -25,7 +25,7 @@ const ProductCard = () => {
           </div>
         </button>
 
-        <div className="bg-indigo-600 outline outline-1 outline-offset-[-1.14px] outline-black/10 text-white px-2 py-1 rounded lg:text-sm text-xs font-medium shadow-md font-poppins absolute bottom-6 left-6 lg:px-4">
+        <div className="bg-indigo-600 outline outline-1 outline-offset-[-1.14px] outline-black/10 text-white px-2 py-1 rounded md:text-sm text-xs font-medium shadow-md font-poppins absolute md:bottom-6 md:left-6 lg:px-4 bottom-4 left-4">
           Electronics
         </div>
 
@@ -36,11 +36,11 @@ const ProductCard = () => {
         />
       </div>
 
-      <h1 className="pb-2 pl-4 lg:text-[1.3vw] text-xs font-medium text-[#313131] font-inter lg:mt-3">
+      <h1 className="pb-2 pl-4 lg:text-[1.6vw] xl:text-[1.3vw] text-sm font-medium text-[#313131] font-inter xl:mt-3">
         Classmate Notebook
       </h1>
-      <div className="flex gap-2 pl-4">
-        <div className="bg-green-100 px-2 py-1 rounded lg:text-sm text-xs text-green-600 font-semibold font-inter flex items-center lg:gap-2">
+      <div className="flex md:gap-2 gap-5 pl-4">
+        <div className="bg-green-100 px-2 py-1 rounded xl:text-sm text-xs text-green-600 font-semibold font-inter flex items-center xl:gap-2 gap-1">
           <span>4.0</span>
           <span>
             <FaStar />
@@ -48,9 +48,9 @@ const ProductCard = () => {
         </div>
       </div>
 
-      <div className="pl-3 pr-3 lg:mt-4 lg:pb-6 mt-2 pb-3 flex flex-col">
-        <div className="flex items-center lg:gap-2">
-          <h2 className="text-zinc-800 font-inter lg:text-2xl font-bold text-sm flex items-center justify-center tracking-tight">
+      <div className="pl-3 pr-3 xl:mt-4 lg:mt-3 lg:pb-6 mt-4 pb-3 flex flex-col">
+        <div className="flex items-center lg:gap-2 gap-2">
+          <h2 className="text-zinc-800 font-inter xl:text-2xl lg:text-xl font-bold text-base flex items-center justify-center tracking-tight">
             <span className="mr-[-0.2vw]">
               <MdOutlineCurrencyRupee />
             </span>
@@ -64,7 +64,7 @@ const ProductCard = () => {
           </h2>
         </div>
         <div className="flex items-center pl-1">
-          <h2 className="text-[#06981E] font-inter lg:text-sm font-medium text-sm flex items-center">
+          <h2 className="text-[#06981E] font-inter lg:text-sm font-medium text-xs flex items-center">
             <h3>Save</h3>
             <div className="flex items-center">
               <span className="mr-[-0.2vw]">

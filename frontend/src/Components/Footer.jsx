@@ -11,19 +11,19 @@ const Footer = () => {
       <img
         src="/assets/circle45.png"
         alt="circle"
-        className="absolute bottom-[-2vh] left-60 w-[250px]"
+        className="absolute hidden md:block bottom-[-2vh] left-60 w-[250px]"
       />
       <img
         src="/assets/footer_circle.png"
         alt="circle"
-        className="absolute top-[-2vh] right-[-3vh] w-[250px]"
+        className="absolute hidden md:block top-[-2vh] right-[-3vh] w-[250px]"
       />
 
       {/* Top Section */}
-      <div className="flex flex-col md:flex-row justify-between gap-10 pt-4">
+      <div className="flex flex-col md:flex-row justify-between gap-10 md:pt-4 pt-2">
         {/* Left */}
         <div className="w-full md:w-1/2 flex flex-col gap-3">
-          <div className="flex flex-col lg:gap-2">
+          <div className="flex flex-col lg:gap-2 gap-1">
             <Link
               to="/"
               className="flex items-center gap-2 text-xl font-bold lg:text-2xl"
@@ -31,7 +31,7 @@ const Footer = () => {
               <img src={whitebag} alt="logo" className="w-5 h-5" />
               <h1> Campus Mart</h1>
             </Link>
-            <h1 className="flex items-center gap-2 text-xl font-medium lg:text-lg font-poppins">
+            <h1 className="flex items-center gap-2 md:text-xl text-sm font-medium lg:text-lg font-poppins">
               {" "}
               ~ platform build by{" "}
               <a
@@ -50,12 +50,12 @@ const Footer = () => {
         </div>
 
         {/* Right */}
-        <div className="hidden md:flex flex-col items-end gap-4 w-full md:w-1/2 lg:mt-6">
-          <h2 className="text-[1.2vw] flex items-center gap-2 font-medium lg:text-[1.5vw] font-poppins">
+        <div className="hidden md:flex flex-col items-end gap-4 w-full md:w-1/2 md:mt-8 lg:mt-6">
+          <h2 className="text-[1.2vw] flex items-center gap-2 font-medium md:text-[2.3vw] lg:text-[1.5vw] font-poppins">
             Feedback? We're Listening!
             <FaHeart className="text-white" />
           </h2>
-          <div className="relative lg:w-1/2">
+          <div className="relative md:w-2/3 lg:w-1/2">
             <a
               href="mailto:sarthakkrishak1234@gmail.com"
               className="z-10 absolute inset-x-0 top-0 py-3 px-10 text-black bg-white rounded-3xl text-lg font-semibold text-center"
@@ -81,15 +81,15 @@ const Footer = () => {
 
       {/* Mobile Feedback */}
       <div className="md:hidden flex flex-col gap-2 mb-10">
-        <h2 className="text-[4vw] mb-1">Feedback? We're Listening!</h2>
-        <div className="relative">
+        <h2 className="text-[4.3vw] mb-1">Feedback? We're Listening!</h2>
+        <div className="relative w-2/3">
           <a
             href="mailto:sarthakkrishak1234@gmail.com"
-            className="z-10 absolute inset-x-0 top-0 py-2 px-[16vw] text-black bg-white rounded-3xl text-lg font-semibold text-center"
+            className="z-10 absolute inset-x-0 top-0 py-3 px-10 text-black bg-white rounded-3xl text-base font-semibold text-center"
           >
             Send Us
           </a>
-          <div className="border border-slate-200 bg-transparent rounded-3xl py-5 px-[24vw] mt-2"></div>
+          <div className="border border-slate-200 bg-transparent rounded-3xl py-7 px-20 ml-[-0.5vw] mr-2"></div>
         </div>
       </div>
 
@@ -133,12 +133,30 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-white/30 mt-10 pt-4 text-sm pb-4 text-white flex items-center justify-between">
+      <div className="border-t border-white/30 mt-10 pt-4 md:text-sm text-lg pb-4 text-white flex flex-col md:flex-row md:items-center justify-between">
         <p className="hover:underline cursor-default">
           © 2025 All rights reserved
         </p>
-        <p className="text-[3.5vw] sm:text-base mt-1">
+        <p className="text-[3.5vw] hidden md:block sm:text-base mt-1">
           Designed and developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/sarthakkrishak/"
+            className="font-semibold hover:text-black transition"
+          >
+            Sarthak
+          </a>
+          ,{" "}
+          <a href="#" className="font-semibold hover:text-black transition">
+            Kamal
+          </a>
+          , and{" "}
+          <a href="#" className="font-semibold hover:text-black transition">
+            Anurag
+          </a>
+          .
+        </p>
+        <p className="text-[4vw] md:hidden sm:text-base mt-1">
+          Developed by{" "}
           <a
             href="https://www.linkedin.com/in/sarthakkrishak/"
             className="font-semibold hover:text-black transition"
