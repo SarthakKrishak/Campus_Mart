@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Components/Header";
-import { Heart } from "lucide-react";
+import { IoMdShareAlt } from "react-icons/io";
 import { EllipsisVertical } from "lucide-react";
 import { IndianRupee } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
@@ -12,6 +12,7 @@ const ProductDescription = () => {
   const [report, setReport] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [wishlish, setWishlish] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const navigate = useNavigate();
 
@@ -35,9 +36,29 @@ const ProductDescription = () => {
     toast.success("Added to Wishlist");
   };
 
+  const handleShare = async () => {
+    const shareData = {
+      title: "Check out this product on Campus Mart!",
+      text: "I found this great product on Campus Mart. Have a look!",
+      url: productUrl,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(productUrl);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    } catch (error) {
+      console.error("Sharing failed:", error);
+    }
+  };
+
   return (
     <div className="w-full h-screen">
-      <Header color={"#394ff1"} textColor={"white"} />
+      <Header color={"#394ff1"} textColor={"white"} bagUrl={"/whitebag.png"} />
       <div className="flex flex-col w-full lg:flex-row 2xl:min-h-screen">
         <Toaster />
         {/* left side */}
@@ -67,17 +88,15 @@ const ProductDescription = () => {
                   alt="image"
                 />
               </div>
-              <div className="flex justify-end items-end pr-6 relative pt-5">
-                <button onClick={handleLike} className="absolute">
-                  <Heart className="text-[#848484] hover:text-blue-500" />
+              <div className="flex justify-end items-end pr-6 pt-5">
+                <button onClick={handleShare} aria-label="Share product">
+                  <IoMdShareAlt className="text-[#848484] hover:text-blue-500 lg:size-6 size-4" />
                 </button>
-
-                <button
-                  onClick={handleLike}
-                  className={`absolute ${isLiked ? "block" : "hidden"}`}
-                >
-                  <Heart className="text-[red]" />
-                </button>
+                {copied && (
+                  <span className="text-xs text-green-600 ml-2">
+                    Link copied!
+                  </span>
+                )}
               </div>
             </div>
           </div>
@@ -121,7 +140,7 @@ const ProductDescription = () => {
               <div className="flex flex-col items-center gap-2 relative">
                 <button onClick={handleReport}>
                   <EllipsisVertical />
-                </button> 
+                </button>
                 <div
                   className={`bg-slate-400 text-white font-medium py-3 px-10 rounded-md ${
                     report ? "block" : "hidden"
@@ -143,9 +162,9 @@ const ProductDescription = () => {
               <h1 className="text-[4.2vw] text-neutral-900 font-bold mt-5 md:text-[3.8vw] lg:text-[2.7vw] xl:text-[1.8vw] font-robotoFlex">
                 Portonics Wireless Earbuds
               </h1>
-              <div className="font-sans text-[6vw] flex items-center mt-1 md:text-[5vw] lg:text-[3.8vw] xl:text-[2.8vw]">
+              <div className="text-[6vw] flex items-center mt-1 md:text-[5vw] lg:text-[3.8vw] xl:text-[2.8vw]">
                 <IndianRupee className="size-6" />
-                              <h1 className=" text-neutral-900 font-tiltWarp">449</h1>
+                <h1 className=" text-neutral-900 font-tiltWarp">449</h1>
                 <div className="text-zinc-600 flex items-center text-2xl justify-end ml-3 mt-3 font-normal line-through font-poppins leading-none">
                   <IndianRupee className="size-4" />
                   <h1>599</h1>
@@ -155,7 +174,7 @@ const ProductDescription = () => {
               <h1 className="font-medium mt-4 text-base md:text-lg xl:mt-7 font-poppins">
                 Product Details
               </h1>
-              <p className="text-[#848484] xl:mr-20 font-poppins leading-7">
+              <p className="text-[#848484] xl:mr-20 font-poppins leading-5">
                 A wireless mouse is a convenient input device that connects to a
                 computer without the need for physical cables, typically using
                 Bluetooth or a USB receiver. A wireless mouse is a convenient
@@ -213,13 +232,12 @@ const ProductDescription = () => {
             </div>
           </div>
           {/* Right bottom side */}
-                  <div className="flex flex-col w-full justify-between items-center mt-4 mb-6 gap-3 lg:flex-row xl:gap-96">
-                      
+          <div className="flex flex-col w-full justify-between items-center mt-4 mb-6 gap-3 lg:flex-row xl:gap-96">
             <div
               onClick={handleWishlish}
-                          className="outline outline-2 outline-offset-[-2px] outline-neutral-200 rounded-md text-black w-full py-3 flex justify-center items-center font-semibold text-sm md:text-base font-robotoFlex hover:scale-105 duration-300 ease-in-out cursor-pointer gap-2"
-                      >
-                          <FaRegHeart className="lg:size-4 hover:text-red-500"/>
+              className="outline outline-2 outline-offset-[-2px] outline-neutral-200 rounded-md text-black w-full py-3 flex justify-center items-center font-semibold text-sm md:text-base font-robotoFlex hover:scale-105 duration-300 ease-in-out cursor-pointer gap-2"
+            >
+              <FaRegHeart className="lg:size-4 hover:text-red-500" />
               Add to Wishlist
             </div>
             <Link

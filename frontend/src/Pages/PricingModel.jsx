@@ -1,17 +1,16 @@
 import React from "react";
 import Header from "../Components/Header";
-import toast, { Toaster } from 'react-hot-toast';
-import { CircleCheck } from 'lucide-react';
+import toast, { Toaster } from "react-hot-toast";
+import { CircleCheck } from "lucide-react";
 
 const PricingModel = () => {
-
   const handlePurchase = () => {
-    toast('Coming Soon !')
+    toast("Coming Soon !");
   };
 
   return (
     <div className="flex flex-col relative w-full min-h-screen overflow-hidden">
-      <Header color={"#394ff1"} textColor={"white"} />
+      <Header color={"#394ff1"} textColor={"white"} bagUrl={"/whitebag.png"} />
       <img
         className="absolute w-[28vw] h-[50vh] bottom-[-35vh] left-[-11vw] hidden xl:block"
         src="/assets/Group_114.png"
@@ -28,15 +27,13 @@ const PricingModel = () => {
         </h4>
       </div>
       <div className="w-full h-3/4 flex flex-col gap-7 items-center justify-center mb-10 sm:flex xl:flex-row pr-32 pl-32 mt-8">
-
         {/* Card 1 */}
         <div className="bg-[#f2f4ff] w-[80vw] rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3 pt-6 pb-5 sm:w-[61vw] md:w-[55vw] xl:w-[30vw]">
           <div className="bg-gradient-to-br from-indigo-600 to-blue-600 w-24 py-1 text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 leading-tight font-robotoFlex">
             Current
           </div>
           <h5 className="text-neutral-400 text-sm sm:text-lg md:text-base leading-tight font-robotoFlex">
-            Perfect for exploring the platform and listing your first few
-            items.
+            Perfect for exploring the platform and listing your first few items.
           </h5>
           <ul className="text-[4vw] pl-4 mt-2 leading-7 sm:text-[2.6vw] md:text-lg xl:text-base font-robotoFlex">
             <li className="list-disc">List up to 5 products for free</li>
@@ -46,7 +43,9 @@ const PricingModel = () => {
           </ul>
           <div className="flex flex-col gap-3 mt-5 sm:mt-10 md:mt-11 xl:mt-6">
             <div className="flex flex-col gap-1">
-              <h1 className="text-3xl sm:text-5xl xl:text-4xl font-tiltWarp">Free</h1>
+              <h1 className="text-3xl sm:text-5xl xl:text-4xl font-tiltWarp">
+                Free
+              </h1>
               <hr className="border-[#D0D0D0]" />
             </div>
             <div className="border-[#D0D0D0] border rounded-md py-1 flex justify-center items-center sm:py-2 md:py-2 xl:py-1 font-robotoFlex">
@@ -61,10 +60,13 @@ const PricingModel = () => {
             <div className="bg-gradient-to-r from-white to-white w-24 py-1 text-black font-bold rounded-md px-2 flex items-center justify-center text-sm sm:py-[0.7vh] xl:py-2">
               Pro
             </div>
-            <h1 className="text-xs font-semibold text-[#ffe500] sm:text-sm leading-tight font-robotoFlex">Popular</h1>
+            <h1 className="text-xs font-semibold text-[#ffe500] sm:text-sm leading-tight font-robotoFlex">
+              Popular
+            </h1>
           </div>
           <h5 className="text-[#cfcfcf] text-sm sm:text-lg md:text-base leading-tight font-robotoFlex">
-            For active sellers and buyers looking to expand.Ideal for users who want additional perks and tools to grow their sales.
+            For active sellers and buyers looking to expand.Ideal for users who
+            want additional perks and tools to grow their sales.
           </h5>
           <ul className="text-sm leading-7 text-white sm:text-[2.6vw] sm:mt-3 xl:text-base font-robotoFlex">
             <div className="flex gap-2 items-center">
@@ -90,10 +92,18 @@ const PricingModel = () => {
           </ul>
           <div className="flex flex-col gap-3 mt-5 sm:mt-10 md:mt-12 xl:mt-7">
             <div className="flex flex-col gap-1">
-              <h1 className="text-4xl text-white sm:text-5xl xl:text-4xl"><span className="text-white text-3xl pr-1 sm:text-5xl xl:text-4xl font-roboto">₹</span><span className="font-tiltWarp text-5xl">49</span></h1>
+              <h1 className="text-4xl text-white sm:text-5xl xl:text-4xl">
+                <span className="text-white text-3xl pr-1 sm:text-5xl xl:text-4xl font-roboto">
+                  ₹
+                </span>
+                <span className="font-tiltWarp text-5xl">49</span>
+              </h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white sm:py-2 md:py-2 xl:py-1 font-robotoFlex">
+            <button
+              onClick={handlePurchase}
+              className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-white sm:py-2 md:py-2 xl:py-1 font-robotoFlex"
+            >
               Continue
             </button>
             <Toaster />
@@ -106,7 +116,8 @@ const PricingModel = () => {
             Pro Plus
           </div>
           <h5 className="text-[#8D8D8D] text-sm sm:text-lg md:text-base font-robotoFlex leading-tight">
-            Ideal for users who want additional perks and tools to grow their sales.
+            Ideal for users who want additional perks and tools to grow their
+            sales.
           </h5>
           <ul className="text-[4vw] pl-4 mt-2 leading-7 sm:text-[2.6vw] md:text-lg xl:text-base font-robotoFlex">
             <li className="list-disc">Everything in Growth Plan</li>
@@ -116,16 +127,23 @@ const PricingModel = () => {
           </ul>
           <div className="flex flex-col gap-3 mt-5 sm:mt-10 md:mt-12 xl:mt-7">
             <div className="flex flex-col gap-1">
-              <h1 className="text-4xl text-black sm:text-5xl xl:text-4xl"><span className=" text-3xl font-['Roboto'] pr-1 sm:text-5xl xl:text-4xl text-gray-400">₹</span><span className="font-tiltWarp text-5xl">99</span></h1>
+              <h1 className="text-4xl text-black sm:text-5xl xl:text-4xl">
+                <span className=" text-3xl font-['Roboto'] pr-1 sm:text-5xl xl:text-4xl text-gray-400">
+                  ₹
+                </span>
+                <span className="font-tiltWarp text-5xl">99</span>
+              </h1>
               <hr className="border-[#8e8e8e]" />
             </div>
-            <button onClick={handlePurchase} className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-indigo-600 to-blue-600 text-white sm:py-2 md:py-2 xl:py-1 font-robotoFlex">
+            <button
+              onClick={handlePurchase}
+              className="border-[#cfcfcf] border rounded-md py-1 flex justify-center items-center bg-gradient-to-r from-indigo-600 to-blue-600 text-white sm:py-2 md:py-2 xl:py-1 font-robotoFlex"
+            >
               Continue
             </button>
             <Toaster />
           </div>
         </div>
-
       </div>
     </div>
   );

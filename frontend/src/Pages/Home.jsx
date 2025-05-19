@@ -65,7 +65,7 @@ const Home = () => {
   };
   return (
     <div className="w-full bg-white relative">
-      <Header />
+      <Header bagUrl={"/bag.png"} />
       {/* search bar */}
       <div className="flex items-center bg-white rounded-md border border-slate-300 pr-2 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2 font-poppins">
         <input

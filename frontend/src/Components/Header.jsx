@@ -8,6 +8,7 @@ import { IoChevronBackOutline } from "react-icons/io5";
 import bag from "/bag.png";
 import bluebag from "/bluebag.png";
 import { useEffect } from "react";
+
 const Header = ({ color, textColor, bagUrl }) => {
   const [search, setSearch] = useState("");
   const [darkMode, setDarkMode] = useState(false);
@@ -50,13 +51,14 @@ const Header = ({ color, textColor, bagUrl }) => {
         </Link>
         <div className="flex items-center font-bold text-base gap-[1vw]">
           <img src={bagUrl} className="size-4 lg:size-5" />
+
           <a href="/">Campus Mart</a>
         </div>
         <IoIosMenu size={25} />
       </div>
 
       <div className="hidden items-center font-bold text-lg gap-[0.4vw] md:text-base sm:flex lg:text-xl xl:text-[1.4vw] font-poppins md:gap-[0.6vw] lg:gap-[0.5vw]">
-        <img src={bag} className="size-3 lg:size-5" />
+        <img src={bagUrl} className="size-3 lg:size-5" />
         <a href="/">Campus Mart</a>
       </div>
 
