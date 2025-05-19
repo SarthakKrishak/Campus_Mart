@@ -27,13 +27,12 @@ const PricingModel = () => {
         </h4>
       </div>
       <div className="w-full h-3/4 flex flex-col gap-7 md:gap-5 items-center justify-center mb-10 sm:flex xl:flex-row pr-32 pl-32 md:pl-12 md:pr-12 mt-8 lg:mt-12">
-        
         {/* Card 1 */}
         <div className="bg-[#f2f4ff] w-[80vw] rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3 pt-6 pb-5 sm:w-[61vw] md:w-[55vw] lg:w-[43vw] xl:w-[30vw]">
-          <div className="bg-gradient-to-br from-indigo-600 to-blue-600 w-24 py-[0.8vh] text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 leading-tight font-robotoFlex lg:text-[1.6vw] lg:w-28">
+          <div className="bg-gradient-to-br from-indigo-600 to-blue-600 w-24 py-[0.8vh] text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 leading-tight font-robotoFlex lg:text-[1.6vw] xl:text-[1vw] lg:w-28">
             Current
           </div>
-          <h5 className="text-neutral-400 text-[3.5vw] sm:text-lg md:text-base leading-tight font-robotoFlex lg:text-[1.7vw]">
+          <h5 className="text-neutral-400 text-[3.5vw] sm:text-lg md:text-base leading-tight font-robotoFlex lg:text-[1.7vw] xl:text-[1.1vw]">
             Perfect for exploring the platform and listing your first few items.
           </h5>
           <ul className="text-[3.5vw] pl-4 mt-2 leading-7 lg:leading-9 sm:text-[2.6vw] md:text-base lg:text-lg xl:text-base font-robotoFlex">
@@ -65,7 +64,7 @@ const PricingModel = () => {
               Popular
             </h1>
           </div>
-          <h5 className="text-neutral-400 text-[3.5vw] sm:text-lg md:text-base leading-tight font-robotoFlex lg:text-[1.7vw]">
+          <h5 className="text-white text-[3.5vw] sm:text-lg md:text-base leading-tight font-robotoFlex lg:text-[1.7vw] xl:text-[1.1vw]">
             For active sellers and buyers looking to expand.Ideal for users who
             want additional perks and tools to grow their sales.
           </h5>
@@ -113,10 +112,10 @@ const PricingModel = () => {
 
         {/* Card 3 */}
         <div className="bg-[#f2f4ff] w-[80vw] rounded-xl shadow-md shadow-slate-400 p-4 flex flex-col gap-3 pt-6 pb-5 sm:w-[61vw] md:w-[55vw] lg:w-[43vw] xl:w-[30vw]">
-          <div className="bg-gradient-to-br from-indigo-600 to-blue-600 w-24 py-[0.8vh] text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 leading-tight font-robotoFlex lg:text-[1.6vw] lg:w-28">
+          <div className="bg-gradient-to-br from-indigo-600 to-blue-600 w-24 py-[0.8vh] text-white font-semibold rounded-md px-2 items-center justify-center flex text-sm sm:py-[0.7vh] md:py-2 leading-tight font-robotoFlex lg:text-[1.6vw] xl:text-[1vw] lg:w-28">
             Pro Plus
           </div>
-          <h5 className="text-neutral-400 text-[3.5vw] sm:text-lg md:text-base leading-tight font-robotoFlex lg:text-[1.7vw]">
+          <h5 className="text-neutral-400 text-[3.5vw] sm:text-lg md:text-base leading-tight font-robotoFlex lg:text-[1.7vw] xl:text-[1.1vw]">
             Ideal for users who want additional perks and tools to grow their
             sales.
           </h5>
