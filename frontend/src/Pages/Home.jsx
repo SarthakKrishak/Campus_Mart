@@ -118,7 +118,7 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col">
-        {/* Blue banner animated code */}
+        {/* Blue banner code */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -126,16 +126,16 @@ const Home = () => {
           className="h-auto min-h-[22vh] md:min-h-[24vh] md:h-auto lg:min-h-[22vh] lg:h-auto xl:min-h-[48vh] xl:h-auo bg-gradient-to-l from-blue-600 to-indigo-600 rounded-md md:rounded-xl ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-[0px_8.196179389953613px_8.196179389953613px_0px_rgba(0,0,0,0.12)]"
         >
           <Swiper
-          modules={[Pagination, A11y, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          speed={900}
+            modules={[Pagination, A11y, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            speed={900}
           >
             {/* Slide 1 */}
             <SwiperSlide>
@@ -304,54 +304,18 @@ const Home = () => {
           </Swiper>
         </motion.div>
 
-        {/* Blue banner code
-                <div className="h-[47vh] bg-gradient-to-l from-[#364ef2] to-[#534ff2] rounded-lg ml-[4.5vw] mr-[4.5vw] mt-4 flex mb-4 relative shadow-lg shadow-gray-400">
-                    <img width={170} src=".\src\assets\circle.png" alt="image" className="absolute bottom-0 left-72" />
-                    <div className="flex gap-1 absolute bottom-5 right-1/2">
-                        <div className="rounded-full bg-white w-2 h-2"></div>
-                        <div className="rounded-full bg-white w-2 h-2"></div>
-                        <div className="rounded-full bg-white w-2 h-2"></div>
-                    </div>
-                    <div className="flex flex-col h-full w-1/2 text-white gap-4 pl-20 pt-12 pb-12 justify-centerst">
-                        <h1 className="text-[2.1vw] font-bold"> 
-                            Unlock Deals, Share Essentials, <br />
-                            Simply Campus Living!
-                        </h1>
-                        <h1 className="text-[1.4vw] text-gray-200">
-                            Your trusted platform to simplify student life.
-                            <br />
-                            Buy, sell and connect with ease!
-                        </h1>
-                        <Link to={"/upload"} className="bg-white w-44 text-[#364EF2] font-bold rounded-md py-2 px-2 text-xl justify-center flex">
-                            Sell Now
-                        </Link>
-                    </div>
-
-                    <div className="flex h-full w-1/2 overflow-hidden justify-center items-center relative">
-                        <img height={420}
-                            width={400} src=".\src\assets\Group_115.png" alt="image" className="z-0 absolute"/>
-                        <img
-                            className="mt-1 z-10 absolute"
-                            height={420}
-                            width={400}
-                            src=".\src\assets\image_12.png"
-                            alt="image"
-                        />
-                    </div>
-                </div> */}
-
         {/* White banner*/}
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="pt-2 pb-2 md:pb-3 md:pt-3 lg:pb-6 lg:pt-6 pl-[2vw] pr-[2vw] lg:pl-[0.2vw] lg:pr-[0.2vw] ml-[4.5vw] mr-[4.5vw] rounded-md md:rounded-xl text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_36.9295768737793px_0px_rgba(0,0,0,0.16)]"
+          className="pt-2 pb-2 md:pb-4 md:pt-4 lg:pb-5 lg:pt-5 pr-[2vw] lg:pr-0 ml-[4.5vw] mr-[4.5vw] rounded-md md:rounded-xl text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_36.9295768737793px_0px_rgba(0,0,0,0.16)]"
         >
           {/* Background Image */}
           <img
             src="/assets/Group_114.png"
             alt="background"
-            className="absolute bottom-12 right-[-22vw] lg:right-[-7vw] z-0 w-[60vw] max-w-[400px] h-auto md:bottom-10 lg:bottom-12 md:right-[-21vw]"
+            className="absolute bottom-8 right-[-14vw] lg:right-[-7vw] z-0 w-[50vw] md:w-[40vw] lg:w-[32vw] xl:w-[24vw] h-auto md:bottom-12 lg:bottom-14 md:right-[-12vw]"
           />
 
           {/* White Banner Container */}
@@ -362,12 +326,12 @@ const Home = () => {
             className="w-full h-full text-black rounded-lg flex"
           >
             {/* Left Text Section */}
-            <div className="flex flex-col lg:pl-20 pl-6 w-2/3 justify-center">
+            <div className="flex flex-col lg:pl-14 pl-6 w-2/3 justify-center md:pl-10">
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="font-extrabold lg:text-[1.5vw] md:text-base text-black text-xs font-figtree tracking-wide"
+                className="font-extrabold lg:text-[1.7vw] xl:text-[1.5vw] md:text-base text-black text-xs font-figtree tracking-wide"
               >
                 Product of the Day
               </motion.h1>
@@ -375,7 +339,7 @@ const Home = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-blue-600 font-bold md:text-lg lg:text-[1.8vw] text-xs font-inter lg:mt-1"
+                className="text-blue-600 font-bold md:text-lg lg:text-[2.2vw] xl:text-[1.8vw] text-xs font-inter lg:mt-1"
               >
                 ADVERTISE YOUR PRODUCT HERE
               </motion.h1>
@@ -383,24 +347,24 @@ const Home = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="lg:text-lg md:text-sm text-[2.5vw] text-black font-medium font-inter"
+                className="lg:text-base xl:text-lg md:text-sm text-[2.5vw] text-black font-medium font-inter"
               >
                 Boost your chances of selling faster!
               </motion.h3>
             </div>
 
             {/* Right Price Section */}
-            <div className="flex items-end w-1/3 lg:gap-8 gap-2 justify-end lg:pr-20 pr-2 pt-3">
+            <div className="flex items-end w-1/3 lg:gap-6 xl:gap-7 gap-2 justify-end lg:pr-12 pr-2 pt-3">
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-right flex flex-col"
               >
-                <h1 className="text-slate-400 lg:text-lg text-xs font-medium font-inter md:text-sm">
+                <h1 className="text-slate-400 lg:text-base xl:text-lg text-xs font-medium font-inter md:text-sm">
                   Only at
                 </h1>
-                <span className="lg:text-4xl font-bold text-lg font-firaSans md:text-2xl">
+                <span className="lg:text-3xl xl:text-4xl font-bold text-lg font-firaSans md:text-2xl ">
                   ₹49
                 </span>
               </motion.div>
@@ -413,7 +377,7 @@ const Home = () => {
               >
                 <Link
                   to={"/price"}
-                  className="rounded-full bg-indigo-600 lg:p-[0.4vw] md:p-[0.8vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] lg:mb-0 md:mb-[0.3vh] text-sm"
+                  className="rounded-full bg-indigo-600 lg:p-[0.5vw] xl:p-[0.4vw] md:p-[0.8vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] lg:mb-0 md:mb-[0.3vh] text-sm"
                 >
                   <IoIosArrowForward />
                 </Link>
@@ -421,28 +385,6 @@ const Home = () => {
             </div>
           </motion.div>
         </motion.div>
-
-        {/* white banner code
-                <div className="h-[16vh] ml-[4.5vw] mr-[4.5vw] rounded-xl text-white flex  items-center justify-between relative overflow-hidden shadow-md shadow-gray-300">
-                    <img height={350}
-                        width={350} src=".\src\assets\Group_114.png" alt="image" className="absolute right-[-6vw] bottom-10 z-0" />
-                    <div className="w-full h-full bg-white shadow-md shadow-slate-300 text-black rounded-lg flex">
-                        <div className="flex flex-col pl-20 w-2/3 justify-center">
-                            <h1 className="font-semibold text-xl">Product of the Day</h1>
-                            <h1 className="text-[#364EF2] font-bold text-2xl">ADVERTISE YOUR PRODUCT HERE</h1>
-                            <h3 className="text-base text-slate-600 font-medium">Boost your chances of selling faster!</h3>
-                        </div>
-                        <div className="flex items-end w-1/3 p-4 gap-3 justify-end pr-20">
-                            <div className="text-right">
-                                <h1 className="text-slate-600 text-lg">Only at</h1>
-                                <span className="text-4xl font-bold">₹49</span>
-                            </div>
-                            <Link to={"/price"} className="rounded-full bg-[#394FF1] p-[0.4vw] text-white text-2xl flex justify-center items-center z-20">
-                                <IoIosArrowForward />
-                            </Link>
-                        </div>
-                    </div>
-                </div> */}
       </div>
 
       <div className="w-full min-h-screen bg-white flex flex-col items-center pl-[4.5vw] pr-[4.5vw]">
