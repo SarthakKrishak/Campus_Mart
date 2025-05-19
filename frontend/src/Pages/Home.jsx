@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Category from "../Components/Category";
 import ProductCard from "../Components/ProductCard";
 import Header from "../Components/Header";
@@ -60,23 +60,58 @@ const Home = () => {
   };
 
   const [search, setSearch] = useState("");
+
+  const placeholderWords = [
+    "Electronics",
+    "Book",
+    "Cycle",
+    "Essential",
+    "Mattress",
+  ];
+
   const handleSearchBar = (e) => {
     setSearch(e.target.value);
   };
+
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setPlaceholderIndex((prev) => (prev + 1) % placeholderWords.length);
+        setFade(true);
+      }, 300);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="w-full bg-white relative">
       <Header bagUrl={"/bag.png"} />
       {/* search bar */}
-      <div className="flex items-center bg-white rounded-md border border-slate-300 pr-2 shadow-sm shadow-slate-200 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2 font-poppins">
+      <div className="flex items-center bg-white rounded-md  pr-2 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.20)] border border-stone-300 hover:shadow-md transition ease-in-out duration-200 sm:hidden mr-4 ml-4 mt-2 font-poppins">
         <input
-          className="rounded-xl px-5 outline-none w-full placeholder:text-[#AAB9C5] text-black py-2 text-sm"
-          placeholder="Search for Product"
+          className="rounded-xl px-5 outline-none w-full placeholder:text-[#AAB9C5] text-black py-[1.9vh] text-sm placeholder-transparent relative z-10 bg-transparent"
           type="text"
           name="search"
           id="search"
+          value={search}
+          onChange={handleSearchBar}
           aria-label="Search products"
         />
-        <CiSearch size={22} className="text-[#64707D] size-5 mr-3" />
+        {/* Animated Placeholder Text */}
+        {search === "" && (
+          <span className={`absolute left-9 lg:left-6 flex items-center gap-1 text-sm`}>
+            <span className="text-slate-400">Search for</span>
+            <span
+              className={` text-[#364EF2] pointer-events-none transition-opacity duration-500 z-0 ${fade ? "opacity-100" : "opacity-0"
+                }`}
+            >
+              {placeholderWords[placeholderIndex]}
+            </span>
+          </span>
+        )}
+        <CiSearch size={22} className="text-[#64707D] size-6 mr-3" />
       </div>
 
       <div>
