@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import axios from "axios";
 import { Images } from "lucide-react";
+import { IoImages } from "react-icons/io5";
 import { ArrowUpFromLine } from "lucide-react";
 import { MdChangeCircle } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
@@ -77,24 +78,38 @@ const ProductListing = () => {
               </h1>
             </div>
             {/* Image upload */}
-            <div className="lg:h-full lg:w-[24vw] bg-gradient-to-b from-indigo-600 to-indigo-600  flex flex-col justify-center items-center ml-5 lg:ml-14 lg:mr-16 mr-6 lg:rounded-2xl rounded-xl text-white gap-4 pt-14 pb-14 lg:pt-0 lg:pb-0 md:pt-20 md:pb-20">
-              <div className="flex flex-col justify-center items-center gap-1">
-                <Images className="lg:size-14 size-8 md:size-9" />
+            <div className="lg:h-full lg:w-[24vw] bg-gradient-to-b from-[#394FF1] to-[#534FF2] shadow-[0px_4.410558223724365px_10px_0px_rgba(0,0,0,0.18)] flex flex-col lg:pl-7 items-start ml-5 lg:ml-14 lg:mr-16 mr-6 lg:rounded-2xl rounded-xl text-white gap-4 pt-14 pb-14 md:pt-20 md:pb-20 lg:pt-7 lg:pr-7 lg:gap-2 lg:pb-7">
+              <div className="flex justify-center items-center gap-1 lg:gap-2">
+                <IoImages className="lg:size-6 size-8 md:size-9" />
                 <h1 className="lg:text-lg font-roboto">Product Images</h1>
               </div>
-              <button
-                className="bg-white text-black lg:py-2 py-1 lg:px-6 px-4 lg:rounded-lg rounded-md lg:text-lg text-sm flex justify-between gap-2 items-center font-roboto leading-loose"
-                onClick={() => document.getElementById("fileInput").click()} // Trigger the hidden input
-              >
-                Add Image
-                <ArrowUpFromLine className="lg:size-5 size-4" />
-              </button>
-              <input
-                type="file"
-                id="fileInput"
-                className="hidden" // Hide the input element
-                onChange={handleImageChange} // Handle file selection
-              />
+              <div className="w-full border border-violet-400 rounded-lg p-[0.4vw] flex items-center gap-2 lg:mt-2">
+                <button
+                  className="bg-white text-black lg:py-2 py-1 lg:px-4 px-4 lg:rounded-lg rounded-md lg:text-sm text-base flex justify-between gap-2 items-center font-roboto leading-loose"
+                  onClick={() => document.getElementById("fileInput").click()}
+                >
+                  Choose Files
+                  <ArrowUpFromLine className="lg:size-4 size-4" />
+                </button>
+                <input
+                  type="file"
+                  id="fileInput"
+                  className="hidden"
+                  onChange={handleImageChange}
+                />
+                <h1 className="lg:text-xs font-roboto leading-snug font-light">
+                  Upload Images (up to 3)
+                </h1>
+              </div>
+              <h1 className="font-roboto lg:text-[0.8vw] leading-snug">
+                Select one or more images. PNG, JPG, WEBP accepted.
+              </h1>
+              <div className="border-dashed border border-violet-200 w-full h-full flex flex-col items-center justify-center rounded-2xl lg:mt-3">
+                <IoImages className="lg:size-10 size-8 md:size-9" />
+                <h1 className="text-white text-sm md:text-base">
+                  Previews will appear here.
+                </h1>
+              </div>
             </div>
           </div>
 
