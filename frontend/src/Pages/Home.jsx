@@ -326,7 +326,7 @@ const Home = () => {
             className="w-full h-full text-black rounded-lg flex"
           >
             {/* Left Text Section */}
-            <div className="flex flex-col lg:pl-14 pl-6 w-2/3 justify-center md:pl-10">
+            <div className="flex flex-col lg:pl-14 pl-6 w-3/4 justify-center md:pl-10">
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -339,7 +339,7 @@ const Home = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-blue-600 font-bold md:text-lg lg:text-[2.2vw] xl:text-[1.8vw] text-xs font-inter lg:mt-1"
+                className="text-blue-600 font-extrabold md:text-lg lg:text-[2.2vw] xl:text-[1.8vw] text-xs font-inter lg:mt-1"
               >
                 ADVERTISE YOUR PRODUCT HERE
               </motion.h1>
@@ -364,7 +364,7 @@ const Home = () => {
                 <h1 className="text-slate-400 lg:text-base xl:text-lg text-xs font-medium font-inter md:text-sm">
                   Only at
                 </h1>
-                <span className="lg:text-3xl xl:text-4xl font-bold text-lg font-firaSans md:text-2xl ">
+                <span className="lg:text-3xl xl:text-4xl font-bold text-lg font-firaSans md:text-2xl mt-[-1vh]">
                   ₹49
                 </span>
               </motion.div>
