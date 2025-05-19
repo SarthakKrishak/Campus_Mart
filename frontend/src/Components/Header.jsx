@@ -42,7 +42,7 @@ const Header = ({ color, textColor, bagUrl }) => {
   return (
     <nav
       style={{ backgroundColor: color, color: textColor }}
-      className={`flex text-black items-center justify-between pt-6 pb-3 md:pb-1 sm:pl-10 md:pr-10 lg:pl-[4.6vw] lg:pr-[4.6vw] lg:pb-1 lg:pt-6 xl:pb-5`}
+      className={`flex text-black items-center justify-between pt-6 pb-3 md:pb-4 sm:pl-10 md:pr-10 lg:pl-[4.6vw] lg:pr-[4.6vw] lg:pb-4 lg:pt-6 xl:pb-5`}
     >
       <div className="flex justify-between pl-5 pr-6 w-full items-center sm:hidden font-poppins">
         <Link to="/">
@@ -63,7 +63,7 @@ const Header = ({ color, textColor, bagUrl }) => {
 
       <div className="relative items-center bg-white rounded-md shadow-[0px_3px_14px_0px_rgba(0,0,0,0.07)] outline outline-2 outline-neutral-200 hover:shadow-md transition ease-in-out duration-200 hidden sm:flex cursor-pointer xl:py-[0.5vh] lg:pr-3 lg:mr-[2vw] xl:mr-[5vw]">
         <input
-          className="rounded-md px-3 outline-none w-[25vw] lg:w-[27vw] placeholder-transparent text-black sm:py-[0.4vh]  md:py-[1.2vh] lg:py-[0.5vh] xl:py-[0.6vh] text-md font-poppins lg:text-base md:text-xs lg:px-6 relative z-10 bg-transparent"
+          className="rounded-md px-3 outline-none w-[25vw] lg:w-[27vw] placeholder-transparent text-black sm:py-[0.4vh]  md:py-[0.9vh] lg:py-[0.5vh] xl:py-[0.6vh] text-md font-poppins lg:text-base md:text-xs lg:px-6 relative z-10 bg-transparent"
           type="text"
           name="search"
           id="search"
