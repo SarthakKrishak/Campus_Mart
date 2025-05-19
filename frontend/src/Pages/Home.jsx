@@ -309,7 +309,7 @@ const Home = () => {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="pt-2 pb-2 md:pb-4 md:pt-4 lg:pb-5 lg:pt-5 pr-[2vw] lg:pr-0 ml-[4.5vw] mr-[4.5vw] rounded-md md:rounded-xl text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_36.9295768737793px_0px_rgba(0,0,0,0.16)]"
+          className="pt-2 pb-2 md:pb-4 md:pt-4 lg:pb-5 lg:pt-5 pr-[2vw] lg:pr-0 ml-[4.5vw] mr-[4.5vw] rounded-md md:rounded-xl text-white flex items-center justify-between relative overflow-hidden shadow-[14.361501693725586px_10.258214950561523px_30px_0px_rgba(0,0,0,0.06)]"
         >
           {/* Background Image */}
           <img

@@ -49,7 +49,7 @@ const Header = ({ color, textColor, bagUrl }) => {
           <RiMenu2Line size={25} />
         </Link>
         <div className="flex items-center font-bold text-lg gap-[1vw]">
-          <img src={bluebag} className="size-4 lg:size-5" />
+          <img src={bagUrl} className="size-4 lg:size-5" />
 
           <a href="/">Campus Mart</a>
         </div>
