@@ -95,21 +95,21 @@ const ProductListing = () => {
                 alt="image"
                 className="size-6 lg:h-8 lg:w-7"
               />
-              <h1 className="sm:text-[1.4vw] lg:text-[1.5vw] text-[4vw] md:text-[2vw] font-poppins leading-normal font-medium dark:text-white">
+              <h1 className="sm:text-[1.4vw] lg:text-[1.5vw] text-[4vw] md:text-[2.4vw] font-poppins leading-normal font-medium dark:text-white">
                 List Your Product
               </h1>
             </div>
             {/* Image upload */}
-            <div className="lg:h-full lg:w-[24vw] bg-gradient-to-b from-[#394FF1] to-[#534FF2] shadow-[0px_4.410558223724365px_10px_0px_rgba(0,0,0,0.18)] flex flex-col lg:pl-7 items-start ml-5 lg:ml-14 lg:mr-16 mr-5 lg:rounded-2xl rounded-xl text-white gap-4 pt-6 xl:pl-7 pl-6 pb-6 md:pt-20 md:pb-20 lg:pt-7 lg:pr-7 lg:gap-2 lg:pb-7 pr-6">
+            <div className="lg:h-full lg:w-[24vw] bg-gradient-to-b from-[#394FF1] to-[#534FF2] shadow-[0px_4.410558223724365px_10px_0px_rgba(0,0,0,0.18)] flex flex-col lg:pl-7 items-start ml-5 lg:ml-14 lg:mr-16 mr-5 lg:rounded-2xl rounded-xl text-white gap-4 pt-6 xl:pl-7 pl-6 pb-6 md:pt-5 md:pb-5 lg:pt-7 lg:pr-7 lg:gap-2 lg:pb-7 pr-6">
               <div className="flex justify-center items-center gap-1 lg:gap-2">
-                <IoImages className="lg:size-6 size-5 md:size-9" />
-                <h1 className="lg:text-lg font-roboto text-lg">
+                <IoImages className="lg:size-6 size-5 md:size-6" />
+                <h1 className="lg:text-lg font-roboto text-lg md:text-lg">
                   Product Images
                 </h1>
               </div>
-              <div className="w-full border border-violet-400 rounded-lg p-[1.5vw] md:p-[0.4vw] flex items-center gap-2 lg:mt-2">
+              <div className="w-full border border-violet-400 rounded-lg p-[1.5vw] md:p-[0.8vw] flex items-center gap-2 lg:mt-2">
                 <button
-                  className="bg-white text-black lg:py-2 py-1 lg:px-4 px-5 lg:rounded-lg rounded-md lg:text-sm text-[3.2vw] flex justify-between gap-2 items-center font-roboto leading-loose"
+                  className="bg-white text-black lg:py-2 py-1 md:py-[0.3vh] lg:px-4 px-5 lg:rounded-lg rounded-md lg:text-sm text-[3.2vw] flex justify-between gap-2 items-center font-roboto leading-loose md:text-[2.1vw]"
                   onClick={() => document.getElementById("fileInput").click()}
                 >
                   Choose Files
@@ -121,14 +121,14 @@ const ProductListing = () => {
                   className="hidden"
                   onChange={handleImageChange}
                 />
-                <h1 className="lg:text-xs font-roboto leading-snug font-light text-[2.8vw] ml-3 md:ml-0">
+                <h1 className="lg:text-xs font-roboto leading-snug font-light text-[2.8vw] ml-3 md:ml-0 md:text-[1.8vw]">
                   Upload Images (up to 3)
                 </h1>
               </div>
-              <h1 className="font-roboto lg:text-[0.8vw] leading-snug text-xs">
+              <h1 className="font-roboto lg:text-[0.8vw] leading-snug text-xs md:text-[1.7vw]">
                 Select one or more images. PNG, JPG, WEBP accepted.
               </h1>
-              <div className="border-dashed border border-violet-200 w-full h-full flex flex-col items-center justify-center rounded-2xl lg:mt-3 p-[20vw] md:p-0">
+              <div className="border-dashed border border-violet-200 w-full h-full flex flex-col items-center justify-center rounded-2xl lg:mt-3 p-[20vw] md:p-[15vw] lg:p-0">
                 <IoImages className="lg:size-10 size-8 md:size-9" />
                 <h1 className="text-white text-xs md:text-base">
                   Previews will appear here.
@@ -138,7 +138,7 @@ const ProductListing = () => {
           </div>
 
           {/* top right */}
-          <div className="flex flex-col md:w-full lg:h-full lg:w-2/3 lg:ml-[-2.9vw] ml-5 mr-5">
+          <div className="flex flex-col lg:h-full lg:w-2/3 lg:ml-[-2.9vw] ml-5 mr-5">
             <form className="flex flex-col lg:flex-row w-full gap-6 shadow-[0px_4px_12px_0px_rgba(0,0,0,0.10)] rounded-2xl lg:pt-5 pr-6 lg:pr-8 pl-6 lg:pl-8 pb-5 lg:mt-16 md:mt-12 mt-6 dark:bg-[#1A1D20] pt-4">
               <div className="flex flex-col h-full lg:w-1/2">
                 {/* Product name */}
@@ -232,7 +232,7 @@ const ProductListing = () => {
                 >
                   Original Price<span className="text-red-500">*</span>
                 </label>
-                <div className="flex outline-none lg:px-2 py-2 lg:ml-[-0.5vw] lg:w-[31.9vw] rounded-md md:mt-[-1.1vh] font-roboto mt-[-0.4vh]">
+                <div className="flex outline-none lg:px-2 py-2 lg:ml-[-0.5vw] lg:w-[31.9vw] rounded-md lg:mt-[-1.1vh] font-roboto mt-[-0.4vh]">
                   <div className="bg-neutral-100 outline outline-1 outline-neutral-300 px-4 rounded-s-md flex justify-center items-center font-roboto dark:bg-[#2A2A2A] dark:text-white dark:outline-[#515151]">
                     <FaRupeeSign className="size-3 xl:size-4 text-neutral-600" />
                   </div>
@@ -451,7 +451,7 @@ const ProductListing = () => {
                       name="productPrice"
                       id="productPrice"
                       min="1"
-                      className="text-black flex outline-none rounded-md w-[80vw] sm:w-2/3 px-2 py-2 font-tiltWarp dark:bg-[#131313] dark:text-white"
+                      className="text-black flex outline-none rounded-md w-[80vw] md:w-[88vw] sm:w-2/3 px-2 py-2 font-tiltWarp dark:bg-[#131313] dark:text-white"
                       placeholder="Enter price"
                       value={productPrice}
                       onChange={(e) =>
@@ -482,7 +482,7 @@ const ProductListing = () => {
                 <button
                   type="submit"
                   disabled={!termsAccepted}
-                  className="bg-stone-900 text-white rounded-md md:py-3 py-3 lg:w-[26vw] w-[85vw] font-medium text-sm lg:text-base md:w-[26vw] dark:bg-[#F1F1F1] dark:text-[#1A1D20]"
+                  className="bg-stone-900 text-white rounded-md md:py-3 py-3 lg:w-[26vw] w-[85vw] font-medium text-sm lg:text-base md:w-[26vw] dark:bg-[#F1F1F1] dark:text-[#1A1D20] md:mt-3 md:text-base md:w-[90vw]"
                 >
                   List my Product
                 </button>
