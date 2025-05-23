@@ -77,7 +77,7 @@ const Header = ({ color, textColor, bagUrl }) => {
   }, []);
 
   const handleLogin = () => {
-    setLoggedin((prev)=> !prev);
+    setLoggedin((prev) => !prev);
   };
 
   const handleMenu = () => {
@@ -142,7 +142,10 @@ const Header = ({ color, textColor, bagUrl }) => {
                   ))}
                 </div>
 
-                <Link onClick={handleLogin} className="flex items-center gap-3 px-4 py-3 text-[#F20000] hover:bg-red-100 transition-all duration-200 rounded-b-xl">
+                <Link
+                  onClick={handleLogin}
+                  className="flex items-center gap-3 px-4 py-3 text-[#F20000] hover:bg-red-100 transition-all duration-200 rounded-b-xl"
+                >
                   <span className="text-lg">
                     <MdOutlineLogout />
                   </span>
@@ -335,7 +338,10 @@ const Header = ({ color, textColor, bagUrl }) => {
                     <h1>Contact Us</h1>
                   </Link>
                 </div>
-                  <Link onClick={handleLogin} className="flex items-center gap-2 px-2 text-[#F20000] pt-3 pb-3 transition-all duration-200 hover:bg-red-100 rounded-b-xl">
+                <Link
+                  onClick={handleLogin}
+                  className="flex items-center gap-2 px-2 text-[#F20000] pt-3 pb-3 transition-all duration-200 hover:bg-red-100 rounded-b-xl"
+                >
                   <span>
                     <MdOutlineLogout />
                   </span>
