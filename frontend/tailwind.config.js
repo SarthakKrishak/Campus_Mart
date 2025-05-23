@@ -16,6 +16,7 @@ export default {
         firaSans: ['"Fira Sans"', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         tiltWarp: ['"Tilt Warp"', 'cursive'],
+        outfit: ['Outfit', 'sans-serif']
       },
     },
   },

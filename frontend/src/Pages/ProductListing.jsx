@@ -82,7 +82,7 @@ const ProductListing = () => {
 
   return (
     <div className="overflow-hidden">
-      <Header color={"#394ff1"} textColor={"white"} bagUrl={"whitebag.png"} />
+      <Header bagUrl={"whitebag.png"} />
       {/* start */}
       <div className="flex flex-col dark:bg-[#131313] pt-3 xl:pt-1">
         {/* top section */}
@@ -482,7 +482,7 @@ const ProductListing = () => {
                 <button
                   type="submit"
                   disabled={!termsAccepted}
-                  className="bg-stone-900 text-white rounded-md md:py-3 py-3 lg:w-[26vw] w-[85vw] font-medium text-sm lg:text-base md:w-[26vw] dark:bg-[#F1F1F1] dark:text-[#1A1D20] md:mt-3 md:text-base md:w-[90vw]"
+                  className="bg-stone-900 text-white rounded-md md:py-3 py-3 lg:w-[26vw] w-[85vw] font-medium text-sm lg:text-base  dark:bg-[#F1F1F1] dark:text-[#1A1D20] md:mt-3 md:text-base md:w-[90vw]"
                 >
                   List my Product
                 </button>

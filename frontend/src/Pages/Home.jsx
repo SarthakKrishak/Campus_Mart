@@ -379,7 +379,7 @@ const Home = () => {
               >
                 <Link
                   to={"/price"}
-                  className="rounded-full bg-indigo-600 lg:p-[0.5vw] xl:p-[0.4vw] md:p-[0.8vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] lg:mb-0 md:mb-[0.3vh] text-sm"
+                  className="rounded-full bg-indigo-600 lg:p-[0.5vw] xl:p-[0.4vw] md:p-[0.8vw] text-white lg:text-2xl flex justify-center items-center z-20 hover:scale-110 transition-transform p-1 mb-[0.2vh] lg:mb-0 md:mb-[0.3vh] text-sm dark:bg-gradient-to-r from-blue-600 to-indigo-600 dark:text-white"
                 >
                   <IoIosArrowForward />
                 </Link>

@@ -58,7 +58,7 @@ const ProductDescription = () => {
 
   return (
     <div className="w-full h-screen ">
-      <Header color={"#394ff1"} textColor={"white"} bagUrl={"/whitebag.png"} />
+      <Header bagUrl={"/whitebag.png"} />
       <div className="flex flex-col w-full xl:flex-row 2xl:min-h-screen dark:bg-[#131313] xl:pt-2">
         <Toaster />
         {/* left side */}
@@ -111,7 +111,9 @@ const ProductDescription = () => {
                 src="/assets/user_img.png"
                 alt="image"
               />
-              <h1 className="font-semibold font-robotoFlex dark:text-[#848484]">Aryan Singh</h1>
+              <h1 className="font-semibold font-robotoFlex dark:text-[#848484]">
+                Aryan Singh
+              </h1>
             </div>
 
             <div className="flex flex-col pt-1">
@@ -164,7 +166,9 @@ const ProductDescription = () => {
               </h1>
               <div className="text-[8vw] flex items-center mt-1 md:text-[5vw] lg:text-[3.8vw] xl:text-[2.8vw]">
                 <IndianRupee className="size-6 dark:text-white" />
-                <h1 className=" text-neutral-900 font-tiltWarp dark:text-white">449</h1>
+                <h1 className=" text-neutral-900 font-tiltWarp dark:text-white">
+                  449
+                </h1>
                 <div className="text-zinc-600 flex items-center text-xl md:text-2xl justify-end ml-3 mt-3 font-normal line-through font-poppins leading-none dark:text-[#626262]">
                   <IndianRupee className="size-4" />
                   <h1>599</h1>
