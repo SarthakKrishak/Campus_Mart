@@ -3,8 +3,6 @@ import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { IoIosSunny, IoMdMoon } from "react-icons/io";
-import bag from "/bag.png";
-import bluebag from "/bluebag.png";
 import { useEffect } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import { MdShoppingCart } from "react-icons/md";
@@ -12,6 +10,10 @@ import { FiMessageSquare } from "react-icons/fi";
 import LoggedImage from "/LoggedImage.png";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { LuUserRound } from "react-icons/lu";
+import { BsBoxSeam } from "react-icons/bs";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { CiMail } from "react-icons/ci";
+import { MdOutlineLogout } from "react-icons/md";
 
 const Header = ({ color, textColor, bagUrl }) => {
   const [search, setSearch] = useState("");
@@ -96,40 +98,40 @@ const Header = ({ color, textColor, bagUrl }) => {
                 </div>
               </Link>
               <div className="flex flex-col text-[#1A1D20] border-t border-b border-b-[#DEDEDE] border-t-[#DEDEDE]">
-                <Link className="flex items-center xl:gap-2 h-full transition-all duration-200 hover:bg-gray-100 xl:pt-3 xl:pb-2 xl:px-4">
+                <Link className="flex items-center xl:gap-3 h-full transition-all duration-200 hover:bg-gray-100 xl:pt-3 xl:pb-2 xl:px-4">
                   <span>
                     <LuUserRound />
                   </span>
                   <h1>Profile</h1>
                 </Link>
-                <Link className="flex items-center xl:gap-2 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-2 xl:px-4">
+                <Link className="flex items-center xl:gap-3 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-2 xl:px-4">
                   <span>
-                    <LuUserRound />
+                    <BsBoxSeam />
                   </span>
                   <h1>Orders</h1>
                 </Link>
-                <Link className="flex items-center xl:gap-2 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-2 xl:px-4">
+                <Link className="flex items-center xl:gap-3 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-2 xl:px-4">
                   <span>
-                    <LuUserRound />
+                    <IoNotificationsOutline />
                   </span>
                   <h1>Chat</h1>
                 </Link>
-                <Link className="flex items-center xl:gap-2 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-2 xl:px-4">
+                <Link className="flex items-center xl:gap-3 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-2 xl:px-4">
                   <span>
-                    <LuUserRound />
+                    <IoIosHeartEmpty />
                   </span>
                   <h1>Wishlist</h1>
                 </Link>
-                <Link className="flex items-center xl:gap-2 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-3 xl:px-4">
+                <Link className="flex items-center xl:gap-3 transition-all duration-200 hover:bg-gray-100 xl:pt-2 xl:pb-3 xl:px-4">
                   <span>
-                    <LuUserRound />
+                    <CiMail />
                   </span>
                   <h1>Contact Us</h1>
                 </Link>
               </div>
-              <Link className="flex items-center xl:gap-2 xl:px-4 text-[#F20000] xl:pt-3 xl:pb-3 transition-all duration-200  hover:bg-red-100 rounded-b-xl">
+              <Link className="flex items-center xl:gap-3 xl:px-4 text-[#F20000] xl:pt-3 xl:pb-3 transition-all duration-200  hover:bg-red-100 rounded-b-xl">
                 <span>
-                  <LuUserRound />
+                  <MdOutlineLogout />
                 </span>
                 <h1>Logout</h1>
               </Link>
