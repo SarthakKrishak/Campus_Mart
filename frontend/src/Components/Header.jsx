@@ -278,7 +278,7 @@ const Header = ({ color, textColor, bagUrl }) => {
         </nav>
       ) : (
         <nav
-          style={{ backgroundColor: color, color: textColor }}
+          style={{ backgroundColor: color, color: textColor}}
           className={`flex text-black items-center justify-between pt-6 pb-3 md:pb-0 sm:pl-10 md:pr-10 lg:pl-[4.6vw] lg:pr-[4.6vw] lg:pb-2 lg:pt-5 xl:pb-4 xl:pt-5 dark:bg-[#131313] relative`}
         >
           {/* mobile menu */}

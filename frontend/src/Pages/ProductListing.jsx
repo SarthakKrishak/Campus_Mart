@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header";
 import axios from "axios";
 import { Images } from "lucide-react";
@@ -16,7 +16,7 @@ const ProductListing = () => {
   const [productCondition, setProductCondition] = React.useState("");
   const [productPrice, setProductPrice] = React.useState("");
   const [productAddress, setProductAddress] = React.useState("");
-  const [productImage, setProductImage] = React.useState(null);
+  const [productImages, setProductImages] = useState([]);
 
   const handleTermsChange = () => {
     setTermsAccepted(!termsAccepted);
@@ -27,7 +27,9 @@ const ProductListing = () => {
   };
 
   const handleImageChange = (e) => {
-    setProductImage(e.target.files[0]);
+    const files = Array.from(e.target.files);
+    const imageUrls = files.map(file => URL.createObjectURL(file));
+    setProductImages(prev => [...prev, ...imageUrls]); // Append to existing
   };
 
   const handleSubmit = (e) => {
@@ -120,6 +122,8 @@ const ProductListing = () => {
                   id="fileInput"
                   className="hidden"
                   onChange={handleImageChange}
+                  accept="image/*"
+                  multiple
                 />
                 <h1 className="lg:text-xs font-roboto leading-snug font-light text-[2.8vw] ml-3 md:ml-0 md:text-[1.8vw]">
                   Upload Images (up to 3)
@@ -128,12 +132,29 @@ const ProductListing = () => {
               <h1 className="font-roboto lg:text-[0.8vw] leading-snug text-xs md:text-[1.7vw]">
                 Select one or more images. PNG, JPG, WEBP accepted.
               </h1>
-              <div className="border-dashed border border-violet-200 w-full h-full flex flex-col items-center justify-center rounded-2xl lg:mt-3 p-[20vw] md:p-[15vw] lg:p-0">
-                <IoImages className="lg:size-10 size-8 md:size-9" />
-                <h1 className="text-white text-xs md:text-base">
-                  Previews will appear here.
-                </h1>
-              </div>
+              {productImages.length > 0 ? (
+                <div className="border-dashed border border-violet-200 w-full h-full rounded-2xl lg:mt-3 p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                  {productImages.map((img, index) => (
+                    <div key={index} className="w-full">
+                      <img
+                        src={img}
+                        alt={`Uploaded ${index}`}
+                        className="w-full h-auto rounded-md border"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="border-dashed border border-violet-200 w-full h-full flex flex-col items-center justify-center rounded-2xl lg:mt-3 p-[20vw] md:p-[15vw] lg:p-4">
+                  <IoImages className="lg:size-10 size-8 md:size-9 text-violet-300" />
+                  <h1 className="text-white text-xs md:text-base mt-2">
+                    Previews will appear here.
+                  </h1>
+                </div>
+              )}
+              <button onClick={() => setProductImages([])} className="mt-4 text-sm font-inter px-2 py-1 rounded-lg text-red-500 bg-white">
+                Clear All
+              </button>
             </div>
           </div>
 
@@ -343,7 +364,7 @@ const ProductListing = () => {
         <div className="flex w-full font-roboto">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col lg:flex-row w-full h-full shadow-[0px_4px_10px_0px_rgba(0,0,0,0.12)] mt-7 lg:pt-5 pt-3 pb-8 lg:pl-10 pl-5 mb-8 rounded-2xl lg:mr-12 mr-3 lg:ml-14 ml-3 dark:bg-[#1A1D20]"
+            className="flex flex-col lg:flex-row w-[93vw] h-full shadow-[0px_4px_10px_0px_rgba(0,0,0,0.12)] mt-7 lg:pt-5 pt-3 pb-8 lg:pl-10 pl-5 mb-8 rounded-2xl lg:mr-12 mr-3 lg:ml-14 ml-3 dark:bg-[#1A1D20] xl:pr-6"
           >
             <div className="flex flex-col lg:w-1/3 lg:pr-20 pr-5">
               {/* Pickup Address */}
@@ -377,7 +398,7 @@ const ProductListing = () => {
             </div>
 
             {/* payment method */}
-            <div className="flex flex-col lg:w-1/3 lg:pl-8 mt-1">
+            <div className="flex flex-col lg:w-1/3 lg:pl-8 mt-1 xl:mt-0">
               <label
                 htmlFor="payment"
                 className="font-semibold mt-3 text-sm lg:text-base md:mt-5 dark:text-[#F1F1F1]"
@@ -444,14 +465,14 @@ const ProductListing = () => {
                     Price
                   </h1>
                   <div className="flex lg:text-[2.5vw] text-[6vw] items-center md:text-[4vw]">
-                    <FaRupeeSign className="text-stone-300 lg:text-[2vw] text-[5vw] md:text-[3vw] dark:text-[#C6C6C6] xl:text-[2.4vw]" />
+                    <FaRupeeSign className="text-stone-300 lg:text-[2vw] text-[5vw] md:text-[3vw] dark:text-[#C6C6C6] xl:text-[3vw]" />
                     <input
                       required
                       type="text"
                       name="productPrice"
                       id="productPrice"
                       min="1"
-                      className="text-black flex outline-none rounded-md w-[80vw] md:w-[88vw] sm:w-2/3 px-2 py-2 font-tiltWarp dark:bg-[#131313] dark:text-white"
+                      className="text-black flex outline-none rounded-md w-[80vw] md:w-[88vw] sm:w-2/3 px-2 py-2 xl:py-1 xl:mr-20 font-tiltWarp dark:bg-[#131313] dark:text-white bg-[#f2f3f3]"
                       placeholder="Enter price"
                       value={productPrice}
                       onChange={(e) =>
